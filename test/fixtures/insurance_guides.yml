@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_en: MyString
+  title_jp: MyString
+  body_en: MyText
+  body_jp: MyText
+  insurance_type: MyString
+  coverage_percent: 1
+
+two:
+  title_en: MyString
+  title_jp: MyString
+  body_en: MyText
+  body_jp: MyText
+  insurance_type: MyString
+  coverage_percent: 1
