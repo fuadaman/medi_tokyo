@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_03_27_114514) do
+ActiveRecord::Schema[7.1].define(version: 2026_03_29_082934) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -53,6 +53,24 @@ ActiveRecord::Schema[7.1].define(version: 2026_03_27_114514) do
     t.float "latitude"
     t.float "longitude"
     t.string "visiting_hours"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "is_government"
+    t.boolean "is_certified"
+    t.boolean "accepts_shakai_hoken"
+    t.boolean "accepts_kokumin_hoken"
+    t.boolean "accepts_travel_insurance"
+    t.string "insurance_notes_en"
+    t.string "insurance_notes_jp"
+  end
+
+  create_table "insurance_guides", force: :cascade do |t|
+    t.string "title_en"
+    t.string "title_jp"
+    t.text "body_en"
+    t.text "body_jp"
+    t.string "insurance_type"
+    t.integer "coverage_percent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

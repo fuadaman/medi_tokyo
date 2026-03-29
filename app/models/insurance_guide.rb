@@ -1,0 +1,2 @@
+class InsuranceGuide < ApplicationRecord
+end

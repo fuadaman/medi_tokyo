@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def emergency
     @emergency_contacts = EmergencyContact.all
   end
+
+  def insurance_guide
+    @insurance_guides = InsuranceGuide.all
+  end
 end
