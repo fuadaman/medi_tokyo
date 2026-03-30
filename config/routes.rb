@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   # EMERGENCY PAGE
   # Displays tap-to-call emergency numbers (119, 110)
   # and basic first aid guidance for foreigners
-  get "/emergency", to: "pages#emergency"
+  get "/emergency", to: "pages#emergency", as: "emergency"
 
   # INSURANCE GUIDE PAGE
   # Explains the Japanese health insurance system
   # Covers Shakai Hoken, Kokumin Hoken and Travel Insurance
   # in plain foreigner-friendly English and Japanese
-  get "/insurance-guide", to: "pages#insurance_guide"
+  get "/insurance-guide", to: "pages#insurance_guide", as: "insurance_guide"
 
   # LANGUAGE TOGGLE
   # Switches the UI language between English (en) and Japanese (jp)

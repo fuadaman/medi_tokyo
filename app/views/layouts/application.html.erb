@@ -1,16 +1,535 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>MediTokyo</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+
+      /* =============================================
+         CSS VARIABLES
+      ============================================= */
+      :root {
+        --navy: #0C2D6B;
+        --mid-blue: #4A7FC1;
+        --sky: #7EB8F7;
+        --ice: #DBEEFF;
+        --white: #FFFFFF;
+        --red: #E24B4A;
+        --light-red: #FCEBEB;
+        --text-primary: #0C2D6B;
+        --text-secondary: #4A7FC1;
+        --text-muted: #7EB8F7;
+        --glass-bg: rgba(255, 255, 255, 0.25);
+        --glass-border: rgba(255, 255, 255, 0.5);
+        --glass-card: rgba(255, 255, 255, 0.75);
+        --glass-card-border: rgba(255, 255, 255, 0.9);
+        --nav-height: 64px;
+        --bottom-nav-height: 76px;
+        --font-main: 'DM Sans', sans-serif;
+      }
+
+      /* =============================================
+         RESET & BASE
+      ============================================= */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html, body {
+        height: 100%;
+        font-family: var(--font-main);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* =============================================
+         MEDICAL BACKGROUND
+      ============================================= */
+      body {
+        min-height: 100vh;
+        background: #87CEEB;
+        position: relative;
+      }
+
+      .bg-layer {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      /* Base gradient */
+      .bg-gradient {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 30% 40%, #87CEEB 0%, #5BB8D4 30%, #B8E4F5 60%, #E8F7FC 100%);
+      }
+
+      /* Hexagon network */
+      .bg-hex {
+        position: absolute;
+        inset: 0;
+        background-image:
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='70' viewBox='0 0 60 70'%3E%3Cpolygon points='30,2 58,17 58,53 30,68 2,53 2,17' fill='none' stroke='rgba(255,255,255,0.2)' stroke-width='0.8'/%3E%3C/svg%3E");
+        background-size: 60px 70px;
+        background-position: center;
+        opacity: 0.6;
+      }
+
+      /* Glow spots */
+      .bg-glow {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.8);
+        filter: blur(8px);
+        animation: pulse 4s ease-in-out infinite;
+      }
+      .bg-glow-1 { width: 6px; height: 6px; top: 15%; left: 20%; animation-delay: 0s; }
+      .bg-glow-2 { width: 4px; height: 4px; top: 35%; left: 65%; animation-delay: 0.8s; }
+      .bg-glow-3 { width: 8px; height: 8px; top: 60%; left: 10%; animation-delay: 1.6s; }
+      .bg-glow-4 { width: 5px; height: 5px; top: 75%; left: 80%; animation-delay: 2.4s; }
+      .bg-glow-5 { width: 4px; height: 4px; top: 25%; left: 85%; animation-delay: 3.2s; }
+
+      /* Floating squares (right side) */
+      .bg-squares {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 40%;
+        overflow: hidden;
+      }
+      .bg-square {
+        position: absolute;
+        border: 1px solid rgba(255,255,255,0.35);
+        border-radius: 4px;
+        background: rgba(255,255,255,0.08);
+      }
+      .sq1 { width: 40px; height: 40px; right: 20px; top: 10%; transform: rotate(12deg); }
+      .sq2 { width: 28px; height: 28px; right: 60px; top: 20%; transform: rotate(-8deg); opacity: 0.6; }
+      .sq3 { width: 50px; height: 50px; right: 15px; top: 35%; transform: rotate(5deg); opacity: 0.4; }
+      .sq4 { width: 20px; height: 20px; right: 80px; top: 50%; transform: rotate(-15deg); opacity: 0.7; }
+      .sq5 { width: 35px; height: 35px; right: 30px; top: 65%; transform: rotate(10deg); opacity: 0.5; }
+      .sq6 { width: 25px; height: 25px; right: 70px; top: 78%; transform: rotate(-5deg); opacity: 0.6; }
+
+      /* Medical icons overlay */
+      .bg-icons {
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(1.5); }
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      /* =============================================
+         MAIN APP WRAPPER
+      ============================================= */
+      .app-wrapper {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        max-width: 430px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* =============================================
+         TOP NAVBAR — GLASS
+      ============================================= */
+      .top-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        height: var(--nav-height);
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+
+      .top-nav.emergency {
+        background: rgba(226, 75, 74, 0.15);
+        border-bottom: 1px solid rgba(226, 75, 74, 0.3);
+      }
+
+      .nav-brand { display: flex; flex-direction: column; gap: 1px; }
+
+      .nav-logo {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--navy);
+        letter-spacing: -0.5px;
+        line-height: 1;
+      }
+
+      .nav-tagline {
+        font-size: 9px;
+        font-weight: 400;
+        color: var(--mid-blue);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .lang-toggle {
+        background: rgba(255,255,255,0.5);
+        border: 1px solid rgba(74,127,193,0.4);
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--navy);
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .lang-toggle:hover {
+        background: rgba(255,255,255,0.7);
+      }
+
+      /* =============================================
+         PAGE CONTENT
+      ============================================= */
+      .page-content {
+        flex: 1;
+        padding: 16px 16px calc(var(--bottom-nav-height) + 16px);
+        overflow-y: auto;
+      }
+
+      /* =============================================
+         BOTTOM NAVBAR — FLOATING PILL
+      ============================================= */
+      .bottom-nav {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.95);
+        border-radius: 36px;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        box-shadow: 0 8px 32px rgba(12, 45, 107, 0.12), 0 2px 8px rgba(12, 45, 107, 0.08);
+        width: calc(100% - 32px);
+        max-width: 398px;
+      }
+
+      .nav-tab {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        padding: 4px 0;
+        text-decoration: none;
+        border-radius: 24px;
+        transition: all 0.2s ease;
+      }
+
+      .nav-tab-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .nav-tab-label {
+        font-size: 9px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      /* Inactive state */
+      .nav-tab .nav-tab-icon { background: transparent; }
+      .nav-tab .nav-tab-label { color: var(--mid-blue); }
+      .nav-tab svg { stroke: var(--mid-blue); }
+
+      /* Active state — teal bubble */
+      .nav-tab.active .nav-tab-icon {
+        background: linear-gradient(135deg, #1a56db, var(--navy));
+        box-shadow: 0 4px 12px rgba(12, 45, 107, 0.35);
+        transform: translateY(-4px) scale(1.05);
+      }
+      .nav-tab.active .nav-tab-label { color: var(--navy); }
+      .nav-tab.active svg { stroke: #fff; }
+
+      /* SOS tab — always red */
+      .nav-tab.sos .nav-tab-icon {
+        background: rgba(226, 75, 74, 0.1);
+        border: 1px solid rgba(226, 75, 74, 0.3);
+      }
+      .nav-tab.sos .nav-tab-label { color: var(--red); }
+      .nav-tab.sos svg { stroke: var(--red); }
+      .nav-tab.sos.active .nav-tab-icon {
+        background: linear-gradient(135deg, #f87171, var(--red));
+        box-shadow: 0 4px 12px rgba(226, 75, 74, 0.4);
+        border: none;
+      }
+      .nav-tab.sos.active svg { stroke: #fff; }
+      .nav-tab.sos.active .nav-tab-label { color: var(--red); }
+
+      /* =============================================
+         GLASS CARDS — reusable
+      ============================================= */
+      .glass-card {
+        background: var(--glass-card);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid var(--glass-card-border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .glass-card-light {
+        background: rgba(255,255,255,0.55);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.7);
+        border-radius: 14px;
+        padding: 14px;
+      }
+
+      /* =============================================
+         TAGS & BADGES
+      ============================================= */
+      .tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 3px 8px;
+        border-radius: 20px;
+      }
+      .tag-navy { background: rgba(12,45,107,0.1); color: var(--navy); }
+      .tag-sky { background: rgba(126,184,247,0.2); color: var(--mid-blue); }
+      .tag-red { background: var(--light-red); color: var(--red); }
+      .tag-amber { background: #FAEEDA; color: #633806; }
+      .tag-pink { background: #FBEAF0; color: #72243E; }
+
+      /* =============================================
+         SECTION LABELS
+      ============================================= */
+      .section-label {
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--mid-blue);
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+
+      /* =============================================
+         BUTTONS
+      ============================================= */
+      .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, var(--mid-blue), var(--navy));
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: var(--font-main);
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-emergency {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 12px;
+        background: var(--red);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: var(--font-main);
+        text-decoration: none;
+        cursor: pointer;
+        flex: 1;
+        text-align: center;
+      }
+
+      .btn-outline {
+        display: block;
+        width: 100%;
+        padding: 13px;
+        background: rgba(255,255,255,0.6);
+        color: var(--navy);
+        border: 1px solid rgba(74,127,193,0.4);
+        border-radius: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: var(--font-main);
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        backdrop-filter: blur(8px);
+      }
+
+      /* =============================================
+         UTILITIES
+      ============================================= */
+      .mb-4 { margin-bottom: 4px; }
+      .mb-8 { margin-bottom: 8px; }
+      .mb-12 { margin-bottom: 12px; }
+      .mb-16 { margin-bottom: 16px; }
+      .flex { display: flex; }
+      .flex-between { display: flex; justify-content: space-between; align-items: center; }
+      .gap-6 { gap: 6px; }
+      .gap-8 { gap: 8px; }
+      .gap-12 { gap: 12px; }
+      .text-navy { color: var(--navy); }
+      .text-mid { color: var(--mid-blue); }
+      .text-muted { color: var(--text-muted); }
+      .font-500 { font-weight: 500; }
+      .font-600 { font-weight: 600; }
+      .text-sm { font-size: 13px; }
+      .text-xs { font-size: 11px; }
+      .text-xxs { font-size: 10px; }
+
+    </style>
   </head>
 
   <body>
-    <%= yield %>
+
+    <%# Medical science background %>
+    <div class="bg-layer">
+      <div class="bg-gradient"></div>
+      <div class="bg-hex"></div>
+
+      <%# Glow spots %>
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+      <div class="bg-glow bg-glow-3"></div>
+      <div class="bg-glow bg-glow-4"></div>
+      <div class="bg-glow bg-glow-5"></div>
+
+      <%# Floating squares %>
+      <div class="bg-squares">
+        <div class="bg-square sq1"></div>
+        <div class="bg-square sq2"></div>
+        <div class="bg-square sq3"></div>
+        <div class="bg-square sq4"></div>
+        <div class="bg-square sq5"></div>
+        <div class="bg-square sq6"></div>
+      </div>
+    </div>
+
+    <%# App wrapper — centered mobile %>
+    <div class="app-wrapper">
+
+      <%# Top navbar %>
+      <nav class="top-nav <%= 'emergency' if controller_name == 'pages' && action_name == 'emergency' %>">
+        <div class="nav-brand">
+          <span class="nav-logo">MediTokyo</span>
+          <span class="nav-tagline">Tokyo Medical Guide</span>
+        </div>
+        <a href="#" class="lang-toggle">
+          <span>EN</span>
+          <span style="color:var(--mid-blue); opacity:0.5;">/</span>
+          <span>JP</span>
+        </a>
+      </nav>
+
+      <%# Page content %>
+      <main class="page-content">
+        <%= yield %>
+      </main>
+
+      <%# Bottom floating navbar %>
+      <nav class="bottom-nav">
+
+        <a href="<%= root_path %>" class="nav-tab <%= 'active' if controller_name == 'pages' && action_name == 'home' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10L10 3L17 10V17H13V13H7V17H3V10Z"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Home</span>
+        </a>
+
+        <a href="<%= hospitals_path %>" class="nav-tab <%= 'active' if controller_name == 'hospitals' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <rect x="3" y="4" width="14" height="13" rx="2"/>
+              <path d="M3 8h14"/>
+              <path d="M8 12h1v3H8z"/>
+              <path d="M11 12h1v3h-1z"/>
+              <path d="M8 4V2M12 4V2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Hospitals</span>
+        </a>
+
+        <a href="<%= emergency_path %>" class="nav-tab sos <%= 'active' if controller_name == 'pages' && action_name == 'emergency' %>">
+          <div class="nav-tab-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <path d="M11 3h0a8 8 0 010 16h0a8 8 0 010-16z"/>
+              <path d="M8 11h3m0 0h3m-3 0V8m0 3v3" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">SOS</span>
+        </a>
+
+        <a href="<%= insurance_guide_path %>" class="nav-tab <%= 'active' if controller_name == 'pages' && action_name == 'insurance_guide' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <rect x="3" y="3" width="14" height="15" rx="2"/>
+              <path d="M7 7h6M7 10h6M7 13h4"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Hoken</span>
+        </a>
+
+        <a href="<%= hospitals_path %>" class="nav-tab">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <path d="M10 2C7.24 2 5 4.24 5 7c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5z"/>
+              <circle cx="10" cy="7" r="2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Map</span>
+        </a>
+
+      </nav>
+
+    </div>
+
   </body>
 </html>
