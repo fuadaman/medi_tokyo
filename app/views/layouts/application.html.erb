@@ -1,1 +1,120 @@
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MediTokyo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <%# Medical science background %>
+    <div class="bg-layer">
+      <div class="bg-gradient"></div>
+      <div class="bg-hex"></div>
+
+      <%# Glow spots %>
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+      <div class="bg-glow bg-glow-3"></div>
+      <div class="bg-glow bg-glow-4"></div>
+      <div class="bg-glow bg-glow-5"></div>
+
+      <%# Floating squares %>
+      <div class="bg-squares">
+        <div class="bg-square sq1"></div>
+        <div class="bg-square sq2"></div>
+        <div class="bg-square sq3"></div>
+        <div class="bg-square sq4"></div>
+        <div class="bg-square sq5"></div>
+        <div class="bg-square sq6"></div>
+      </div>
+    </div>
+
+    <%# App wrapper — centered mobile %>
+    <div class="app-wrapper">
+
+      <%# Top navbar %>
+      <nav class="top-nav <%= 'emergency' if controller_name == 'pages' && action_name == 'emergency' %>">
+        <div class="nav-brand">
+          <span class="nav-logo">MediTokyo</span>
+          <span class="nav-tagline">Tokyo Medical Guide</span>
+        </div>
+        <a href="#" class="lang-toggle">
+          <span>EN</span>
+          <span style="color:var(--mid-blue); opacity:0.5;">/</span>
+          <span>JP</span>
+        </a>
+      </nav>
+
+      <%# Page content %>
+      <main class="page-content">
+        <%= yield %>
+      </main>
+
+      <%# Bottom floating navbar %>
+      <nav class="bottom-nav">
+
+        <a href="<%= root_path %>" class="nav-tab <%= 'active' if controller_name == 'pages' && action_name == 'home' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 10L10 3L17 10V17H13V13H7V17H3V10Z"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Home</span>
+        </a>
+
+        <a href="<%= hospitals_path %>" class="nav-tab <%= 'active' if controller_name == 'hospitals' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <rect x="3" y="4" width="14" height="13" rx="2"/>
+              <path d="M3 8h14"/>
+              <path d="M8 12h1v3H8z"/>
+              <path d="M11 12h1v3h-1z"/>
+              <path d="M8 4V2M12 4V2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Hospitals</span>
+        </a>
+
+        <a href="<%= emergency_path %>" class="nav-tab sos <%= 'active' if controller_name == 'pages' && action_name == 'emergency' %>">
+          <div class="nav-tab-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <path d="M11 3h0a8 8 0 010 16h0a8 8 0 010-16z"/>
+              <path d="M8 11h3m0 0h3m-3 0V8m0 3v3" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">SOS</span>
+        </a>
+
+        <a href="<%= insurance_guide_path %>" class="nav-tab <%= 'active' if controller_name == 'pages' && action_name == 'insurance_guide' %>">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <rect x="3" y="3" width="14" height="15" rx="2"/>
+              <path d="M7 7h6M7 10h6M7 13h4"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Hoken</span>
+        </a>
+
+        <a href="<%= hospitals_path %>" class="nav-tab">
+          <div class="nav-tab-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.6" stroke-linecap="round">
+              <path d="M10 2C7.24 2 5 4.24 5 7c0 3.75 5 11 5 11s5-7.25 5-11c0-2.76-2.24-5-5-5z"/>
+              <circle cx="10" cy="7" r="2"/>
+            </svg>
+          </div>
+          <span class="nav-tab-label">Map</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </body>
+</html>
