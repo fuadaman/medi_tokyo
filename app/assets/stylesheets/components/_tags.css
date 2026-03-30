@@ -1,0 +1,20 @@
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.tag-navy  { background: rgba(12, 45, 107, 0.1);  color: var(--navy); }
+.tag-sky   { background: rgba(126, 184, 247, 0.2); color: var(--mid-blue); }
+.tag-red   { background: var(--light-red);          color: var(--red); }
+.tag-amber { background: #FAEEDA;                   color: #633806; }
+.tag-pink  { background: #FBEAF0;                   color: #72243E; }
+.tag-green { background: #EAF3DE;                   color: #27500A; }
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
