@@ -258,3 +258,10 @@
   flex: none;
   width: auto;
 }
+
+// Hide scrollbar on quick access pills
+div[style*="overflow-x:auto"] {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
