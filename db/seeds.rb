@@ -250,7 +250,7 @@ bokutoh = Hospital.create!(
   name_en: "Tokyo Metropolitan Bokutoh Hospital",
   name_jp: "東京都立墨東病院",
   address_en: "4-23-15 Kotobashi, Sumida-ku, Tokyo 130-8575", # MANUAL: get exact address from tmhp.jp/bokutoh
-  address_jp: "130-8575　東京都墨田区江東橋4-23-15",      # MANUAL: get exact address from tmhp.jp/bokutoh
+  address_jp: "130-8575 東京都墨田区江東橋4-23-15",      # MANUAL: get exact address from tmhp.jp/bokutoh
   phone: "03-3633-6151",
   website_url: "https://www.tmhp.jp/bokutoh/en/",
   ward: "Sumida-ku",
@@ -433,6 +433,92 @@ ntt_medical = Hospital.create!(
 )
 
 # =============================================================
+# HOSPITALS — PART 2B: INTERNATIONAL CLINICS
+# Source: tmsc.jp, sendagaya-ic.com, ejable.com, tokyocheapo.com
+# =============================================================
+puts "Creating international clinics..."
+
+univ_tokyo = Hospital.create!(
+  name_en: "University of Tokyo Hospital",
+  name_jp: "東京大学医学部附属病院",
+  address_en: "7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8655",
+  address_jp: "東京都文京区本郷7-3-1",
+  phone: "03-3815-5411",
+  website_url: "https://www.h.u-tokyo.ac.jp/english/",
+  ward: "Bunkyo-ku",
+  latitude: 35.762887,
+  longitude: 139.766065,
+  visiting_hours: "Weekdays 08:30–17:00 (Outpatient). Referral required for international patients.",
+  is_government: true,
+  is_certified: true,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Accepts Shakai Hoken and Kokumin Hoken. International patients without Japanese insurance billed at private rate. Contact International Medical Center in advance. Most doctors speak English.",
+  insurance_notes_jp: "社会保険・国民健康保険対応。外国人患者で保険なしの場合は自費診療。事前に国際診療部へご連絡ください。"
+)
+
+takanawa = Hospital.create!(
+  name_en: "JCHO Tokyo Takanawa Hospital",
+  name_jp: "JCHO東京高輪病院",
+  address_en: "3-10-11 Takanawa, Minato-ku, Tokyo 108-8606",
+  address_jp: "東京都港区高輪3-10-11",
+  phone: "03-3443-9191",
+  website_url: "https://tokyo-takanawa.jcho.go.jp/",
+  ward: "Minato-ku",
+  latitude: 35.635825,
+  longitude: 139.733641,
+  visiting_hours: "Weekdays 09:00–11:30 (Outpatient) / Emergency: after 17:30 weekdays, 24h weekends",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Accepts Shakai Hoken and Kokumin Hoken. International Assistance Desk open weekdays 09:00–15:45. English, Chinese and Russian language support available.",
+  insurance_notes_jp: "社会保険・国民健康保険対応。国際窓口：平日09:00〜15:45。英語・中国語・ロシア語対応。"
+)
+
+tmsc = Hospital.create!(
+  name_en: "Tokyo Medical and Surgical Clinic",
+  name_jp: "東京メディカル・サージカル・クリニック",
+  address_en: "32 Shiba Koen Bldg 2F, 3-4-30 Shibakoen, Minato-ku, Tokyo 105-0011",
+  address_jp: "東京都港区芝公園3-4-30 芝公園32ビル2F",
+  phone: "03-3436-3028",
+  website_url: "https://tmsc.jp/",
+  ward: "Minato-ku",
+  latitude: 35.656308,
+  longitude: 139.745787,
+  visiting_hours: "Weekdays 09:00–17:00 / Saturday 09:00–12:00",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: true,
+  insurance_notes_en: "Does NOT accept Japanese national health insurance. Private pay only. Receipts provided for international insurance reimbursement. US/European trained doctors. English, Spanish, German, French spoken.",
+  insurance_notes_jp: "日本の健康保険は不可。自費診療のみ。国際保険の払い戻し用領収書発行可。英語・スペイン語・ドイツ語・フランス語対応。"
+)
+
+sendagaya = Hospital.create!(
+  name_en: "Sendagaya International Clinic",
+  name_jp: "千駄ヶ谷インターナショナルクリニック",
+  address_en: "2F Barbizon Bldg 11, 1-20-3 Sendagaya, Shibuya-ku, Tokyo 151-0051",
+  address_jp: "東京都渋谷区千駄ヶ谷1-20-3 バルビゾン11 2F",
+  phone: "03-3478-4747",
+  website_url: "https://sendagaya-ic.com/en/",
+  ward: "Shibuya-ku",
+  latitude: 35.681674,
+  longitude: 139.714023,
+  visiting_hours: "Mon 13:00–19:00 / Tue Thu Fri 09:00–19:00 / Sat 09:00–14:00 / Closed Wed & Sun",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: true,
+  insurance_notes_en: "Accepts Shakai Hoken, Kokumin Hoken and travel insurance. Walk-ins welcome. English and French speaking staff. Specializes in travel medicine and care for international patients.",
+  insurance_notes_jp: "社会保険・国民健康保険・旅行保険対応。飛び込み歓迎。英語・フランス語対応。旅行医学・外国人患者専門。"
+)
+
+# =============================================================
 # HOSPITALS — PART 3: MATERNITY & PEDIATRIC SPECIALISTS
 # Source: japanlivingguide.com (verified)
 # =============================================================
@@ -541,7 +627,26 @@ HospitalSpecialty.create!([
   # Okubo, Toshima, Ebara — general hospitals
   { hospital: okubo,        specialty: emergency_med },
   { hospital: toshima,      specialty: cardiology },
-  { hospital: ebara,        specialty: orthopedics }
+  { hospital: ebara,        specialty: orthopedics },
+
+  # University of Tokyo — general + specialist
+  { hospital: univ_tokyo,  specialty: oncology },
+  { hospital: univ_tokyo,  specialty: neurology },
+  { hospital: univ_tokyo,  specialty: cardiology },
+  { hospital: univ_tokyo,  specialty: infectious },
+
+  # Takanawa — general + emergency
+  { hospital: takanawa,    specialty: emergency_med },
+  { hospital: takanawa,    specialty: orthopedics },
+  { hospital: takanawa,    specialty: pediatrics },
+
+  # TMSC — international clinic
+  { hospital: tmsc,        specialty: gynecology },
+  { hospital: tmsc,        specialty: pediatrics },
+
+  # Sendagaya — travel medicine
+  { hospital: sendagaya,   specialty: infectious },
+  { hospital: sendagaya,   specialty: pediatrics }
 ])
 
 # =============================================================
@@ -622,7 +727,24 @@ HospitalService.create!([
   { hospital: red_cross,    service: outpatient },
   { hospital: red_cross,    service: inpatient },
   { hospital: red_cross,    service: emergency_care },
-  { hospital: red_cross,    service: prenatal }
+  { hospital: red_cross,    service: prenatal },
+
+  { hospital: univ_tokyo,  service: outpatient },
+  { hospital: univ_tokyo,  service: inpatient },
+  { hospital: univ_tokyo,  service: surgery },
+  { hospital: univ_tokyo,  service: mri },
+  { hospital: univ_tokyo,  service: ct_scan },
+
+  { hospital: takanawa,    service: outpatient },
+  { hospital: takanawa,    service: inpatient },
+  { hospital: takanawa,    service: emergency_care },
+  { hospital: takanawa,    service: xray },
+
+  { hospital: tmsc,        service: outpatient },
+  { hospital: tmsc,        service: vaccination },
+
+  { hospital: sendagaya,   service: outpatient },
+  { hospital: sendagaya,   service: vaccination }
 ])
 # =============================================================
 # SUMMARY
