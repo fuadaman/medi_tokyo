@@ -19,7 +19,7 @@
 
 <%# Filter Pills — Insurance %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Insurance</p>
-<div style="display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px;">
+<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px;">
   <button onclick="filterBy('insurance','all')" id="ins-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
   <button onclick="filterBy('insurance','shakai')" id="ins-shakai" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Shakai Hoken</button>
   <button onclick="filterBy('insurance','kokumin')" id="ins-kokumin" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Kokumin Hoken</button>
@@ -28,7 +28,7 @@
 
 <%# Filter Pills — Type %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Type</p>
-<div style="display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px;">
+<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;">
   <button onclick="filterBy('type','all')" id="type-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
   <button onclick="filterBy('type','government')" id="type-government" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Government</button>
   <button onclick="filterBy('type','certified')" id="type-certified" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Certified</button>
@@ -114,7 +114,6 @@
     if (filterGroup === 'insurance') activeInsurance = value;
     if (filterGroup === 'type') activeType = value;
 
-    // Reset all pills in group
     const prefixes = filterGroup === 'insurance'
       ? ['ins-all','ins-shakai','ins-kokumin','ins-travel']
       : ['type-all','type-government','type-certified','type-maternity','type-emergency'];
@@ -124,7 +123,6 @@
       if (el) el.style.cssText = inactivePillStyle;
     });
 
-    // Set active pill
     const activeId = filterGroup === 'insurance' ? `ins-${value}` : `type-${value}`;
     const activeEl = document.getElementById(activeId);
     if (activeEl) activeEl.style.cssText = activePillStyle;
@@ -133,7 +131,8 @@
   }
 
   function applyFilters() {
-    const searchVal = document.getElementById('search-input').value.toLowerCase();
+    const searchInput = document.getElementById('search-input');
+    const searchVal = searchInput ? searchInput.value.toLowerCase() : '';
     const cards = document.querySelectorAll('#hospitals-list .hospital-card');
     let visibleCount = 0;
 
@@ -141,16 +140,13 @@
       const name = card.dataset.name || '';
       const ward = card.dataset.ward || '';
 
-      // Search filter
       const matchesSearch = searchVal === '' || name.includes(searchVal) || ward.includes(searchVal);
 
-      // Insurance filter
       let matchesInsurance = true;
       if (activeInsurance === 'shakai')  matchesInsurance = card.dataset.shakai === 'true';
       if (activeInsurance === 'kokumin') matchesInsurance = card.dataset.kokumin === 'true';
       if (activeInsurance === 'travel')  matchesInsurance = card.dataset.travel === 'true';
 
-      // Type filter
       let matchesType = true;
       if (activeType === 'government') matchesType = card.dataset.government === 'true';
       if (activeType === 'certified')  matchesType = card.dataset.certified === 'true';
@@ -162,22 +158,29 @@
       if (visible) visibleCount++;
     });
 
-    // Update count
-    document.getElementById('result-count').textContent = `${visibleCount} facilities found`;
+    const countEl = document.getElementById('result-count');
+    if (countEl) countEl.textContent = `${visibleCount} facilities found`;
 
-    // Show/hide no results
-    document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+    const noResults = document.getElementById('no-results');
+    if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
   }
 
-  // Search input listener
   document.getElementById('search-input').addEventListener('input', applyFilters);
 
-  // Check URL params on load
-  window.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('turbo:load', () => {
     const params = new URLSearchParams(window.location.search);
+
     const specialty = params.get('specialty');
-    if (specialty === 'maternity') {
-      filterBy('type', 'maternity');
-    }
+    if (specialty === 'maternity') filterBy('type', 'maternity');
+    else if (specialty === 'emergency') filterBy('type', 'emergency');
+
+    const type = params.get('type');
+    if (type === 'certified') filterBy('type', 'certified');
+    else if (type === 'government') filterBy('type', 'government');
+
+    const insurance = params.get('insurance');
+    if (insurance === 'shakai') filterBy('insurance', 'shakai');
+    else if (insurance === 'kokumin') filterBy('insurance', 'kokumin');
+    else if (insurance === 'travel') filterBy('insurance', 'travel');
   });
 </script>
