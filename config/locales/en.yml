@@ -1,31 +1,85 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  app:
+    name: "MediTokyo"
+    tagline: "Tokyo Medical Guide"
+    lang_toggle: "JP"
+  nav:
+    home: "Home"
+    hospitals: "Hospitals"
+    sos: "SOS"
+    hoken: "Hoken"
+    map: "Map"
+  home:
+    emergency_title: "Emergency / 緊急"
+    emergency_sub: "Tap to call immediately"
+    search_placeholder: "Search hospitals, wards, specialties..."
+    quick_access: "Quick access"
+    hospitals_count: "17 facilities"
+    emergency_guide: "Guide & numbers"
+    insurance_info: "Insurance info"
+    maternity_count: "4 facilities"
+    nearby: "Nearby hospitals"
+    see_all: "See all →"
+    did_you_know: "Did you know?"
+    did_you_know_text: "Japanese health insurance covers 70% of medical costs. New mothers receive ¥500,000 childbirth allowance."
+    learn_hoken: "Learn about Hoken →"
+  hospitals:
+    title: "Hospitals"
+    search_placeholder: "Search hospitals, wards..."
+    insurance_label: "Insurance"
+    type_label: "Type"
+    all: "All"
+    shakai: "Shakai Hoken"
+    kokumin: "Kokumin Hoken"
+    travel: "Travel Insurance"
+    government: "Government"
+    certified: "Certified"
+    maternity: "Maternity"
+    emergency: "Emergency"
+    facilities_found: "facilities found"
+    no_results: "No facilities found"
+    adjust_filters: "Try adjusting your filters"
+    open_maps: "Open in Maps →"
+    contact_hours: "Contact & Hours"
+    phone: "Phone"
+    ward: "Ward"
+    address: "Address"
+    visiting_hours: "Visiting hours"
+    insurance_accepted: "Insurance Accepted"
+    specialties: "Specialties"
+    services: "Services"
+    call: "Call"
+    visit_website: "Visit Official Website"
+    back: "← Back to hospitals"
+  emergency:
+    title: "Emergency / 緊急"
+    sub: "Tap any number to call immediately"
+    numbers_label: "Emergency Numbers"
+    steps_label: "What to do in an emergency"
+    first_aid: "Basic First Aid"
+    cpr: "CPR"
+    cpr_text: "30 chest compressions, 2 rescue breaths. Repeat until help arrives."
+    bleeding: "Bleeding"
+    bleeding_text: "Apply firm pressure with clean cloth. Keep pressure until help arrives."
+    choking: "Choking"
+    choking_text: "5 back blows, then 5 abdominal thrusts. Call 119 immediately."
+    burns: "Burns"
+    burns_text: "Cool with running water for 10 min. Do not use ice or butter."
+    disclaimer: "This is basic guidance only. Always call 119 in a medical emergency. MediTokyo is not a substitute for professional medical advice."
+  insurance:
+    title: "Japanese Health Insurance"
+    subtitle: "Japan covers 70% of all medical costs for insured residents."
+    types_label: "Insurance Types"
+    maternity_label: "Maternity Allowance"
+    maternity_title: "Childbirth Lump-Sum Grant"
+    maternity_text: "Per baby, for all insured residents. Normal delivery costs are not billed through insurance — you receive this grant instead."
+    maternity_tip: "Many hospitals arrange direct payment — you only pay the difference above ¥500,000."
+    bring_label: "What to Bring to Hospital"
+    find_label: "Find hospitals that accept your insurance"
+    find_sub: "Filter by Shakai Hoken, Kokumin Hoken or Travel Insurance"
+    search_btn: "Search Hospitals"
+    disclaimer: "Information based on official MHLW, nenkin.go.jp and Tokyo Metropolitan Government sources."
+    covered: "% covered"
+    tip_shakai: "Bring your 保険証 (Hoken card) to every hospital visit."
+    tip_kokumin: "Enroll at your ward office (区役所) within 14 days of arrival."
+    tip_travel: "Most Japanese hospitals do not accept foreign insurance directly — pay first, claim later."

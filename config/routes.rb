@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   # Switches the UI language between English (en) and Japanese (jp)
   # :locale is a dynamic segment — e.g. /set_language/en or /set_language/jp
   # Stores the selected locale in the session
-  get "/set_language/:locale", to: "application#set_language"
+  get "/set_language/:locale", to: "application#set_language", as: "set_language"
 
   # HOSPITALS
   # index → GET /hospitals
