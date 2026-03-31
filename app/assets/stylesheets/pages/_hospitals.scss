@@ -1,0 +1,30 @@
+// =============================================
+// HOSPITALS INDEX & SHOW
+// =============================================
+
+// Filter pills
+.filter-pill {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(74, 127, 193, 0.25);
+  background: rgba(255, 255, 255, 0.6);
+  color: #4A7FC1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-main);
+  white-space: nowrap;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(74, 127, 193, 0.4);
+  }
+
+  &.active {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+    box-shadow: 0 2px 8px rgba(12, 45, 107, 0.25);
+  }
+}

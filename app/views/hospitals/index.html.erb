@@ -1,2 +1,183 @@
-<h1>Hospitals#index</h1>
-<p>Find me in app/views/hospitals/index.html.erb</p>
+<%# ========================================
+    HOSPITAL INDEX — MediTokyo
+    /hospitals
+    ======================================== %>
+
+<%# Search Bar %>
+<div style="position:relative; margin-bottom:12px;">
+  <svg style="position:absolute; left:14px; top:50%; transform:translateY(-50%); pointer-events:none;" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+    <circle cx="9" cy="9" r="6"/>
+    <path d="M15 15l3 3"/>
+  </svg>
+  <input
+    type="text"
+    id="search-input"
+    placeholder="Search hospitals, wards..."
+    style="width:100%;padding:12px 16px 12px 40px;background:rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.2);border-radius:14px;font-size:13px;color:#0C2D6B;outline:none;font-family:var(--font-main);"
+  >
+</div>
+
+<%# Filter Pills — Insurance %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Insurance</p>
+<div style="display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px;">
+  <button onclick="filterBy('insurance','all')" id="ins-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
+  <button onclick="filterBy('insurance','shakai')" id="ins-shakai" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Shakai Hoken</button>
+  <button onclick="filterBy('insurance','kokumin')" id="ins-kokumin" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Kokumin Hoken</button>
+  <button onclick="filterBy('insurance','travel')" id="ins-travel" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Travel</button>
+</div>
+
+<%# Filter Pills — Type %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Type</p>
+<div style="display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;padding-bottom:4px;">
+  <button onclick="filterBy('type','all')" id="type-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
+  <button onclick="filterBy('type','government')" id="type-government" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Government</button>
+  <button onclick="filterBy('type','certified')" id="type-certified" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Certified</button>
+  <button onclick="filterBy('type','maternity')" id="type-maternity" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Maternity</button>
+  <button onclick="filterBy('type','emergency')" id="type-emergency" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Emergency</button>
+</div>
+
+<%# Result Count %>
+<p style="font-size:11px;color:#4A7FC1;margin-bottom:10px;" id="result-count"><%= @hospitals.count %> facilities found</p>
+
+<%# Hospital Cards %>
+<div id="hospitals-list">
+  <% @hospitals.each do |hospital| %>
+    <a href="<%= hospital_path(hospital) %>"
+      class="hospital-card"
+      data-name="<%= hospital.name_en.downcase %>"
+      data-ward="<%= hospital.ward.downcase %>"
+      data-government="<%= hospital.is_government? %>"
+      data-certified="<%= hospital.is_certified? %>"
+      data-shakai="<%= hospital.accepts_shakai_hoken? %>"
+      data-kokumin="<%= hospital.accepts_kokumin_hoken? %>"
+      data-travel="<%= hospital.accepts_travel_insurance? %>"
+      data-emergency="<%= hospital.specialties.any? { |s| s.name_en == 'Emergency Medicine' } %>"
+      data-maternity="<%= hospital.specialties.any? { |s| s.name_en.include?('Maternity') } %>">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+        <div style="flex:1;">
+          <p class="hosp-name"><%= hospital.name_en %></p>
+          <p class="hosp-jp"><%= hospital.name_jp %></p>
+          <p class="hosp-meta"><%= hospital.ward %> · <%= hospital.phone %></p>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;">
+          <path d="M7 10h6M13 10l-3-3M13 10l-3 3"/>
+        </svg>
+      </div>
+
+      <div class="tag-row">
+        <% if hospital.is_government? %>
+          <span class="tag tag-navy">Government</span>
+        <% end %>
+        <% if hospital.is_certified? %>
+          <span class="tag tag-sky">Certified</span>
+        <% end %>
+        <% if hospital.accepts_shakai_hoken? %>
+          <span class="tag tag-sky">Shakai Hoken</span>
+        <% end %>
+        <% if hospital.accepts_kokumin_hoken? %>
+          <span class="tag tag-sky">Kokumin Hoken</span>
+        <% end %>
+        <% if hospital.accepts_travel_insurance? %>
+          <span class="tag tag-amber">Travel Insurance</span>
+        <% end %>
+        <% if hospital.specialties.any? { |s| s.name_en == "Emergency Medicine" } %>
+          <span class="tag tag-red">24h Emergency</span>
+        <% end %>
+        <% if hospital.specialties.any? { |s| s.name_en.include?("Maternity") } %>
+          <span class="tag tag-pink">Maternity</span>
+        <% end %>
+      </div>
+
+    </a>
+  <% end %>
+</div>
+
+<%# No results message %>
+<div id="no-results" style="display:none;text-align:center;padding:40px 20px;">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto 12px;">
+    <circle cx="11" cy="11" r="8"/>
+    <path d="M21 21l-4.35-4.35"/>
+  </svg>
+  <p style="font-size:14px;font-weight:500;color:#0C2D6B;margin-bottom:4px;">No facilities found</p>
+  <p style="font-size:12px;color:#4A7FC1;">Try adjusting your filters</p>
+</div>
+
+<script>
+  let activeInsurance = 'all';
+  let activeType = 'all';
+
+  const inactivePillStyle = 'font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;';
+  const activePillStyle = 'font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;';
+
+  function filterBy(filterGroup, value) {
+    if (filterGroup === 'insurance') activeInsurance = value;
+    if (filterGroup === 'type') activeType = value;
+
+    // Reset all pills in group
+    const prefixes = filterGroup === 'insurance'
+      ? ['ins-all','ins-shakai','ins-kokumin','ins-travel']
+      : ['type-all','type-government','type-certified','type-maternity','type-emergency'];
+
+    prefixes.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.cssText = inactivePillStyle;
+    });
+
+    // Set active pill
+    const activeId = filterGroup === 'insurance' ? `ins-${value}` : `type-${value}`;
+    const activeEl = document.getElementById(activeId);
+    if (activeEl) activeEl.style.cssText = activePillStyle;
+
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const searchVal = document.getElementById('search-input').value.toLowerCase();
+    const cards = document.querySelectorAll('#hospitals-list .hospital-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const name = card.dataset.name || '';
+      const ward = card.dataset.ward || '';
+
+      // Search filter
+      const matchesSearch = searchVal === '' || name.includes(searchVal) || ward.includes(searchVal);
+
+      // Insurance filter
+      let matchesInsurance = true;
+      if (activeInsurance === 'shakai')  matchesInsurance = card.dataset.shakai === 'true';
+      if (activeInsurance === 'kokumin') matchesInsurance = card.dataset.kokumin === 'true';
+      if (activeInsurance === 'travel')  matchesInsurance = card.dataset.travel === 'true';
+
+      // Type filter
+      let matchesType = true;
+      if (activeType === 'government') matchesType = card.dataset.government === 'true';
+      if (activeType === 'certified')  matchesType = card.dataset.certified === 'true';
+      if (activeType === 'maternity')  matchesType = card.dataset.maternity === 'true';
+      if (activeType === 'emergency')  matchesType = card.dataset.emergency === 'true';
+
+      const visible = matchesSearch && matchesInsurance && matchesType;
+      card.style.display = visible ? 'block' : 'none';
+      if (visible) visibleCount++;
+    });
+
+    // Update count
+    document.getElementById('result-count').textContent = `${visibleCount} facilities found`;
+
+    // Show/hide no results
+    document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+
+  // Search input listener
+  document.getElementById('search-input').addEventListener('input', applyFilters);
+
+  // Check URL params on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const specialty = params.get('specialty');
+    if (specialty === 'maternity') {
+      filterBy('type', 'maternity');
+    }
+  });
+</script>
