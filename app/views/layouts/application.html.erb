@@ -41,18 +41,20 @@
 
       <%# Top navbar %>
       <nav class="top-nav <%= 'emergency' if controller_name == 'pages' && action_name == 'emergency' %>">
-        <div class="nav-brand">
-          <span class="nav-logo">MediTokyo</span>
-          <span class="nav-tagline">Tokyo Medical Guide</span>
+        <div class="top-nav-inner">
+          <div class="nav-brand">
+            <span class="nav-logo">MediTokyo</span>
+            <span class="nav-tagline">Tokyo Medical Guide</span>
+          </div>
+          <a href="#" class="lang-toggle">
+            <span>EN</span>
+            <span style="color:var(--mid-blue); opacity:0.5;">/</span>
+            <span>JP</span>
+          </a>
         </div>
-        <a href="#" class="lang-toggle">
-          <span>EN</span>
-          <span style="color:var(--mid-blue); opacity:0.5;">/</span>
-          <span>JP</span>
-        </a>
       </nav>
-
       <%# Page content %>
+
       <main class="page-content">
         <%= yield %>
       </main>
