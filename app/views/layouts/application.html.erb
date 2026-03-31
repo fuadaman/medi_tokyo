@@ -39,7 +39,6 @@
     <%# App wrapper — centered mobile %>
     <div class="app-wrapper">
 
-      <%# Top navbar %>
       <nav class="top-nav <%= 'emergency' if controller_name == 'pages' && action_name == 'emergency' %>">
         <div class="top-nav-inner">
           <div class="nav-brand">
@@ -53,7 +52,6 @@
           </a>
         </div>
       </nav>
-      <%# Page content %>
 
       <main class="page-content">
         <%= yield %>
