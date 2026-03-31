@@ -4,7 +4,7 @@
     ======================================== %>
 
 <%# Hero %>
-<div style="background:linear-gradient(135deg,rgba(74,127,193,0.12),rgba(12,45,107,0.06));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.2);border-radius:16px;padding:20px;margin-bottom:16px;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+<div style="background:linear-gradient(135deg,rgba(74,127,193,0.12),rgba(12,45,107,0.06));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.2);border-radius:16px;padding:20px;margin-bottom:12px;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
   <div style="width:56px;height:56px;background:rgba(74,127,193,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
       <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/>
@@ -14,13 +14,41 @@
   <p style="font-size:12px;color:#4A7FC1;line-height:1.6;"><%= t('insurance.subtitle') %></p>
 </div>
 
-<%# Insurance Guide Cards %>
+<%# ⚠️ My Number Card Alert — NEW Dec 2024 %>
+<div style="background:rgba(250,238,218,0.8);backdrop-filter:blur(20px);border:1px solid rgba(186,117,23,0.25);border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
+  <div style="display:flex;gap:10px;align-items:flex-start;">
+    <span style="font-size:20px;flex-shrink:0;">⚠️</span>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#633806;margin-bottom:4px;">
+        <%= I18n.locale == :ja ? '重要：マイナンバーカードへの切り替え（2024年12月〜）' : 'Important: My Number Card Update (Dec 2024)' %>
+      </p>
+      <p style="font-size:11px;color:#633806;line-height:1.6;">
+        <%= I18n.locale == :ja ? '2024年12月2日より、従来の健康保険証の新規発行が停止されました。マイナンバーカードを健康保険証として使用することが推奨されています。マイナンバーカードをお持ちでない方には「資格確認書」が発行されます。' : 'As of December 2, 2024, traditional health insurance cards are no longer issued. Your My Number Card (マイナンバーカード) now serves as your health insurance credential. If you do not have one, you will receive a Qualification Confirmation Notice (資格確認書).' %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<%# ⚠️ 2027 Visa Renewal Warning %>
+<div style="background:rgba(252,235,235,0.8);backdrop-filter:blur(20px);border:1px solid rgba(226,75,74,0.2);border-radius:14px;padding:14px 16px;margin-bottom:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
+  <div style="display:flex;gap:10px;align-items:flex-start;">
+    <span style="font-size:20px;flex-shrink:0;">🛂</span>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#E24B4A;margin-bottom:4px;">
+        <%= I18n.locale == :ja ? '2027年6月〜：保険料未払いでビザ更新拒否の可能性' : 'From June 2027: Unpaid Premiums May Block Visa Renewal' %>
+      </p>
+      <p style="font-size:11px;color:#c0392b;line-height:1.6;">
+        <%= I18n.locale == :ja ? '2025年11月の政府発表により、国民健康保険料または国民年金保険料の未払いがある外国人は、2027年6月以降、ビザの更新・在留資格変更が原則として拒否される可能性があります。社会保険加入者は給与天引きのため影響は少ない見込みです。' : 'From June 2027, foreign residents with unpaid NHI or National Pension premiums may be denied visa renewal or status changes. This was announced in November 2025. Shakai Hoken enrollees are largely unaffected as premiums are auto-deducted from salary. Pay your NHI bills on time.' %>
+      </p>
+    </div>
+  </div>
+</div>
+
+<%# Insurance Types %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.types_label') %></p>
 
 <% @insurance_guides.each do |guide| %>
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.1);">
-
-    <%# Header %>
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
       <div>
         <h2 style="font-size:15px;font-weight:600;color:#0C2D6B;margin-bottom:2px;">
@@ -35,13 +63,9 @@
         <%= guide.coverage_percent %><%= t('insurance.covered') %>
       </span>
     </div>
-
-    <%# Body %>
     <p style="font-size:12px;color:#4A7FC1;line-height:1.7;margin-bottom:12px;">
       <%= locale_field(guide, :body) %>
     </p>
-
-    <%# Key tip box %>
     <div style="background:rgba(219,238,255,0.5);border-radius:10px;padding:10px 12px;border-left:3px solid #4A7FC1;">
       <% if guide.insurance_type == 'shakai_hoken' %>
         <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_shakai') %></p>
@@ -51,12 +75,228 @@
         <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_travel') %></p>
       <% end %>
     </div>
-
   </div>
 <% end %>
 
+<%# Real Cost Examples %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '実際の費用例（2025年東京）' : 'Real Cost Examples (Tokyo 2025)' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+
+  <%# Shakai Hoken example %>
+  <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);">
+    <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">
+      <%= I18n.locale == :ja ? '社会保険（月給40万円の場合）' : 'Shakai Hoken (¥400,000/month salary)' %>
+    </p>
+    <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+      <span style="font-size:11px;color:#4A7FC1;"><%= I18n.locale == :ja ? '総保険料（9.91%）' : 'Total premium (9.91%)' %></span>
+      <span style="font-size:11px;font-weight:600;color:#0C2D6B;">¥39,640/月</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+      <span style="font-size:11px;color:#4A7FC1;"><%= I18n.locale == :ja ? 'あなたの負担（半額）' : 'Your share (half)' %></span>
+      <span style="font-size:11px;font-weight:600;color:#0C2D6B;">¥19,820/月</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;">
+      <span style="font-size:11px;color:#4A7FC1;"><%= I18n.locale == :ja ? '会社負担（半額）' : 'Employer pays (half)' %></span>
+      <span style="font-size:11px;font-weight:600;color:#27500A;">¥19,820/月</span>
+    </div>
+  </div>
+
+  <%# Kokumin Hoken example %>
+  <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);">
+    <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">
+      <%= I18n.locale == :ja ? '国民健康保険（年収400万円、東京の場合）' : 'Kokumin Hoken (¥4M annual income, Tokyo)' %>
+    </p>
+    <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+      <span style="font-size:11px;color:#4A7FC1;"><%= I18n.locale == :ja ? '年間保険料（目安）' : 'Annual premium (approx)' %></span>
+      <span style="font-size:11px;font-weight:600;color:#0C2D6B;">¥737,000/年</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;">
+      <span style="font-size:11px;color:#4A7FC1;"><%= I18n.locale == :ja ? '月額換算' : 'Monthly equivalent' %></span>
+      <span style="font-size:11px;font-weight:600;color:#0C2D6B;">¥61,400/月</span>
+    </div>
+  </div>
+
+  <%# Co-pay at hospital %>
+  <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:8px;">
+    <%= I18n.locale == :ja ? '病院での自己負担（窓口支払い）' : 'At the hospital — your co-pay (30%)' %>
+  </p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+    <% copay_items = I18n.locale == :ja ? [
+      { label: "診察料 ¥3,000", you: "¥900", icon: "🩺" },
+      { label: "処方薬 ¥5,000", you: "¥1,500", icon: "💊" },
+      { label: "血液検査 ¥10,000", you: "¥3,000", icon: "🔬" },
+      { label: "入院（1日）¥50,000", you: "¥15,000", icon: "🏥" }
+    ] : [
+      { label: "Doctor visit ¥3,000", you: "¥900", icon: "🩺" },
+      { label: "Prescription ¥5,000", you: "¥1,500", icon: "💊" },
+      { label: "Blood test ¥10,000", you: "¥3,000", icon: "🔬" },
+      { label: "Hospital stay ¥50,000/day", you: "¥15,000", icon: "🏥" }
+    ] %>
+    <% copay_items.each do |item| %>
+      <div style="background:rgba(219,238,255,0.4);border-radius:10px;padding:10px;">
+        <p style="font-size:16px;margin-bottom:4px;"><%= item[:icon] %></p>
+        <p style="font-size:10px;color:#4A7FC1;margin-bottom:2px;"><%= item[:label] %></p>
+        <p style="font-size:12px;font-weight:600;color:#0C2D6B;"><%= I18n.locale == :ja ? 'あなた：' : 'You pay: ' %><%= item[:you] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%# Co-pay by Age %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '年齢別自己負担率' : 'Co-pay by age' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  <% age_groups = I18n.locale == :ja ? [
+    { age: "0〜5歳", rate: "20%", note: "就学前" },
+    { age: "6〜69歳", rate: "30%", note: "標準" },
+    { age: "70〜74歳", rate: "20%", note: "高所得者は30%" },
+    { age: "75歳以上", rate: "10%", note: "後期高齢者" }
+  ] : [
+    { age: "0–5 years", rate: "20%", note: "Pre-school" },
+    { age: "6–69 years", rate: "30%", note: "Standard" },
+    { age: "70–74 years", rate: "20%", note: "30% if high income" },
+    { age: "75+ years", rate: "10%", note: "Elderly system" }
+  ] %>
+  <% age_groups.each_with_index do |group, index| %>
+    <div style="display:flex;justify-content:space-between;align-items:center;<%= index < age_groups.length - 1 ? 'margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
+      <div>
+        <p style="font-size:12px;font-weight:500;color:#0C2D6B;"><%= group[:age] %></p>
+        <p style="font-size:10px;color:#4A7FC1;"><%= group[:note] %></p>
+      </div>
+      <span style="font-size:18px;font-weight:700;color:#0C2D6B;"><%= group[:rate] %></span>
+    </div>
+  <% end %>
+</div>
+
+<%# Enrollment Step-by-step %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '加入手続き（国民健康保険）' : 'How to enroll — Kokumin Hoken' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  <% enroll_steps = I18n.locale == :ja ? [
+    { num: "1", title: "14日以内に区役所へ", body: "引越し・退職・在留資格変更から14日以内に手続きを。期限を過ぎると未加入期間の医療費が全額自己負担になります。" },
+    { num: "2", title: "必要書類を持参", body: "在留カード、パスポート、マイナンバーカード、前の保険の「資格喪失証明書」（切替の場合）。" },
+    { num: "3", title: "窓口で申請", body: "「国民健康保険に加入したい」と伝えてください。職員が手続きを案内してくれます。" },
+    { num: "4", title: "保険証を受け取る", body: "手続き完了後、その場で国民健康保険証（またはマイナンバー連携確認書）を受け取れます。" },
+    { num: "5", title: "保険料の支払い", body: "毎年6月頃に納付書が届きます。コンビニ・銀行・口座振替で支払えます。低所得者は減額申請が可能です。" }
+  ] : [
+    { num: "1", title: "Go to ward office within 14 days", body: "After moving, leaving a job, or changing visa status — enroll within 14 days. Missing deadline means 100% cost for any care during the gap." },
+    { num: "2", title: "Bring required documents", body: "Residence card, passport, My Number card, and if switching insurance — 資格喪失証明書 (insurance termination certificate)." },
+    { num: "3", title: "Apply at the counter", body: "Say: '国民健康保険に加入したいです' (I want to join National Health Insurance). Staff will guide you through the form." },
+    { num: "4", title: "Receive your insurance card", body: "You receive your NHI card immediately after enrollment. Keep it with you at all times for hospital visits." },
+    { num: "5", title: "Pay your premiums", body: "Bills arrive in June each year. Pay at convenience stores, banks, or set up auto-debit. Low-income households can apply for premium reduction." }
+  ] %>
+
+  <% enroll_steps.each_with_index do |step, index| %>
+    <div style="display:flex;gap:12px;align-items:flex-start;<%= index < enroll_steps.length - 1 ? 'margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
+      <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#4A7FC1,#0C2D6B);color:#fff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <%= step[:num] %>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:2px;"><%= step[:title] %></p>
+        <p style="font-size:11px;color:#4A7FC1;line-height:1.6;"><%= step[:body] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%# High Cost Medical Expense Benefit %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '高額療養費制度' : 'High-Cost Medical Expense Benefit' %>
+</p>
+
+<div style="background:rgba(219,238,255,0.5);backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.15);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  <div style="display:flex;gap:12px;align-items:flex-start;">
+    <div style="width:44px;height:44px;background:rgba(74,127,193,0.1);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        <path d="M12 6v6l4 2"/>
+      </svg>
+    </div>
+    <div>
+      <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">
+        <%= I18n.locale == :ja ? '月ごとの自己負担に上限があります' : 'Your monthly out-of-pocket has a cap' %>
+      </p>
+      <p style="font-size:11px;color:#4A7FC1;line-height:1.6;margin-bottom:10px;">
+        <%= I18n.locale == :ja ? '1か月の医療費自己負担が上限額を超えた場合、超過分が払い戻されます。高額な手術や入院でも、自己負担が一定額以上にはなりません。' : 'If your monthly medical costs exceed the income-based threshold, the excess is reimbursed. Even major surgery or hospitalization has a maximum monthly out-of-pocket.' %>
+      </p>
+      <div style="background:rgba(255,255,255,0.7);border-radius:10px;padding:10px 12px;">
+        <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;">
+          <%= I18n.locale == :ja ? '例：一般的な収入（69歳以下）' : 'Example: Standard income (under 69)' %>
+        </p>
+        <p style="font-size:11px;color:#4A7FC1;line-height:1.6;">
+          <%= I18n.locale == :ja ? '月の上限額：¥80,100 ＋（医療費 − ¥267,000）× 1%' : 'Monthly cap: ¥80,100 + (medical costs − ¥267,000) × 1%' %>
+        </p>
+        <p style="font-size:11px;color:#4A7FC1;margin-top:4px;">
+          <%= I18n.locale == :ja ? '💡 入院前に「限度額適用認定証」を取得すると、窓口での支払いが上限額のみになります。' : '💡 Get a Maximum Copayment Certificate (限度額適用認定証) before a planned hospital stay to pay less upfront.' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# Between Jobs %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '退職・転職時の保険' : 'Between jobs — what to do' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  <% job_options = I18n.locale == :ja ? [
+    { icon: "🔄", title: "任意継続（最長2年）", body: "退職後も社会保険を最長2年間継続できます。ただし保険料は全額自己負担（会社負担分もあなたが払う）になるため、約2倍になります。" },
+    { icon: "🏛️", title: "国民健康保険に切り替え", body: "退職翌日から14日以内に区役所で手続き。収入が少ない場合は保険料が安くなることもあります。" },
+    { icon: "👨‍👩‍👧", title: "配偶者の扶養に入る", body: "配偶者が社会保険加入者であれば、扶養家族として追加されます。追加保険料はかかりません。" }
+  ] : [
+    { icon: "🔄", title: "Voluntary continuation (up to 2 years)", body: "Keep your Shakai Hoken for up to 2 years after leaving a job. You pay the full premium (both your share and employer's share) — roughly double the previous cost." },
+    { icon: "🏛️", title: "Switch to Kokumin Hoken", body: "Enroll at your ward office within 14 days of leaving your job. If your income is low, premiums may actually be cheaper than voluntary continuation." },
+    { icon: "👨‍👩‍👧", title: "Join spouse's insurance as dependent", body: "If your spouse has Shakai Hoken, you can be added as a dependent at no extra cost — as long as your income is below the threshold." }
+  ] %>
+
+  <% job_options.each_with_index do |option, index| %>
+    <div style="display:flex;gap:12px;align-items:flex-start;<%= index < job_options.length - 1 ? 'margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
+      <span style="font-size:20px;flex-shrink:0;"><%= option[:icon] %></span>
+      <div>
+        <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:2px;"><%= option[:title] %></p>
+        <p style="font-size:11px;color:#4A7FC1;line-height:1.6;"><%= option[:body] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%# Dependent Family Coverage %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '家族の保険' : 'Family & dependent coverage' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  <% family_items = I18n.locale == :ja ? [
+    { icon: "💼", title: "社会保険（扶養）", body: "非就労の配偶者・子どもは追加保険料なしで加入者の社会保険に扶養として入れます。大きなメリットです。" },
+    { icon: "🏛️", title: "国民健康保険（世帯単位）", body: "国民健康保険は世帯単位で計算されます。家族全員が加入し、世帯全体の収入と人数で保険料が決まります。" },
+    { icon: "👶", title: "子どもの保険", body: "子どもは必ず何らかの健康保険に加入が必要です。0〜5歳は自己負担20%。東京では多くの区が独自の子ども医療費助成制度を実施しており、実質無料になることも。" }
+  ] : [
+    { icon: "💼", title: "Shakai Hoken dependents", body: "Non-working spouses and children can be added to your Shakai Hoken at no additional cost. This is a major financial benefit for families." },
+    { icon: "🏛️", title: "Kokumin Hoken (household)", body: "NHI is calculated at household level. All family members enroll, and premiums are based on total household income and number of people." },
+    { icon: "👶", title: "Children's coverage", body: "Children must be enrolled in health insurance. Ages 0–5 pay 20% co-pay. Many Tokyo wards subsidize children's medical costs further — some wards offer near-free care for children up to age 18." }
+  ] %>
+
+  <% family_items.each_with_index do |item, index| %>
+    <div style="display:flex;gap:12px;align-items:flex-start;<%= index < family_items.length - 1 ? 'margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
+      <span style="font-size:20px;flex-shrink:0;"><%= item[:icon] %></span>
+      <div>
+        <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:2px;"><%= item[:title] %></p>
+        <p style="font-size:11px;color:#4A7FC1;line-height:1.6;"><%= item[:body] %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <%# Maternity Allowance %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;margin-top:4px;"><%= t('insurance.maternity_label') %></p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.maternity_label') %></p>
 
 <div style="background:linear-gradient(135deg,rgba(251,234,240,0.8),rgba(244,192,209,0.3));backdrop-filter:blur(40px);border:1px solid rgba(212,83,126,0.15);border-radius:16px;padding:20px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
   <div style="display:flex;align-items:flex-start;gap:14px;">
@@ -81,21 +321,20 @@
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.bring_label') %></p>
 
 <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
-
   <% if I18n.locale == :ja %>
     <% items = [
-      { icon: "🪪", text: "保険証（Hoken カード）", sub: "最も重要な書類" },
+      { icon: "🪪", text: "マイナンバーカード（保険証として使用）", sub: "2024年12月以降、最も重要な書類" },
       { icon: "🛂", text: "在留カード", sub: "外国人居住者向け" },
-      { icon: "💳", text: "お支払い方法", sub: "自己負担分30%の現金またはクレジットカード" },
-      { icon: "📋", text: "病歴", sub: "現在の薬とアレルギーのリスト" },
-      { icon: "🌐", text: "翻訳アプリ", sub: "Google翻訳またはDeepLによるコミュニケーション" }
+      { icon: "💳", text: "お支払い方法", sub: "自己負担分（30%）の現金またはクレジットカード" },
+      { icon: "📋", text: "病歴・現在の薬のリスト", sub: "アレルギー情報も含めて" },
+      { icon: "🌐", text: "翻訳アプリ", sub: "Google翻訳またはDeepLで医師とコミュニケーション" }
     ] %>
   <% else %>
     <% items = [
-      { icon: "🪪", text: "Insurance card (保険証 Hoken card)", sub: "Most important document" },
+      { icon: "🪪", text: "My Number Card (acts as insurance card)", sub: "Most important document since Dec 2024" },
       { icon: "🛂", text: "Residence card (在留カード)", sub: "For foreign residents" },
-      { icon: "💳", text: "Payment method", sub: "Cash or credit card for your 30% share" },
-      { icon: "📋", text: "Medical history", sub: "List of current medications & allergies" },
+      { icon: "💳", text: "Payment method", sub: "Cash or credit card for your 30% co-pay" },
+      { icon: "📋", text: "Medical history & medication list", sub: "Include any allergies" },
       { icon: "🌐", text: "Translation app", sub: "Google Translate or DeepL for communication" }
     ] %>
   <% end %>
@@ -111,7 +350,7 @@
   <% end %>
 </div>
 
-<%# Find hospitals by insurance %>
+<%# Find hospitals CTA %>
 <div style="background:linear-gradient(135deg,rgba(12,45,107,0.06),rgba(74,127,193,0.08));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.15);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);text-align:center;">
   <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:6px;"><%= t('insurance.find_label') %></p>
   <p style="font-size:11px;color:#4A7FC1;margin-bottom:12px;"><%= t('insurance.find_sub') %></p>
