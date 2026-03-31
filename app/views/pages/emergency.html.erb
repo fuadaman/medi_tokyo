@@ -11,42 +11,58 @@
       <path d="M12 7v5M12 16h.01" stroke-width="2.5"/>
     </svg>
   </div>
-  <h1 style="font-size:18px;font-weight:600;color:#E24B4A;margin-bottom:4px;">Emergency / 緊急</h1>
-  <p style="font-size:12px;color:rgba(226,75,74,0.7);">Tap any number to call immediately</p>
+  <h1 style="font-size:18px;font-weight:600;color:#E24B4A;margin-bottom:4px;"><%= t('emergency.title') %></h1>
+  <p style="font-size:12px;color:rgba(226,75,74,0.7);"><%= t('emergency.sub') %></p>
 </div>
 
 <%# Emergency Numbers %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">Emergency Numbers</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('emergency.numbers_label') %></p>
 
 <% @emergency_contacts.each do |contact| %>
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);<%= contact.number == '119' || contact.number == '110' ? 'border:1px solid rgba(226,75,74,0.15);' : 'border:1px solid rgba(74,127,193,0.15);' %>">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;">
       <div style="flex:1;">
         <p style="font-size:<%= contact.number == '119' || contact.number == '110' ? '32px' : '18px' %>;font-weight:700;color:<%= contact.number == '119' || contact.number == '110' ? '#E24B4A' : '#0C2D6B' %>;line-height:1;margin-bottom:4px;"><%= contact.number %></p>
-        <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:2px;"><%= contact.name_en %></p>
-        <p style="font-size:11px;color:#4A7FC1;"><%= contact.name_jp %></p>
+        <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:2px;">
+          <%= locale_field(contact, :name) %>
+        </p>
+        <p style="font-size:11px;color:#4A7FC1;">
+          <%= I18n.locale == :ja ? contact.name_en : contact.name_jp %>
+        </p>
       </div>
       <a href="tel:<%= contact.number %>" style="background:<%= contact.number == '119' || contact.number == '110' ? '#E24B4A' : 'linear-gradient(135deg,#4A7FC1,#0C2D6B)' %>;color:#fff;font-size:12px;font-weight:600;padding:10px 16px;border-radius:12px;text-decoration:none;display:flex;align-items:center;gap:6px;flex-shrink:0;box-shadow:0 4px 12px rgba(12,45,107,0.2);">
         <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M3 3h4l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v4a2 2 0 01-2 2C6 20 0 14 0 5a2 2 0 012-2z"/></svg>
-        Call
+        <%= t('emergency.numbers_label') == '緊急番号' ? '電話' : 'Call' %>
       </a>
     </div>
-    <p style="font-size:11px;color:#4A7FC1;line-height:1.6;"><%= contact.description_en %></p>
+    <p style="font-size:11px;color:#4A7FC1;line-height:1.6;">
+      <%= locale_field(contact, :description) %>
+    </p>
   </div>
 <% end %>
 
 <%# What to do section %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;margin-top:8px;">What to do in an emergency</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;margin-top:8px;"><%= t('emergency.steps_label') %></p>
 
 <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
 
-  <% steps = [
-    { num: "1", en: "Stay calm and call 119 immediately", jp: "落ち着いて、すぐに119番に電話してください" },
-    { num: "2", en: "Say 'Kyuukyuu desu' (救急です) — It's an emergency", jp: "「救急です」と伝えてください" },
-    { num: "3", en: "Give your location clearly — street name or landmark", jp: "現在地を明確に伝えてください" },
-    { num: "4", en: "Describe symptoms as clearly as possible", jp: "症状をできるだけ明確に説明してください" },
-    { num: "5", en: "English operators available 24 hours", jp: "英語対応オペレーターが24時間対応" }
-  ] %>
+  <% if I18n.locale == :ja %>
+    <% steps = [
+      { num: "1", text: "落ち着いて、すぐに119番に電話してください", sub: "Stay calm and call 119 immediately" },
+      { num: "2", text: "「救急です」と伝えてください", sub: "Say 'Kyuukyuu desu' — It's an emergency" },
+      { num: "3", text: "現在地を明確に伝えてください", sub: "Give your location clearly" },
+      { num: "4", text: "症状をできるだけ明確に説明してください", sub: "Describe symptoms as clearly as possible" },
+      { num: "5", text: "英語対応オペレーターが24時間対応", sub: "English operators available 24 hours" }
+    ] %>
+  <% else %>
+    <% steps = [
+      { num: "1", text: "Stay calm and call 119 immediately", sub: "落ち着いて、すぐに119番に電話してください" },
+      { num: "2", text: "Say 'Kyuukyuu desu' (救急です) — It's an emergency", sub: "「救急です」と伝えてください" },
+      { num: "3", text: "Give your location clearly — street name or landmark", sub: "現在地を明確に伝えてください" },
+      { num: "4", text: "Describe symptoms as clearly as possible", sub: "症状をできるだけ明確に説明してください" },
+      { num: "5", text: "English operators available 24 hours", sub: "英語対応オペレーターが24時間対応" }
+    ] %>
+  <% end %>
 
   <% steps.each_with_index do |step, index| %>
     <div style="display:flex;gap:12px;align-items:flex-start;<%= index < steps.length - 1 ? 'margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
@@ -54,8 +70,8 @@
         <%= step[:num] %>
       </div>
       <div>
-        <p style="font-size:12px;font-weight:500;color:#0C2D6B;margin-bottom:2px;line-height:1.5;"><%= step[:en] %></p>
-        <p style="font-size:10px;color:#4A7FC1;"><%= step[:jp] %></p>
+        <p style="font-size:12px;font-weight:500;color:#0C2D6B;margin-bottom:2px;line-height:1.5;"><%= step[:text] %></p>
+        <p style="font-size:10px;color:#4A7FC1;"><%= step[:sub] %></p>
       </div>
     </div>
   <% end %>
@@ -63,7 +79,7 @@
 </div>
 
 <%# First Aid Tips %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">Basic First Aid</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('emergency.first_aid') %></p>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
 
@@ -73,8 +89,8 @@
         <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
       </svg>
     </div>
-    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;">CPR</p>
-    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;">30 chest compressions, 2 rescue breaths. Repeat until help arrives.</p>
+    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;"><%= t('emergency.cpr') %></p>
+    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;"><%= t('emergency.cpr_text') %></p>
   </div>
 
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:14px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
@@ -83,8 +99,8 @@
         <path d="M12 2v20M2 12h20"/>
       </svg>
     </div>
-    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;">Bleeding</p>
-    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;">Apply firm pressure with clean cloth. Keep pressure until help arrives.</p>
+    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;"><%= t('emergency.bleeding') %></p>
+    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;"><%= t('emergency.bleeding_text') %></p>
   </div>
 
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:14px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
@@ -95,8 +111,8 @@
         <path d="M9 9h.01M15 9h.01"/>
       </svg>
     </div>
-    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;">Choking</p>
-    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;">5 back blows, then 5 abdominal thrusts. Call 119 immediately.</p>
+    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;"><%= t('emergency.choking') %></p>
+    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;"><%= t('emergency.choking_text') %></p>
   </div>
 
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:14px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
@@ -106,8 +122,8 @@
         <path d="M12 8v4M12 16h.01"/>
       </svg>
     </div>
-    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;">Burns</p>
-    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;">Cool with running water for 10 min. Do not use ice or butter.</p>
+    <p style="font-size:11px;font-weight:600;color:#0C2D6B;margin-bottom:4px;"><%= t('emergency.burns') %></p>
+    <p style="font-size:10px;color:#4A7FC1;line-height:1.5;"><%= t('emergency.burns_text') %></p>
   </div>
 
 </div>
@@ -115,6 +131,6 @@
 <%# Disclaimer %>
 <div style="background:rgba(74,127,193,0.05);border:1px solid rgba(74,127,193,0.12);border-radius:12px;padding:12px;margin-bottom:8px;">
   <p style="font-size:10px;color:#4A7FC1;line-height:1.6;text-align:center;">
-    This is basic guidance only. Always call 119 in a medical emergency. MediTokyo is not a substitute for professional medical advice.
+    <%= t('emergency.disclaimer') %>
   </p>
 </div>

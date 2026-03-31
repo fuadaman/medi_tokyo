@@ -56,8 +56,8 @@
 
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
         <div style="flex:1;">
-          <p class="hosp-name"><%= hospital.name_en %></p>
-          <p class="hosp-jp"><%= hospital.name_jp %></p>
+          <p class="hosp-name"><%= locale_field(hospital, :name) %></p>
+          <p class="hosp-jp"><%= I18n.locale == :ja ? hospital.name_en : hospital.name_jp %></p>
           <p class="hosp-meta"><%= hospital.ward %> · <%= hospital.phone %></p>
         </div>
         <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;">

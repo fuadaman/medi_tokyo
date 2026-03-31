@@ -10,12 +10,12 @@
       <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/>
     </svg>
   </div>
-  <h1 style="font-size:18px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">Japanese Health Insurance</h1>
-  <p style="font-size:12px;color:#4A7FC1;line-height:1.6;">Japan covers <strong style="color:#0C2D6B;">70%</strong> of all medical costs for insured residents. Here's everything you need to know.</p>
+  <h1 style="font-size:18px;font-weight:600;color:#0C2D6B;margin-bottom:6px;"><%= t('insurance.title') %></h1>
+  <p style="font-size:12px;color:#4A7FC1;line-height:1.6;"><%= t('insurance.subtitle') %></p>
 </div>
 
 <%# Insurance Guide Cards %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">Insurance Types</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.types_label') %></p>
 
 <% @insurance_guides.each do |guide| %>
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.1);">
@@ -23,26 +23,32 @@
     <%# Header %>
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
       <div>
-        <h2 style="font-size:15px;font-weight:600;color:#0C2D6B;margin-bottom:2px;"><%= guide.title_en %></h2>
-        <p style="font-size:11px;color:#4A7FC1;"><%= guide.title_jp %></p>
+        <h2 style="font-size:15px;font-weight:600;color:#0C2D6B;margin-bottom:2px;">
+          <%= locale_field(guide, :title) %>
+        </h2>
+        <p style="font-size:11px;color:#4A7FC1;">
+          <%= I18n.locale == :ja ? guide.title_en : guide.title_jp %>
+        </p>
       </div>
       <span style="font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;white-space:nowrap;
         <%= guide.insurance_type == 'travel_insurance' ? 'background:rgba(186,117,23,0.1);color:#633806;' : 'background:rgba(12,45,107,0.08);color:#0C2D6B;' %>">
-        <%= guide.coverage_percent %>% covered
+        <%= guide.coverage_percent %><%= t('insurance.covered') %>
       </span>
     </div>
 
     <%# Body %>
-    <p style="font-size:12px;color:#4A7FC1;line-height:1.7;margin-bottom:12px;"><%= guide.body_en %></p>
+    <p style="font-size:12px;color:#4A7FC1;line-height:1.7;margin-bottom:12px;">
+      <%= locale_field(guide, :body) %>
+    </p>
 
     <%# Key tip box %>
     <div style="background:rgba(219,238,255,0.5);border-radius:10px;padding:10px 12px;border-left:3px solid #4A7FC1;">
       <% if guide.insurance_type == 'shakai_hoken' %>
-        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 Bring your 保険証 (Hoken card) to every hospital visit.</p>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_shakai') %></p>
       <% elsif guide.insurance_type == 'kokumin_hoken' %>
-        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 Enroll at your ward office (区役所) within 14 days of arrival.</p>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_kokumin') %></p>
       <% elsif guide.insurance_type == 'travel_insurance' %>
-        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 Most Japanese hospitals do not accept foreign insurance directly — pay first, claim later.</p>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_travel') %></p>
       <% end %>
     </div>
 
@@ -50,7 +56,7 @@
 <% end %>
 
 <%# Maternity Allowance %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;margin-top:4px;">Maternity Allowance</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;margin-top:4px;"><%= t('insurance.maternity_label') %></p>
 
 <div style="background:linear-gradient(135deg,rgba(251,234,240,0.8),rgba(244,192,209,0.3));backdrop-filter:blur(40px);border:1px solid rgba(212,83,126,0.15);border-radius:16px;padding:20px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
   <div style="display:flex;align-items:flex-start;gap:14px;">
@@ -61,33 +67,44 @@
       </svg>
     </div>
     <div style="flex:1;">
-      <p style="font-size:13px;font-weight:600;color:#72243E;margin-bottom:4px;">Childbirth Lump-Sum Grant</p>
+      <p style="font-size:13px;font-weight:600;color:#72243E;margin-bottom:4px;"><%= t('insurance.maternity_title') %></p>
       <p style="font-size:28px;font-weight:700;color:#993556;margin-bottom:6px;line-height:1;">¥500,000</p>
-      <p style="font-size:11px;color:#72243E;line-height:1.6;margin-bottom:8px;">Per baby, for all insured residents. Normal delivery costs are not billed through insurance — you receive this grant instead. Enroll in Shakai Hoken or Kokumin Hoken to qualify.</p>
+      <p style="font-size:11px;color:#72243E;line-height:1.6;margin-bottom:8px;"><%= t('insurance.maternity_text') %></p>
       <div style="background:rgba(255,255,255,0.6);border-radius:8px;padding:8px 10px;">
-        <p style="font-size:10px;font-weight:500;color:#72243E;">💡 Many hospitals arrange direct payment — you only pay the difference above ¥500,000.</p>
+        <p style="font-size:10px;font-weight:500;color:#72243E;">💡 <%= t('insurance.maternity_tip') %></p>
       </div>
     </div>
   </div>
 </div>
 
 <%# What to bring %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">What to Bring to Hospital</p>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.bring_label') %></p>
 
 <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
-  <% items = [
-    { icon: "🪪", en: "Insurance card (保険証 Hoken card)", sub: "Most important document" },
-    { icon: "🛂", en: "Residence card (在留カード)", sub: "For foreign residents" },
-    { icon: "💳", en: "Payment method", sub: "Cash or credit card for your 30% share" },
-    { icon: "📋", en: "Medical history", sub: "List of current medications & allergies" },
-    { icon: "🌐", en: "Translation app", sub: "Google Translate or DeepL for communication" }
-  ] %>
+
+  <% if I18n.locale == :ja %>
+    <% items = [
+      { icon: "🪪", text: "保険証（Hoken カード）", sub: "最も重要な書類" },
+      { icon: "🛂", text: "在留カード", sub: "外国人居住者向け" },
+      { icon: "💳", text: "お支払い方法", sub: "自己負担分30%の現金またはクレジットカード" },
+      { icon: "📋", text: "病歴", sub: "現在の薬とアレルギーのリスト" },
+      { icon: "🌐", text: "翻訳アプリ", sub: "Google翻訳またはDeepLによるコミュニケーション" }
+    ] %>
+  <% else %>
+    <% items = [
+      { icon: "🪪", text: "Insurance card (保険証 Hoken card)", sub: "Most important document" },
+      { icon: "🛂", text: "Residence card (在留カード)", sub: "For foreign residents" },
+      { icon: "💳", text: "Payment method", sub: "Cash or credit card for your 30% share" },
+      { icon: "📋", text: "Medical history", sub: "List of current medications & allergies" },
+      { icon: "🌐", text: "Translation app", sub: "Google Translate or DeepL for communication" }
+    ] %>
+  <% end %>
 
   <% items.each_with_index do |item, index| %>
     <div style="display:flex;align-items:flex-start;gap:12px;<%= index < items.length - 1 ? 'margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
-      <span style="font-size:20px;flex-shrink:0;"></span>
+      <span style="font-size:20px;flex-shrink:0;"><%= item[:icon] %></span>
       <div>
-        <p style="font-size:12px;font-weight:500;color:#0C2D6B;margin-bottom:1px;"><%= item[:en] %></p>
+        <p style="font-size:12px;font-weight:500;color:#0C2D6B;margin-bottom:1px;"><%= item[:text] %></p>
         <p style="font-size:10px;color:#4A7FC1;"><%= item[:sub] %></p>
       </div>
     </div>
@@ -96,17 +113,17 @@
 
 <%# Find hospitals by insurance %>
 <div style="background:linear-gradient(135deg,rgba(12,45,107,0.06),rgba(74,127,193,0.08));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.15);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);text-align:center;">
-  <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">Find hospitals that accept your insurance</p>
-  <p style="font-size:11px;color:#4A7FC1;margin-bottom:12px;">Filter by Shakai Hoken, Kokumin Hoken or Travel Insurance</p>
+  <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:6px;"><%= t('insurance.find_label') %></p>
+  <p style="font-size:11px;color:#4A7FC1;margin-bottom:12px;"><%= t('insurance.find_sub') %></p>
   <a href="<%= hospitals_path %>" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4A7FC1,#0C2D6B);color:#fff;font-size:13px;font-weight:500;padding:12px 24px;border-radius:12px;text-decoration:none;box-shadow:0 4px 12px rgba(12,45,107,0.25);">
     <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M15 15l3 3"/></svg>
-    Search Hospitals
+    <%= t('insurance.search_btn') %>
   </a>
 </div>
 
 <%# Disclaimer %>
 <div style="background:rgba(74,127,193,0.05);border:1px solid rgba(74,127,193,0.12);border-radius:12px;padding:12px;margin-bottom:8px;">
   <p style="font-size:10px;color:#4A7FC1;line-height:1.6;text-align:center;">
-    Information based on official MHLW, nenkin.go.jp and Tokyo Metropolitan Government sources. Always confirm with your hospital or insurer before visiting.
+    <%= t('insurance.disclaimer') %>
   </p>
 </div>
