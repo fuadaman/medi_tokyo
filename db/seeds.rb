@@ -565,6 +565,3483 @@ red_cross = Hospital.create!(
 )
 
 # =============================================================
+# HOSPITALS — PART 4: WARD-BY-WARD COVERAGE (23 WARDS)
+# =============================================================
+puts "Creating ward-by-ward hospitals & clinics..."
+
+# --- ARAKAWA-KU ---
+kosaka_ophthalmology = Hospital.create!(
+  name_en: "Kosaka Ophthalmology",
+  name_jp: "小坂眼科",
+  phone: "03-5615-0321",
+  website_url: "https://maps.google.com/?q=Kosaka+Ophthalmology+Arakawa+Tokyo",
+  ward: "Arakawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- ADACHI-KU ---
+aqua_dental = Hospital.create!(
+  name_en: "aQua Dental Clinic",
+  name_jp: "アクア歯科クリニック",
+  phone: "03-3882-6677",
+  website_url: "https://maps.google.com/?q=aQua+Dental+Clinic+Adachi+Tokyo",
+  ward: "Adachi-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takahashi_clinic_adachi = Hospital.create!(
+  name_en: "Takahashi Clinic Adachi-ku",
+  name_jp: "高橋クリニック足立区",
+  phone: "03-3854-3031",
+  website_url: "https://maps.google.com/?q=Takahashi+Clinic+Adachi+Tokyo",
+  ward: "Adachi-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kohoku_family_clinic = Hospital.create!(
+  name_en: "Kohoku Family Clinic",
+  name_jp: "江北ファミリークリニック",
+  phone: "03-3897-3030",
+  website_url: "https://maps.google.com/?q=kohoku+family+clinic+Adachi+Tokyo",
+  ward: "Adachi-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- KATSUSHIKA-KU ---
+koujinkai_daiichi = Hospital.create!(
+  name_en: "Koujinkai Daiichi Hospital",
+  name_jp: "厚仁会第一病院",
+  phone: "03-3607-0007",
+  website_url: "https://maps.google.com/?q=Koujinkai+Daiichi+Hospital+Katsushika+Tokyo",
+  ward: "Katsushika-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tobu_chiiki = Hospital.create!(
+  name_en: "Tokyo Metropolitan Tobu Chiiki Hospital",
+  name_jp: "東京都立東部地域病院",
+  phone: "03-5682-5111",
+  website_url: "https://maps.google.com/?q=Tokyo+Metropolitan+Tobu+Chiiki+Hospital+Katsushika+Tokyo",
+  ward: "Katsushika-ku",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- SUMIDA-KU ---
+# NOTE: bokutoh (Tokyo Metropolitan Bokutoh Hospital) is already defined above with full verified data.
+
+kinshicho_mint_dental = Hospital.create!(
+  name_en: "Kinshicho Mint Dental Clinic",
+  name_jp: "錦糸町ミント歯科",
+  phone: "03-5637-7610",
+  website_url: "https://maps.google.com/?q=Kinshicho+Mint+Dental+Clinic+Sumida+Tokyo",
+  ward: "Sumida-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- KOTO-KU ---
+telecom_center_dental = Hospital.create!(
+  name_en: "Telecom Center Dental Office",
+  name_jp: "テレコムセンター歯科",
+  phone: "03-5500-0418",
+  website_url: "https://maps.google.com/?q=Telecom+Center+Dental+Office+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+wakaba_dental = Hospital.create!(
+  name_en: "Wakaba Dental Clinic",
+  name_jp: "わかば歯科クリニック",
+  phone: "03-3684-3655",
+  website_url: "https://maps.google.com/?q=Wakaba+Dental+Clinic+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+sekoukai_dental = Hospital.create!(
+  name_en: "Sekoukai Dental Office Tokyo Bay",
+  name_jp: "世光会歯科東京ベイ",
+  phone: "03-5530-3755",
+  website_url: "https://maps.google.com/?q=Sekoukai+Dental+Office+Tokyo+Bay+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ono_cardiology = Hospital.create!(
+  name_en: "Ono Cardiology and GP Medical Office",
+  name_jp: "小野循環器科・内科医院",
+  phone: "03-3636-5505",
+  website_url: "https://maps.google.com/?q=Ono+Cardiology+GP+Medical+Office+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kobayashi_clinic_koto = Hospital.create!(
+  name_en: "Kobayashi Clinic",
+  name_jp: "小林クリニック",
+  phone: "03-3684-0481",
+  website_url: "https://maps.google.com/?q=Kobayashi+Clinic+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+heiwa_memorial_clinic = Hospital.create!(
+  name_en: "Heiwa Memorial Clinic",
+  name_jp: "平和記念クリニック",
+  phone: "03-3820-8880",
+  website_url: "https://maps.google.com/?q=HEIWA+MEMORIAL+CLINIC+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+toyosu_minna_clinic = Hospital.create!(
+  name_en: "Toyosu Minna Clinic Toyosu",
+  name_jp: "豊洲みんなクリニック豊洲",
+  phone: "03-6204-2733",
+  website_url: "https://maps.google.com/?q=Toyosu+Minna+Clinic+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kameido_eye_clinic = Hospital.create!(
+  name_en: "Kameido Eye Clinic",
+  name_jp: "亀戸眼科クリニック",
+  phone: "03-3682-9973",
+  website_url: "https://maps.google.com/?q=Kameido+Eye+Clinic+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kameido_central_clinic = Hospital.create!(
+  name_en: "Kameido Central Clinic",
+  name_jp: "亀戸セントラルクリニック",
+  phone: "03-5628-6531",
+  website_url: "https://maps.google.com/?q=KAMEIDO+CENTRAL+CLINIC+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shinonome_medical = Hospital.create!(
+  name_en: "Shinonome Medical Clinic",
+  name_jp: "塩浜医院",
+  phone: "03-6910-1623",
+  website_url: "https://maps.google.com/?q=Shinonome+medical+clinic+Koto+Tokyo",
+  ward: "Koto-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- EDOGAWA-KU ---
+moriyama_memorial = Hospital.create!(
+  name_en: "Moriyama Memorial Hospital",
+  name_jp: "森山記念病院",
+  phone: "03-5679-1211",
+  website_url: "https://maps.google.com/?q=Moriyama+Memorial+Hospital+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_rinkai = Hospital.create!(
+  name_en: "Tokyo Rinkai Hospital",
+  name_jp: "東京臨海病院",
+  phone: "03-5605-8811",
+  website_url: "https://maps.google.com/?q=Tokyo+Rinkai+Hospital+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nishikasai_lifestyle_a = Hospital.create!(
+  name_en: "Nishikasai Life Style Clinic",
+  name_jp: "西葛西ライフスタイルクリニック",
+  phone: "080-4340-9083",
+  website_url: "https://maps.google.com/?q=Nishikasai+Life+Style+Clinic+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nishikasai_smile_dental = Hospital.create!(
+  name_en: "Nishikasai Smile Dental Clinic",
+  name_jp: "西葛西スマイル歯科",
+  phone: "03-3675-4182",
+  website_url: "https://maps.google.com/?q=Nishikasai+Smile+Dental+Clinic+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+himawari_dental = Hospital.create!(
+  name_en: "Himawari Dental Clinic",
+  name_jp: "ひまわり歯科クリニック",
+  phone: "03-5622-2350",
+  website_url: "https://maps.google.com/?q=Himawari+Dental+Clinic+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nishikasai_lifestyle_b = Hospital.create!(
+  name_en: "Nishikasai Lifestyle Clinic (Branch)",
+  name_jp: "西葛西ライフスタイルクリニック（別院）",
+  phone: "080-3640-9636",
+  website_url: "https://maps.google.com/?q=NISHIKASAI+LIFESTYLE+CLINIC+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Multiple languages supported via translation machine.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kobayashi_dental_edogawa = Hospital.create!(
+  name_en: "Kobayashi Dental Clinic",
+  name_jp: "小林歯科クリニック",
+  phone: "03-3653-7567",
+  website_url: "https://maps.google.com/?q=KOBAYASHI+DENTAL+CLINIC+Edogawa+Tokyo",
+  ward: "Edogawa-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Home visit available. English and Russian supported for home visits.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- CHIYODA-KU ---
+tokyo_station_international = Hospital.create!(
+  name_en: "Tokyo Station International Clinic",
+  name_jp: "東京ステーションインターナショナルクリニック",
+  phone: "03-6206-3070",
+  website_url: "https://maps.google.com/?q=Tokyo+Station+International+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+isdorly_orthodontic = Hospital.create!(
+  name_en: "Isdorly Orthodontic Office",
+  name_jp: "イズドーリー矯正歯科",
+  phone: "03-6206-4806",
+  website_url: "https://maps.google.com/?q=Isdorly+Orthodontic+Office+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ochanomizu_vascular = Hospital.create!(
+  name_en: "Ochanomizu Vascular & Vein Clinic",
+  name_jp: "御茶ノ水血管・静脈クリニック",
+  phone: "03-5281-4103",
+  website_url: "https://maps.google.com/?q=Ochanomizu+Vascular+Vein+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shinomiya_clinic = Hospital.create!(
+  name_en: "Shinomiya Clinic",
+  name_jp: "四宮クリニック",
+  phone: "03-5687-1516",
+  website_url: "https://maps.google.com/?q=Shinomiya+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ambulatory_vascular = Hospital.create!(
+  name_en: "Ambulatory Vascular Surgical Clinic Tokyo",
+  name_jp: "東京外来血管外科クリニック",
+  phone: "03-5289-0072",
+  website_url: "https://maps.google.com/?q=Ambulatory+Vascular+Surgical+Clinic+Tokyo+Chiyoda",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+dental_salon_kojimachi = Hospital.create!(
+  name_en: "Dental Salon Kojimachi",
+  name_jp: "デンタルサロン麹町",
+  phone: "03-6268-9810",
+  website_url: "https://maps.google.com/?q=Dental+Salon+Kojimachi+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+your_clinic_akihabara = Hospital.create!(
+  name_en: "Your Clinic Akihabara",
+  name_jp: "ユアクリニック秋葉原",
+  phone: "03-3256-1180",
+  website_url: "https://maps.google.com/?q=Your+Clinic+Akihabara+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ichihashi_dental = Hospital.create!(
+  name_en: "Ichihashi Dental Clinic",
+  name_jp: "市橋歯科クリニック",
+  phone: "03-3211-2848",
+  website_url: "https://maps.google.com/?q=Ichihashi+Dental+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokousha_kensin = Hospital.create!(
+  name_en: "Tokousha Kensin Clinic",
+  name_jp: "東光社健診クリニック",
+  phone: "03-3212-0105",
+  website_url: "https://maps.google.com/?q=Tokousha+Kensin+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+sanno_medical = Hospital.create!(
+  name_en: "Sanno Medical Clinic",
+  name_jp: "山王メディカルクリニック",
+  phone: "03-3580-5001",
+  website_url: "https://maps.google.com/?q=Sanno+Medical+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+jtk_clinic = Hospital.create!(
+  name_en: "JTK Clinic",
+  name_jp: "JTKクリニック",
+  phone: "03-6261-6386",
+  website_url: "https://maps.google.com/?q=JTK+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kojimachi_dermatology = Hospital.create!(
+  name_en: "Kojimachi Dermatology, Plastic Surgery Clinic",
+  name_jp: "麹町皮膚科・形成外科クリニック",
+  phone: "03-6261-2458",
+  website_url: "https://maps.google.com/?q=Kojimachi+Dermatology+Plastic+Surgery+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kandabashi_dental = Hospital.create!(
+  name_en: "Kandabashi Dental Office",
+  name_jp: "神田橋デンタルオフィス",
+  phone: "03-5283-6533",
+  website_url: "https://maps.google.com/?q=Kandabashi+Dental+Office+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+st_lukes_medilocus = Hospital.create!(
+  name_en: "St. Luke's MediLocus",
+  name_jp: "聖路加メディローカス",
+  phone: "03-3527-9520",
+  website_url: "https://maps.google.com/?q=St+Lukes+MediLocus+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+imperial_clinic = Hospital.create!(
+  name_en: "Imperial Clinic",
+  name_jp: "インペリアルクリニック",
+  phone: "03-3503-8681",
+  website_url: "https://maps.google.com/?q=Imperial+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_seaside_clinic = Hospital.create!(
+  name_en: "Tokyo Seaside Clinic",
+  name_jp: "東京シーサイドクリニック",
+  phone: "03-6272-6616",
+  website_url: "https://maps.google.com/?q=Tokyo+Seaside+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_business_clinic_marunouchi = Hospital.create!(
+  name_en: "Tokyo Business Clinic GRANSTA Marunouchi",
+  name_jp: "東京ビジネスクリニックGRANSTA丸の内",
+  phone: "03-6259-1605",
+  website_url: "https://maps.google.com/?q=Tokyo+Business+Clinic+GRANSTA+MARUNOUCHI+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_business_clinic_yaesu = Hospital.create!(
+  name_en: "Tokyo Business Clinic Yaesu-kitaguchi",
+  name_jp: "東京ビジネスクリニック八重洲北口",
+  phone: "03-6268-0079",
+  website_url: "https://maps.google.com/?q=Tokyo+Business+Clinic+Yaesu+kitaguchi+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_teishin = Hospital.create!(
+  name_en: "Tokyo Teishin Hospital",
+  name_jp: "東京逓信病院",
+  phone: "03-5214-7111",
+  website_url: "https://maps.google.com/?q=Tokyo+Teishin+Hospital+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hibiya_clinic = Hospital.create!(
+  name_en: "Hibiya Clinic",
+  name_jp: "日比谷クリニック",
+  phone: "03-3215-1105",
+  website_url: "https://maps.google.com/?q=Hibiya+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hamille_dental_tokyo = Hospital.create!(
+  name_en: "Hamille Tokyo Dental Office",
+  name_jp: "ハミルトン東京デンタルオフィス",
+  phone: "03-5280-6480",
+  website_url: "https://maps.google.com/?q=HAMILLE+TOKYO+DENTAL+OFFICE+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Chinese (Mandarin only) available via return call.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hamille_ogawamachi = Hospital.create!(
+  name_en: "Hamille Tokyo Ogawamachi",
+  name_jp: "ハミルトン東京小川町",
+  phone: "03-6275-0988",
+  website_url: "https://maps.google.com/?q=HAMILLE+TOKYO+OGAWAMACHI+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+asahi_ladies_clinic = Hospital.create!(
+  name_en: "Asahi Ladies Clinic",
+  name_jp: "旭レディースクリニック",
+  phone: "03-3251-3588",
+  website_url: "https://maps.google.com/?q=Asahi+Ladies+Clinic+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+minsyu_dermatology = Hospital.create!(
+  name_en: "Minsyu Dermatology Clinic Kudan-Kaikan Terrace",
+  name_jp: "民主皮膚科クリニック九段会館テラス",
+  phone: "03-6256-8981",
+  website_url: "https://maps.google.com/?q=MINSYU+Dermatology+Clinic+KUDAN+KAIKAN+TERRACE+Chiyoda+Tokyo",
+  ward: "Chiyoda-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- CHUO-KU ---
+# NOTE: st_lukes (St. Luke's International Hospital) is already defined above with full verified data.
+
+kishi_clinica_femina = Hospital.create!(
+  name_en: "Kishi Clinica Femina",
+  name_jp: "岸クリニカフェミナ",
+  phone: "03-5537-7171",
+  website_url: "https://maps.google.com/?q=KISHI+CLINICA+FEMINA+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+online_general_clinic = Hospital.create!(
+  name_en: "Online General Clinic",
+  name_jp: "オンライン総合クリニック",
+  phone: "03-6691-9525",
+  website_url: "https://maps.google.com/?q=Online+General+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+koike_clinic = Hospital.create!(
+  name_en: "Koike Clinic",
+  name_jp: "小池クリニック",
+  phone: "03-3271-0813",
+  website_url: "https://maps.google.com/?q=Koike+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mamizuka_dental = Hospital.create!(
+  name_en: "Mamizuka Dental Clinic",
+  name_jp: "間見塚歯科クリニック",
+  phone: "03-3541-8110",
+  website_url: "https://maps.google.com/?q=Mamizuka+Dental+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+pulice_beauty = Hospital.create!(
+  name_en: "Pulice Beauty & Health",
+  name_jp: "プリス美容・健康",
+  phone: "03-3538-6767",
+  website_url: "https://maps.google.com/?q=Pulice+Beauty+Health+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+yaesugai_medical = Hospital.create!(
+  name_en: "Yaesugai Medical Clinic",
+  name_jp: "八重洲外医院",
+  phone: "03-3271-1828",
+  website_url: "https://maps.google.com/?q=Yaesugai+Medical+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+fujimoto_international_dental = Hospital.create!(
+  name_en: "Fujimoto International Dental Clinic",
+  name_jp: "藤本インターナショナル歯科クリニック",
+  phone: "03-5551-0051",
+  website_url: "https://maps.google.com/?q=Fujimoto+International+Dental+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kameda_kyobashi = Hospital.create!(
+  name_en: "Kameda Kyobashi Clinic",
+  name_jp: "亀田京橋クリニック",
+  phone: "03-5542-1182",
+  website_url: "https://maps.google.com/?q=Kameda+Kyobashi+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nihonbashi_primary = Hospital.create!(
+  name_en: "Nihonbashi Primary Health Care Clinic",
+  name_jp: "日本橋プライマリケアクリニック",
+  phone: "03-6667-0855",
+  website_url: "https://maps.google.com/?q=Nihonbashi+Primary+Health+Care+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ps_i_clinic = Hospital.create!(
+  name_en: "Psychosomatic and Internal Medicine Clinic (Ps I Clinic)",
+  name_jp: "心療内科・内科クリニック（Ps Iクリニック）",
+  phone: "03-6228-5581",
+  website_url: "https://maps.google.com/?q=Ps+I+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+harai_clinic = Hospital.create!(
+  name_en: "Harai Clinic",
+  name_jp: "原井クリニック",
+  phone: "03-3538-6055",
+  website_url: "https://maps.google.com/?q=Harai+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+igarashi_endocrine = Hospital.create!(
+  name_en: "Igarashi Endocrine Clinic",
+  name_jp: "五十嵐内分泌クリニック",
+  phone: "03-3820-8855",
+  website_url: "https://maps.google.com/?q=Igarashi+Endocrine+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takahashi_clinic_chuo = Hospital.create!(
+  name_en: "Takahashi Clinic",
+  name_jp: "高橋クリニック",
+  phone: "03-3551-5955",
+  website_url: "https://maps.google.com/?q=Takahashi+Clinic+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ningyocho_internal_medicine = Hospital.create!(
+  name_en: "Internal Medicine General Clinic Ningyocho",
+  name_jp: "内科一般クリニック人形町",
+  phone: "050-3146-4285",
+  website_url: "https://maps.google.com/?q=Internal+Medicine+General+Clinic+Ningyocho+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+total_skin_care_ginza = Hospital.create!(
+  name_en: "Total Skin Care Clinic Ginza",
+  name_jp: "トータルスキンケアクリニック銀座",
+  phone: "03-6281-5208",
+  website_url: "https://maps.google.com/?q=Total+Skin+Care+Clinic+GINZA+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Multiple languages including Chinese and Korean supported via tablet.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kuramochi_nihonbashi = Hospital.create!(
+  name_en: "Kuramochi Clinic Interpark Nihonbashi",
+  name_jp: "倉持クリニックインターパーク日本橋",
+  phone: "03-5801-9893",
+  website_url: "https://maps.google.com/?q=Kuramochi+Clinic+Interpark+Nihonbashi+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mammaria_tsukiji = Hospital.create!(
+  name_en: "Mammaria Tsukiji",
+  name_jp: "マンマリア築地",
+  phone: "03-3545-0880",
+  website_url: "https://maps.google.com/?q=mammaria+tsukiji+Chuo+Tokyo",
+  ward: "Chuo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- BUNKYO-KU ---
+coco_medical = Hospital.create!(
+  name_en: "Coco Medical Clinic",
+  name_jp: "ここメディカルクリニック",
+  phone: "03-6882-3319",
+  website_url: "https://maps.google.com/?q=Coco+Medical+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+personal_health_clinic = Hospital.create!(
+  name_en: "Personal Health Clinic",
+  name_jp: "パーソナルヘルスクリニック",
+  phone: "03-5817-4415",
+  website_url: "https://maps.google.com/?q=Personal+Health+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Transgender health care available.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+murai_clinic = Hospital.create!(
+  name_en: "Internal Medicine and Cardiovascular Murai Clinic",
+  name_jp: "内科・循環器科むらいクリニック",
+  phone: "070-8339-2683",
+  website_url: "https://maps.google.com/?q=Murai+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+dentsuin_clinic = Hospital.create!(
+  name_en: "Dentsuin Clinic",
+  name_jp: "伝通院クリニック",
+  phone: "03-6912-1565",
+  website_url: "https://maps.google.com/?q=Dentsuin+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hitomi_dental_bunkyo = Hospital.create!(
+  name_en: "Hitomi Dental Office",
+  name_jp: "ひとみ歯科",
+  phone: "03-6280-8789",
+  website_url: "https://maps.google.com/?q=Hitomi+Dental+Office+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takagi_dental = Hospital.create!(
+  name_en: "Takagi Dental Clinic",
+  name_jp: "高木歯科クリニック",
+  phone: "03-3815-6725",
+  website_url: "https://maps.google.com/?q=Takagi+Dental+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+sakuma_dental = Hospital.create!(
+  name_en: "Sakuma Dental Clinic",
+  name_jp: "佐久間歯科クリニック",
+  phone: "03-3941-0280",
+  website_url: "https://maps.google.com/?q=Sakuma+Dental+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+juntendo = Hospital.create!(
+  name_en: "Juntendo University Hospital",
+  name_jp: "順天堂大学医学部附属順天堂医院",
+  phone: "03-5802-1985",
+  website_url: "https://www.juntendo.ac.jp/hospital/",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: true,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "All clinical departments available. English support provided.",
+  insurance_notes_jp: "全診療科対応。英語サポートあり。"
+)
+
+koishikawa_international = Hospital.create!(
+  name_en: "Koishikawa International Clinic",
+  name_jp: "小石川インターナショナルクリニック",
+  phone: "03-5615-8556",
+  website_url: "https://maps.google.com/?q=Koishikawa+International+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "09:30-16:30. 24-hour housecall: 03-6311-5853",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "24-hour housecall service available at separate number.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# NOTE: komagome (Tokyo Metropolitan Komagome Hospital) already defined above.
+
+nakamura_clinic_bunkyo = Hospital.create!(
+  name_en: "Nakamura Clinic",
+  name_jp: "中村クリニック",
+  phone: "03-3818-7677",
+  website_url: "https://maps.google.com/?q=Nakamura+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+institute_of_science_tokyo = Hospital.create!(
+  name_en: "Institute of Science Tokyo Hospital",
+  name_jp: "東京科学大学病院",
+  phone: "03-5803-5650",
+  website_url: "https://maps.google.com/?q=Institute+of+Science+Tokyo+Hospital+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hakusan_nagamine_eye = Hospital.create!(
+  name_en: "Hakusan Nagamine Eye Clinic",
+  name_jp: "白山長嶺眼科クリニック",
+  phone: "03-5842-2232",
+  website_url: "https://maps.google.com/?q=Hakusan+Nagamine+Eye+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hongo_ent = Hospital.create!(
+  name_en: "Hongo E.N.T. Clinic",
+  name_jp: "本郷耳鼻咽喉科クリニック",
+  phone: "03-5689-4133",
+  website_url: "https://maps.google.com/?q=Hongo+ENT+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+bunkyo_medical = Hospital.create!(
+  name_en: "Bunkyo Medical Clinic",
+  name_jp: "文京メディカルクリニック",
+  phone: "03-3827-7755",
+  website_url: "https://maps.google.com/?q=Bunkyo+Medical+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Multiple languages including Chinese, Korean, French supported via tablet.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+fix_dental = Hospital.create!(
+  name_en: "Fix Dental Clinic",
+  name_jp: "フィックス歯科クリニック",
+  phone: "03-5615-8415",
+  website_url: "https://maps.google.com/?q=Fix+Dental+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ohtsuka_clinic = Hospital.create!(
+  name_en: "Ohtsuka Clinic",
+  name_jp: "大塚クリニック",
+  phone: "03-3831-2294",
+  website_url: "https://maps.google.com/?q=Ohtsuka+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+todaimae_kids = Hospital.create!(
+  name_en: "Todaimae Kids Clinic",
+  name_jp: "東大前キッズクリニック",
+  phone: "03-3830-0161",
+  website_url: "https://maps.google.com/?q=Todaimae+Kids+Clinic+Bunkyo+Tokyo",
+  ward: "Bunkyo-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- TAITO-KU ---
+asian_beauty_clinic = Hospital.create!(
+  name_en: "Asian Beauty Clinic",
+  name_jp: "アジアンビューティークリニック",
+  phone: "03-3831-5136",
+  website_url: "https://maps.google.com/?q=Asian+Beauty+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+stress_care_ueno = Hospital.create!(
+  name_en: "Stress Care Tokyo Ueno Ekimae Clinic",
+  name_jp: "ストレスケア東京上野駅前クリニック",
+  phone: "03-3842-7730",
+  website_url: "https://maps.google.com/?q=Stress+Care+Tokyo+Ueno+Ekimae+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kyowa_clinic = Hospital.create!(
+  name_en: "Kyowa Clinic",
+  name_jp: "共和クリニック",
+  phone: "03-3835-0186",
+  website_url: "https://maps.google.com/?q=Kyowa+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+minowa_dental = Hospital.create!(
+  name_en: "Minowa Dental Clinic",
+  name_jp: "三ノ輪歯科クリニック",
+  phone: "090-3503-8871",
+  website_url: "https://maps.google.com/?q=Minowa+Dental+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+yamada_shitamachi = Hospital.create!(
+  name_en: "Yamada Hideaki Shitamachi Clinic",
+  name_jp: "山田秀明下町クリニック",
+  phone: "03-5806-3077",
+  website_url: "https://maps.google.com/?q=Yamada+Hideaki+Shitamachi+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ueno_medical = Hospital.create!(
+  name_en: "Ueno Medical Clinic",
+  name_jp: "上野メディカルクリニック",
+  phone: "03-3832-0076",
+  website_url: "https://maps.google.com/?q=Ueno+Medical+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ueno_shinagawa_dental = Hospital.create!(
+  name_en: "Ueno Shinagawa Dental & Orthodontic Clinic",
+  name_jp: "上野品川歯科・矯正歯科クリニック",
+  phone: "03-5826-8814",
+  website_url: "https://maps.google.com/?q=Ueno+Shinagawa+Dental+Orthodontic+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_business_clinic_ueno = Hospital.create!(
+  name_en: "Tokyo Business Clinic Ecute-ueno",
+  name_jp: "東京ビジネスクリニックエキュート上野",
+  phone: "03-6802-8792",
+  website_url: "https://maps.google.com/?q=Tokyo+Business+Clinic+Ecute+ueno+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+higashiueno_dental = Hospital.create!(
+  name_en: "Higashiueno Dental Clinic",
+  name_jp: "東上野歯科クリニック",
+  phone: "03-5818-4618",
+  website_url: "https://maps.google.com/?q=Higashiueno+Dental+Clinic+Taito+Tokyo",
+  ward: "Taito-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- MEGURO-KU ---
+yamashita_jiyugaoka = Hospital.create!(
+  name_en: "Yamashita Medical Clinic Jiyugaoka",
+  name_jp: "山下医院自由が丘",
+  phone: "03-3724-3811",
+  website_url: "https://maps.google.com/?q=Yamashita+Medical+Clinic+Jiyugaoka+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+loco_clinic = Hospital.create!(
+  name_en: "Loco Clinic Nakameguro",
+  name_jp: "ロコクリニック中目黒",
+  phone: "03-5722-6565",
+  website_url: "https://maps.google.com/?q=Loco+Clinic+Nakameguro+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+yamamoto_dermatology = Hospital.create!(
+  name_en: "Yamamoto Familiar Dermatology Clinic",
+  name_jp: "山本ファミリー皮膚科クリニック",
+  phone: "03-3795-1112",
+  website_url: "https://maps.google.com/?q=Yamamoto+Familiar+Dermatology+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+meguro_ootorijinja = Hospital.create!(
+  name_en: "Meguro no Ootorijinjya-mae Clinic",
+  name_jp: "目黒の大鳥神社前クリニック",
+  phone: "03-3779-7736",
+  website_url: "https://maps.google.com/?q=Meguro+Ootorijinja+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mikawa_orthodontics = Hospital.create!(
+  name_en: "Mikawa Orthodontics",
+  name_jp: "三河矯正歯科",
+  phone: "03-6421-8998",
+  website_url: "https://maps.google.com/?q=Mikawa+Orthodontics+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+matsuo_dental = Hospital.create!(
+  name_en: "Matsuo Dental Clinic",
+  name_jp: "松尾歯科クリニック",
+  phone: "03-3419-4018",
+  website_url: "https://maps.google.com/?q=Matsuo+Dental+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+la_ebs_clinique = Hospital.create!(
+  name_en: "La Ebs Clinique Dental",
+  name_jp: "ラエブスクリニークデンタル",
+  phone: "03-6451-2314",
+  website_url: "https://maps.google.com/?q=La+Ebs+Clinique+Dental+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+yamate_dental = Hospital.create!(
+  name_en: "Yamate Dental Clinic",
+  name_jp: "山手歯科クリニック",
+  phone: "03-3719-6874",
+  website_url: "https://maps.google.com/?q=Yamate+Dental+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+jiyugaoka_oral_care = Hospital.create!(
+  name_en: "Jiyugaoka Oral Care",
+  name_jp: "自由が丘オーラルケア",
+  phone: "03-5726-9185",
+  website_url: "https://maps.google.com/?q=Jiyugaoka+Oral+Care+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+genwado_dental = Hospital.create!(
+  name_en: "Genwado Dental Clinic",
+  name_jp: "源和堂歯科クリニック",
+  phone: "03-6452-3882",
+  website_url: "https://maps.google.com/?q=Genwado+Dental+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokuchi_clinic = Hospital.create!(
+  name_en: "Tokuchi Clinic",
+  name_jp: "徳地クリニック",
+  phone: "03-3712-0872",
+  website_url: "https://maps.google.com/?q=Tokuchi+Clinic+Meguro+Tokyo",
+  ward: "Meguro-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- SETAGAYA-KU ---
+nissan_tamagawa = Hospital.create!(
+  name_en: "Nissan Tamagawa Hospital",
+  name_jp: "日産玉川病院",
+  phone: "03-3700-1151",
+  website_url: "https://maps.google.com/?q=Nissan+Tamagawa+Hospital+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kanto_central = Hospital.create!(
+  name_en: "Kanto Central Hospital",
+  name_jp: "関東中央病院",
+  phone: "03-3429-1171",
+  website_url: "https://maps.google.com/?q=Kanto+Central+Hospital+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kodama_kyodo = Hospital.create!(
+  name_en: "Kodama Kyodo Hospital",
+  name_jp: "こだま共同病院",
+  phone: "03-3420-1028",
+  website_url: "https://maps.google.com/?q=Kodama+Kyodo+Hospital+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+musashi_eye = Hospital.create!(
+  name_en: "Musashi Eye Clinic",
+  name_jp: "武蔵眼科クリニック",
+  phone: "03-5760-6695",
+  website_url: "https://maps.google.com/?q=Musashi+Eye+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+karasawa_clinic = Hospital.create!(
+  name_en: "Karasawa Clinic",
+  name_jp: "からさわクリニック",
+  phone: "03-3701-7552",
+  website_url: "https://maps.google.com/?q=Karasawa+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+naomiya_clinic = Hospital.create!(
+  name_en: "Naomiya Clinic",
+  name_jp: "直宮クリニック",
+  phone: "03-3468-2867",
+  website_url: "https://maps.google.com/?q=Naomiya+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+setagaya_okada_ortho = Hospital.create!(
+  name_en: "Setagaya Okada Orthopaedic Surgery Clinic",
+  name_jp: "世田谷岡田整形外科クリニック",
+  phone: "03-3422-8877",
+  website_url: "https://maps.google.com/?q=Setagaya+Okada+Orthopaedic+Surgery+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+california_orthodontics = Hospital.create!(
+  name_en: "California Orthodontics Sangenjaya",
+  name_jp: "カリフォルニア矯正歯科三軒茶屋",
+  phone: "03-5787-8107",
+  website_url: "https://maps.google.com/?q=California+Orthodontics+Sangenjaya+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+dental_watanabe = Hospital.create!(
+  name_en: "Dental Watanabe",
+  name_jp: "デンタルワタナベ",
+  phone: "03-3309-1188",
+  website_url: "https://maps.google.com/?q=Dental+Watanabe+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takao_dental = Hospital.create!(
+  name_en: "Takao Dental Clinic",
+  name_jp: "高尾歯科クリニック",
+  phone: "03-3309-7771",
+  website_url: "https://maps.google.com/?q=Takao+Dental+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kan_dental = Hospital.create!(
+  name_en: "Kan Dental Clinic",
+  name_jp: "貫歯科クリニック",
+  phone: "03-5752-6480",
+  website_url: "https://maps.google.com/?q=Kan+Dental+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# NOTE: matsuzawa (Tokyo Metropolitan Matsuzawa Hospital) already defined above.
+
+nishikawa_dental = Hospital.create!(
+  name_en: "Nishikawa Dental Clinic",
+  name_jp: "西川歯科クリニック",
+  phone: "03-3429-0418",
+  website_url: "https://maps.google.com/?q=Nishikawa+Dental+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+futakotamagawa_celeste = Hospital.create!(
+  name_en: "Futakotamagawa Celeste Clinic",
+  name_jp: "二子玉川セレストクリニック",
+  phone: "03-6447-9511",
+  website_url: "https://maps.google.com/?q=Futakotamagawa+Celeste+Clinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+rose_ladies_clinic = Hospital.create!(
+  name_en: "Rose Ladies Clinic",
+  name_jp: "ローズレディースクリニック",
+  phone: "03-3703-0114",
+  website_url: "https://maps.google.com/?q=RoseLadiesClinic+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ncchd = Hospital.create!(
+  name_en: "National Center for Child Health and Development",
+  name_jp: "国立成育医療研究センター",
+  phone: "03-5494-5486",
+  website_url: "https://maps.google.com/?q=National+Center+Child+Health+Development+Setagaya+Tokyo",
+  ward: "Setagaya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: true,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- SHIBUYA-KU ---
+# NOTE: hiroo (Tokyo Metropolitan Hiroo Hospital) already defined above.
+# NOTE: sendagaya (Sendagaya International Clinic) already defined above.
+
+plaza_plastic_surgery = Hospital.create!(
+  name_en: "Plaza Plastic Surgery",
+  name_jp: "プラザ形成外科",
+  phone: "03-5475-2345",
+  website_url: "https://maps.google.com/?q=Plaza+Plastic+Surgery+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ogihara_orthopedics = Hospital.create!(
+  name_en: "Ogihara Orthopedics",
+  name_jp: "荻原整形外科",
+  phone: "03-5371-3001",
+  website_url: "https://maps.google.com/?q=Ogihara+Orthopedics+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takako_clinic = Hospital.create!(
+  name_en: "Takako Clinic",
+  name_jp: "たかこクリニック",
+  phone: "03-5459-7943",
+  website_url: "https://maps.google.com/?q=Takako+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+fertility_clinic_tokyo = Hospital.create!(
+  name_en: "Fertility Clinic Tokyo",
+  name_jp: "フェティリティークリニック東京",
+  phone: "03-3406-6868",
+  website_url: "https://maps.google.com/?q=Fertility+Clinic+Tokyo+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+suwa_child_family = Hospital.create!(
+  name_en: "Suwa Child Family Clinic",
+  name_jp: "諏訪こどもファミリークリニック",
+  phone: "03-3444-7070",
+  website_url: "https://maps.google.com/?q=Suwa+Child+Family+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mih_clinic_yoyogi = Hospital.create!(
+  name_en: "Mih Clinic Yoyogi",
+  name_jp: "MIHクリニック代々木",
+  phone: "03-6276-5385",
+  website_url: "https://maps.google.com/?q=Mih+Clinic+Yoyogi+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+harajuku_first_dental = Hospital.create!(
+  name_en: "Harajuku First Dental Office",
+  name_jp: "原宿ファースト歯科",
+  phone: "03-5413-6480",
+  website_url: "https://maps.google.com/?q=Harajuku+First+Dental+Office+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mihara_dental = Hospital.create!(
+  name_en: "Mihara Dental Clinic",
+  name_jp: "三原歯科クリニック",
+  phone: "03-6407-1646",
+  website_url: "https://maps.google.com/?q=Mihara+Dental+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+daikanyama_dental_salon = Hospital.create!(
+  name_en: "Daikanyama Dental Salon",
+  name_jp: "代官山デンタルサロン",
+  phone: "03-6416-5747",
+  website_url: "https://maps.google.com/?q=Daikanyama+Dental+Salon+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+daikanyama_dental_clinic = Hospital.create!(
+  name_en: "Daikanyama Dental Clinic",
+  name_jp: "代官山歯科クリニック",
+  phone: "03-3462-0787",
+  website_url: "https://maps.google.com/?q=Daikanyama+Dental+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+japan_orthodontic_center = Hospital.create!(
+  name_en: "Japan Orthodontic Center",
+  name_jp: "日本矯正歯科センター",
+  phone: "03-3499-2222",
+  website_url: "https://maps.google.com/?q=Japan+Orthodontic+Center+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+doi_dental_harajuku = Hospital.create!(
+  name_en: "Doi Dental Harajuku Clinic",
+  name_jp: "土井歯科原宿クリニック",
+  phone: "03-5414-5727",
+  website_url: "https://maps.google.com/?q=Doi+Dental+Harajuku+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hirahata_clinic = Hospital.create!(
+  name_en: "Hirahata Clinic",
+  name_jp: "平畑クリニック",
+  phone: "03-3400-3288",
+  website_url: "https://maps.google.com/?q=Hirahata+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Travel vaccinations and Chinese medicine specialty available.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+pinkribbon_omotesando = Hospital.create!(
+  name_en: "Pinkribbon Breastcare Clinic Omotesando",
+  name_jp: "ピンクリボンブレストケアクリニック表参道",
+  phone: "050-3171-3258",
+  website_url: "https://maps.google.com/?q=pinkribbon+breastcare+clinic+omotesando+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "30+ languages supported including English, Chinese, Korean, Vietnamese, Russian, and more.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+japan_china_friendship = Hospital.create!(
+  name_en: "Japan China Friendship Clinic",
+  name_jp: "日中友好クリニック",
+  phone: "03-6276-9788",
+  website_url: "https://maps.google.com/?q=Japan+China+Friendship+Clinic+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shibuya_er = Hospital.create!(
+  name_en: "Shibuya ER",
+  name_jp: "渋谷ER",
+  phone: "080-3312-9910",
+  website_url: "https://maps.google.com/?q=Shibuya+ER+Shibuya+Tokyo",
+  ward: "Shibuya-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Emergency clinic. English supported.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# --- MINATO-KU ---
+# NOTE: takanawa (JCHO Tokyo Takanawa Hospital) already defined above.
+# NOTE: saiseikai (Saiseikai Central Hospital) already defined above.
+
+iuhw_mita = Hospital.create!(
+  name_en: "IUHW Mita Hospital",
+  name_jp: "国際医療福祉大学三田病院",
+  phone: "03-3451-8121",
+  website_url: "https://maps.google.com/?q=IUHW+Mita+Hospital+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+toranomon = Hospital.create!(
+  name_en: "Toranomon Hospital",
+  name_jp: "虎の門病院",
+  phone: "03-3588-1111",
+  website_url: "https://maps.google.com/?q=Toranomon+Hospital+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: true,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "English and Chinese supported. Full multi-specialty hospital.",
+  insurance_notes_jp: "英語・中国語対応。多科病院。"
+)
+
+toranomon_nakamura = Hospital.create!(
+  name_en: "Toranomon Nakamura Clinic",
+  name_jp: "虎の門中村クリニック",
+  phone: "03-6823-1409",
+  website_url: "https://maps.google.com/?q=Toranomon+Nakamura+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nishiazabu_international = Hospital.create!(
+  name_en: "Nishiazabu International Clinic",
+  name_jp: "西麻布インターナショナルクリニック",
+  phone: "03-6447-5966",
+  website_url: "https://maps.google.com/?q=Nishiazabu+International+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kyono_art_takanawa = Hospital.create!(
+  name_en: "Kyono Art Clinic Takanawa",
+  name_jp: "京野アートクリニック高輪",
+  phone: "03-6408-4124",
+  website_url: "https://maps.google.com/?q=Kyono+Art+Clinic+Takanawa+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+roppongi_hat = Hospital.create!(
+  name_en: "Roppongi HAT Clinic",
+  name_jp: "六本木HATクリニック",
+  phone: "03-3585-3232",
+  website_url: "https://maps.google.com/?q=Roppongi+HAT+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shiba_coloproctological = Hospital.create!(
+  name_en: "Shiba International Coloproctological Clinic",
+  name_jp: "芝インターナショナル大腸肛門クリニック",
+  phone: "03-6453-9307",
+  website_url: "https://maps.google.com/?q=SHIBA+INTERNATIONAL+COLOPROCTOLOGICAL+CLINIC+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+omotesando_helene = Hospital.create!(
+  name_en: "Omotesando Helene Clinic",
+  name_jp: "表参道ヘレネクリニック",
+  phone: "03-3400-2277",
+  website_url: "https://maps.google.com/?q=Omotesando+Helene+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+international_health_care = Hospital.create!(
+  name_en: "International Health Care Clinic",
+  name_jp: "インターナショナルヘルスケアクリニック",
+  phone: "03-3501-1330",
+  website_url: "https://maps.google.com/?q=International+Health+Care+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "Interpreter consultation: Tue-Fri 15:30-18:30",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Interpreter consultation available Tuesday to Friday, 15:30-18:30.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+azabu_orthopedic = Hospital.create!(
+  name_en: "Azabu Orthopedic Clinic",
+  name_jp: "麻布整形外科クリニック",
+  phone: "03-5765-2020",
+  website_url: "https://maps.google.com/?q=Azabu+Orthopedic+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_beauty_skin = Hospital.create!(
+  name_en: "Tokyo Beauty Skin Clinic",
+  name_jp: "東京ビューティースキンクリニック",
+  phone: "03-3585-0272",
+  website_url: "https://maps.google.com/?q=Tokyo+Beauty+Skin+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "English, French, German, Dutch supported.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kumada_clinic = Hospital.create!(
+  name_en: "Kumada Clinic",
+  name_jp: "熊田クリニック",
+  phone: "03-5766-3357",
+  website_url: "https://maps.google.com/?q=Kumada+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+matsumi_ladice = Hospital.create!(
+  name_en: "Matsumi Ladice Clinic",
+  name_jp: "まつみレディースクリニック",
+  phone: "03-6453-8355",
+  website_url: "https://maps.google.com/?q=matsumi+ladice+clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+omotesando_wiz = Hospital.create!(
+  name_en: "Omotesando Wiz Clinic",
+  name_jp: "表参道ウィズクリニック",
+  phone: "03-5962-7018",
+  website_url: "https://maps.google.com/?q=Omotesando+Wiz+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+akasaka_odayaka = Hospital.create!(
+  name_en: "Akasaka Odayaka Clinic",
+  name_jp: "赤坂おだやかクリニック",
+  phone: "03-6234-0511",
+  website_url: "https://maps.google.com/?q=Akasaka+Odayaka+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ishigami_dental = Hospital.create!(
+  name_en: "Ishigami Dental Office",
+  name_jp: "石上歯科医院",
+  phone: "03-3409-6889",
+  website_url: "https://maps.google.com/?q=Ishigami+Dental+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+yamanaka_dental = Hospital.create!(
+  name_en: "Yamanaka Dental Clinic",
+  name_jp: "山中歯科クリニック",
+  phone: "03-6381-7778",
+  website_url: "https://maps.google.com/?q=Yamanaka+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takanawa_orthodontic = Hospital.create!(
+  name_en: "Takanawa Orthodontic Clinic",
+  name_jp: "高輪矯正歯科クリニック",
+  phone: "03-3280-1700",
+  website_url: "https://maps.google.com/?q=Takanawa+Orthodontic+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+azabudai_united_dental = Hospital.create!(
+  name_en: "Azabudai United Dental Office",
+  name_jp: "麻布台ユナイテッド歯科",
+  phone: "03-5570-4334",
+  website_url: "https://maps.google.com/?q=Azabudai+United+Dental+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nakajima_dental_minato = Hospital.create!(
+  name_en: "Nakajima Dental Clinic",
+  name_jp: "中島歯科クリニック",
+  phone: "03-3479-2726",
+  website_url: "https://maps.google.com/?q=Nakajima+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ichikawa_dental_akasaka = Hospital.create!(
+  name_en: "Ichikawa Dental Akasaka Office",
+  name_jp: "市川歯科赤坂オフィス",
+  phone: "03-3505-5733",
+  website_url: "https://maps.google.com/?q=Ichikawa+Dental+Akasaka+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_international_dental_roppongi = Hospital.create!(
+  name_en: "Tokyo International Dental Clinic Roppongi",
+  name_jp: "東京インターナショナル歯科六本木",
+  phone: "03-6447-5966",
+  website_url: "https://maps.google.com/?q=Tokyo+International+Dental+Clinic+Roppongi+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+mirise_orthodontics = Hospital.create!(
+  name_en: "Mirise Orthodontics Minami Aoyama",
+  name_jp: "ミライズ矯正歯科南青山",
+  phone: "03-5468-5585",
+  website_url: "https://maps.google.com/?q=Mirise+Orthodontics+Minami+Aoyama+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+reiko_dental = Hospital.create!(
+  name_en: "Reiko Dental Clinic",
+  name_jp: "れいこ歯科クリニック",
+  phone: "03-5114-6077",
+  website_url: "https://maps.google.com/?q=Reiko+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+makiyama_oral = Hospital.create!(
+  name_en: "Makiyama Kiyoshi Oral Clinic",
+  name_jp: "牧山きよし口腔クリニック",
+  phone: "03-6447-4118",
+  website_url: "https://maps.google.com/?q=Makiyama+Kiyoshi+Oral+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+azabu_tokyo_dental = Hospital.create!(
+  name_en: "Azabu Tokyo Dental Clinic",
+  name_jp: "麻布東京デンタルクリニック",
+  phone: "03-5422-7518",
+  website_url: "https://maps.google.com/?q=Azabu+Tokyo+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kimishima_dental = Hospital.create!(
+  name_en: "Kimishima Dental Office",
+  name_jp: "君島歯科医院",
+  phone: "03-6277-4217",
+  website_url: "https://maps.google.com/?q=Kimishima+Dental+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shiroganedai_pearl = Hospital.create!(
+  name_en: "Shiroganedai Pearl Orthodontic Office",
+  name_jp: "白金台パール矯正歯科",
+  phone: "03-3445-1182",
+  website_url: "https://maps.google.com/?q=Shiroganedai+Pearl+Orthodontic+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: false,
+  accepts_kokumin_hoken: false,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_midtown_dental = Hospital.create!(
+  name_en: "Tokyo Midtown Dental Clinic",
+  name_jp: "東京ミッドタウン歯科クリニック",
+  phone: "03-5413-7911",
+  website_url: "https://maps.google.com/?q=Tokyo+Midtown+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hitomi_dental_akasaka = Hospital.create!(
+  name_en: "Hitomi Dental Office Akasaka",
+  name_jp: "ひとみ歯科赤坂",
+  phone: "03-6277-7983",
+  website_url: "https://maps.google.com/?q=Hitomi+Dental+Office+Akasaka+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nakano_dental_minato = Hospital.create!(
+  name_en: "Nakano Dental",
+  name_jp: "中野歯科",
+  phone: "03-3446-1117",
+  website_url: "https://maps.google.com/?q=NAKANO+DENTAL+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+toyoda_dental = Hospital.create!(
+  name_en: "Toyoda Dental Office",
+  name_jp: "豊田歯科医院",
+  phone: "03-3582-4731",
+  website_url: "https://maps.google.com/?q=Toyoda+Dental+Office+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+royal_dental = Hospital.create!(
+  name_en: "Royal Dental Clinic",
+  name_jp: "ロイヤル歯科クリニック",
+  phone: "03-3404-0819",
+  website_url: "https://maps.google.com/?q=Royal+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+keyakizakaue_medical_dental = Hospital.create!(
+  name_en: "Keyakizakaue Medical and Dental Clinic",
+  name_jp: "欅坂上メディカル・デンタルクリニック",
+  phone: "03-6804-2211",
+  website_url: "https://maps.google.com/?q=Keyakizakaue+Medical+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+rk_dental_roppongi = Hospital.create!(
+  name_en: "RK Dental Office Roppongi",
+  name_jp: "RK歯科六本木",
+  phone: "03-6459-2560",
+  website_url: "https://maps.google.com/?q=RK+Dental+Office+Roppongi+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shimbashi_hibiya = Hospital.create!(
+  name_en: "Shimbashi Hibiya Clinic",
+  name_jp: "新橋日比谷クリニック",
+  phone: "03-5251-9300",
+  website_url: "https://maps.google.com/?q=Shimbashi+Hibiya+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+azabu_koki = Hospital.create!(
+  name_en: "Azabu Koki Clinic",
+  name_jp: "麻布幸喜クリニック",
+  phone: "03-6240-2912",
+  website_url: "https://maps.google.com/?q=Azabu+Koki+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_midtown_clinic = Hospital.create!(
+  name_en: "Tokyo Midtown Clinic",
+  name_jp: "東京ミッドタウンクリニック",
+  phone: "03-5413-7911",
+  website_url: "https://maps.google.com/?q=Tokyo+Midtown+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+akasaka_dental = Hospital.create!(
+  name_en: "Akasaka Dental Clinic",
+  name_jp: "赤坂歯科クリニック",
+  phone: "03-3583-1818",
+  website_url: "https://maps.google.com/?q=Akasaka+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+aoyama_dental = Hospital.create!(
+  name_en: "Aoyama Dental Clinic",
+  name_jp: "青山歯科クリニック",
+  phone: "03-6804-2378",
+  website_url: "https://maps.google.com/?q=Aoyama+Dental+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+plaza_precision_surgery = Hospital.create!(
+  name_en: "Plaza Precision Surgery",
+  name_jp: "プラザプレジョンサージェリー",
+  phone: "03-3437-3880",
+  website_url: "https://maps.google.com/?q=Plaza+Precision+Surgery+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+indiva_clinic = Hospital.create!(
+  name_en: "Indiva Clinic",
+  name_jp: "インディバクリニック",
+  phone: "03-6436-7991",
+  website_url: "https://maps.google.com/?q=Indiva+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+roppongi_mental_health = Hospital.create!(
+  name_en: "Roppongi Clinic, Mental Health Clinic",
+  name_jp: "六本木クリニック・メンタルヘルスクリニック",
+  phone: "03-6262-3459",
+  website_url: "https://maps.google.com/?q=Roppongi+Clinic+Mental+Health+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tokyo_tower_view_clinic = Hospital.create!(
+  name_en: "Tokyo Tower View Clinic Azabujuban",
+  name_jp: "東京タワービュークリニック麻布十番",
+  phone: "03-6809-3207",
+  website_url: "https://maps.google.com/?q=Tokyo+Tower+View+Clinic+Azabujuban+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "French available by appointment for internal medicine only.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+minamiazabu_musubi = Hospital.create!(
+  name_en: "Minamiazabu Musubi Dermatology and Plastic Surgery",
+  name_jp: "南麻布むすび皮膚科・形成外科",
+  phone: "03-6277-2113",
+  website_url: "https://maps.google.com/?q=Minamiazabu+Musubi+Dermatology+Plastic+Surgery+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Chinese interpreter availability depends on working days.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+dental_office_toranomon = Hospital.create!(
+  name_en: "Dental Office Toranomon",
+  name_jp: "デンタルオフィス虎ノ門",
+  phone: "03-5545-1418",
+  website_url: "https://maps.google.com/?q=DENTAL+OFFICE+TORANOMON+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "By appointment",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Appointment required. Chinese (Mandarin) available.",
+  insurance_notes_jp: "予約制。中国語（普通話）対応。"
+)
+
+total_tooth_treatment = Hospital.create!(
+  name_en: "Total Tooth Treatment",
+  name_jp: "トータルトゥーストリートメント",
+  phone: "03-3585-0648",
+  website_url: "https://maps.google.com/?q=TOTAL+TOOTH+TREATMENT+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+heiwa_hospital_minato = Hospital.create!(
+  name_en: "Heiwa Hospital",
+  name_jp: "平和病院",
+  phone: "03-5797-8367",
+  website_url: "https://maps.google.com/?q=HEIWA+HOSPITAL+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+shinagawa_east_medical = Hospital.create!(
+  name_en: "Shinagawa East Medical Clinic",
+  name_jp: "品川イーストメディカルクリニック",
+  phone: "03-5783-5521",
+  website_url: "https://maps.google.com/?q=Shinagawa+East+Medical+Clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "Travel clinic and medical examination available.",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+evergreen_medical = Hospital.create!(
+  name_en: "Evergreen Medical Clinic",
+  name_jp: "エバーグリーンメディカルクリニック",
+  phone: "03-6459-2757",
+  website_url: "https://maps.google.com/?q=Evergreen+medical+clinic+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+sakura_international = Hospital.create!(
+  name_en: "Sakura International Clinic Tokyo",
+  name_jp: "さくらインターナショナルクリニック東京",
+  phone: "03-6824-6819",
+  website_url: "https://maps.google.com/?q=Sakura+International+Clinic+Tokyo+Minato+Tokyo",
+  ward: "Minato-ku",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "30+ languages supported including English, Chinese, Korean, Nepali, Portuguese, Spanish, Vietnamese, Bengali, and more.",
+  insurance_notes_jp: "英語・中国語・韓国語・ネパール語・ポルトガル語ほか30言語以上対応。"
+)
+
+# --- OUTSIDE 23 WARDS ---
+
+# Kokubunji
+nomura_clinic_square = Hospital.create!(
+  name_en: "Nomura Clinic Square",
+  name_jp: "野村クリニックスクエア",
+  phone: "042-325-0087",
+  website_url: "https://maps.google.com/?q=Nomura+Clinic+Square+Kokubunji+Tokyo",
+  ward: "Kokubunji",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Kunitachi
+seirin_clinic = Hospital.create!(
+  name_en: "Seirin Clinic",
+  name_jp: "清林クリニック",
+  phone: "042-580-6102",
+  website_url: "https://maps.google.com/?q=Seirin+Clinic+Kunitachi+Tokyo",
+  ward: "Kunitachi",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Mitaka
+tokyo_international_ohori = Hospital.create!(
+  name_en: "Tokyo International Ohori Hospital",
+  name_jp: "東京国際大堀病院",
+  phone: "0422-47-1000",
+  website_url: "https://maps.google.com/?q=Tokyo+International+Ohori+Hospital+Mitaka+Tokyo",
+  ward: "Mitaka",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+takayama_clinic = Hospital.create!(
+  name_en: "Takayama Clinic",
+  name_jp: "高山クリニック",
+  phone: "0422-43-0700",
+  website_url: "https://maps.google.com/?q=TAKAYAMA+CLINIC+Mitaka+Tokyo",
+  ward: "Mitaka",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "All languages supported via translation machine.",
+  insurance_notes_jp: "翻訳機による全言語対応。"
+)
+
+# Kodaira
+ncnp = Hospital.create!(
+  name_en: "National Center for Neurology and Psychiatry",
+  name_jp: "国立精神・神経医療研究センター",
+  phone: "042-341-2711",
+  website_url: "https://maps.google.com/?q=National+Center+Neurology+Psychiatry+Kodaira+Tokyo",
+  ward: "Kodaira",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: true,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "National research center. English supported.",
+  insurance_notes_jp: "国立研究センター。英語対応。"
+)
+
+shiraya_eye = Hospital.create!(
+  name_en: "Shiraya Eye Clinic",
+  name_jp: "白谷眼科クリニック",
+  phone: "042-341-0219",
+  website_url: "https://maps.google.com/?q=Shiraya+Eye+Clinic+Kodaira+Tokyo",
+  ward: "Kodaira",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Akishima
+tokyo_nishi_tokushukai = Hospital.create!(
+  name_en: "Tokyo Nishi Tokushukai Hospital",
+  name_jp: "東京西徳洲会病院",
+  phone: "042-500-4433",
+  website_url: "https://maps.google.com/?q=Tokyo+Nishi+Tokushukai+Hospital+Akishima+Tokyo",
+  ward: "Akishima",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Tama
+musashino_tokushukai = Hospital.create!(
+  name_en: "Musashino Tokushukai Hospital",
+  name_jp: "武蔵野徳洲会病院",
+  phone: "042-465-0700",
+  website_url: "https://maps.google.com/?q=Musashino+Tokushukai+Hospital+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+aozora_tanashi = Hospital.create!(
+  name_en: "Aozora Tanashi Clinic",
+  name_jp: "あおぞら田無クリニック",
+  phone: "042-452-3700",
+  website_url: "https://maps.google.com/?q=Aozora+Tanashi+Clinic+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tama_nambu_chiiki = Hospital.create!(
+  name_en: "Tokyo Metropolitan Tama-Nambu Chiiki Hospital",
+  name_jp: "東京都立多摩南部地域病院",
+  phone: "042-338-5111",
+  website_url: "https://maps.google.com/?q=Tokyo+Metropolitan+Tama+Nambu+Chiiki+Hospital+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "13 languages supported including English, Chinese, Korean, Thai, Tagalog, Burmese, Vietnamese, Bengali, French, Portuguese, German, Russian, Italian, Spanish.",
+  insurance_notes_jp: "英語・中国語・韓国語・タイ語ほか13言語対応。"
+)
+
+mimuro_womens = Hospital.create!(
+  name_en: "Mimuro Women's Clinic",
+  name_jp: "三室レディースクリニック",
+  phone: "042-710-3609",
+  website_url: "https://maps.google.com/?q=Mimuro+Womens+Clinic+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kuroiwa_dental = Hospital.create!(
+  name_en: "Kuroiwa Dental Clinic",
+  name_jp: "黒岩歯科クリニック",
+  phone: "042-725-0310",
+  website_url: "https://maps.google.com/?q=Kuroiwa+Dental+Clinic+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+neuro_machida = Hospital.create!(
+  name_en: "Neuro Machida Clinic",
+  name_jp: "ニューロ町田クリニック",
+  phone: "042-732-6077",
+  website_url: "https://maps.google.com/?q=Neuro+Machida+Clinic+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+taisei_clinic = Hospital.create!(
+  name_en: "Taisei Clinic",
+  name_jp: "大成クリニック",
+  phone: "042-797-7423",
+  website_url: "https://maps.google.com/?q=Taisei+Clinic+Tama+Tokyo",
+  ward: "Tama",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Chofu
+sengawa_orthopedics = Hospital.create!(
+  name_en: "Sengawa Orthopedics",
+  name_jp: "仙川整形外科",
+  phone: "03-3305-0088",
+  website_url: "https://maps.google.com/?q=Sengawa+Orthopedics+Chofu+Tokyo",
+  ward: "Chofu",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+sengawa_ent = Hospital.create!(
+  name_en: "Sengawa E.N.T. Clinic",
+  name_jp: "仙川耳鼻咽喉科クリニック",
+  phone: "03-5313-3281",
+  website_url: "https://maps.google.com/?q=Sengawa+ENT+Clinic+Chofu+Tokyo",
+  ward: "Chofu",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Higashimurayama
+tama_hokubu = Hospital.create!(
+  name_en: "Tokyo Metropolitan Tama-Hokubu Medical Center",
+  name_jp: "東京都立多摩北部医療センター",
+  phone: "042-396-3811",
+  website_url: "https://maps.google.com/?q=Tokyo+Metropolitan+Tama+Hokubu+Medical+Center+Higashimurayama+Tokyo",
+  ward: "Higashimurayama",
+  visiting_hours: "# VERIFY",
+  is_government: true,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "15 languages supported including English, Cantonese, Mandarin, Korean, Thai, Tagalog, Burmese, Vietnamese, Bengali, French, Portuguese, German, Russian, Italian, Spanish.",
+  insurance_notes_jp: "英語・広東語・北京語・韓国語ほか15言語対応。"
+)
+
+# Hachioji
+kitahara_international = Hospital.create!(
+  name_en: "Kitahara International Hospital",
+  name_jp: "北原国際病院",
+  phone: "042-645-1110",
+  website_url: "https://maps.google.com/?q=Kitahara+International+Hospital+Hachioji+Tokyo",
+  ward: "Hachioji",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+ito_clinic_hachioji = Hospital.create!(
+  name_en: "Ito Clinic",
+  name_jp: "伊藤クリニック",
+  phone: "042-644-2770",
+  website_url: "https://maps.google.com/?q=Ito+Clinic+Hachioji+Tokyo",
+  ward: "Hachioji",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+saitoh_dental = Hospital.create!(
+  name_en: "Saitoh Dental Clinic",
+  name_jp: "斉藤歯科クリニック",
+  phone: "042-626-6066",
+  website_url: "https://maps.google.com/?q=Saitoh+Dental+Clinic+Hachioji+Tokyo",
+  ward: "Hachioji",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Fuchu
+# NOTE: tama (Tokyo Metropolitan Tama Medical Center) already defined above.
+# NOTE: childrens (Tokyo Metropolitan Children's Medical Center) already defined above.
+# NOTE: neurological (Tokyo Metropolitan Neurological Hospital) already defined above.
+
+clinique_dentaire_sacre_coeur = Hospital.create!(
+  name_en: "Clinique Dentaire Jardin Du Sacre-Coeur",
+  name_jp: "クリニークデンテールジャルダンドゥサクレクール",
+  phone: "042-403-9511",
+  website_url: "https://maps.google.com/?q=Clinique+Dentaire+Jardin+Du+Sacre+Coeur+Fuchu+Tokyo",
+  ward: "Fuchu-shi",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+tama_fuchu_umehara_dental = Hospital.create!(
+  name_en: "Tama Fuchu Umehara Dental Clinic",
+  name_jp: "多摩府中梅原歯科クリニック",
+  phone: "042-306-9877",
+  website_url: "https://maps.google.com/?q=Tama+Fuchu+Umehara+Dental+Clinic+Fuchu+Tokyo",
+  ward: "Fuchu-shi",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Musashino
+kawasaki_dental_musashino = Hospital.create!(
+  name_en: "Kawasaki Dental Clinic",
+  name_jp: "川崎歯科クリニック",
+  phone: "0422-51-3200",
+  website_url: "https://maps.google.com/?q=Kawasaki+Dental+Clinic+Musashino+Tokyo",
+  ward: "Musashino",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+nakajima_clinic_musashino = Hospital.create!(
+  name_en: "Nakajima Clinic",
+  name_jp: "中島クリニック",
+  phone: "0422-21-6251",
+  website_url: "https://maps.google.com/?q=Nakajima+Clinic+Musashino+Tokyo",
+  ward: "Musashino",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+numata_medical = Hospital.create!(
+  name_en: "Numata Medical Clinic",
+  name_jp: "沼田医院",
+  phone: "0422-56-3255",
+  website_url: "https://maps.google.com/?q=Numata+Medical+Clinic+Musashino+Tokyo",
+  ward: "Musashino",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+kichijoji_general_dental = Hospital.create!(
+  name_en: "Kichijoji General Dental Clinic",
+  name_jp: "吉祥寺総合歯科クリニック",
+  phone: "0422-26-2900",
+  website_url: "https://maps.google.com/?q=Kichijoji+General+Dental+Clinic+Musashino+Tokyo",
+  ward: "Musashino",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Fussa
+takahashi_dental_fussa = Hospital.create!(
+  name_en: "Takahashi Dental Clinic",
+  name_jp: "高橋歯科クリニック",
+  phone: "042-552-1182",
+  website_url: "https://maps.google.com/?q=Takahashi+Dental+Clinic+Fussa+Tokyo",
+  ward: "Fussa",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+hikari_clinic = Hospital.create!(
+  name_en: "Hikari Clinic",
+  name_jp: "ひかりクリニック",
+  phone: "042-530-0221",
+  website_url: "https://maps.google.com/?q=Hikari+Clinic+Fussa+Tokyo",
+  ward: "Fussa",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Tachikawa
+tachikawa_iki_iki_dental = Hospital.create!(
+  name_en: "Tachikawa Iki-Iki Dental Clinic",
+  name_jp: "立川いきいき歯科クリニック",
+  phone: "042-526-2784",
+  website_url: "https://maps.google.com/?q=Tachikawa+Iki+Iki+Dental+Clinic+Tachikawa+Tokyo",
+  ward: "Tachikawa",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# Koganei
+musashi_koganei_midori = Hospital.create!(
+  name_en: "Musashi-Koganei Midori Clinic",
+  name_jp: "武蔵小金井みどりクリニック",
+  phone: "042-316-1101",
+  website_url: "https://maps.google.com/?q=Musashi+Koganei+Midori+Clinic+Koganei+Tokyo",
+  ward: "Koganei",
+  visiting_hours: "# VERIFY",
+  is_government: false,
+  is_certified: false,
+  accepts_shakai_hoken: true,
+  accepts_kokumin_hoken: true,
+  accepts_travel_insurance: false,
+  insurance_notes_en: "# MANUAL CHECK REQUIRED",
+  insurance_notes_jp: "# MANUAL CHECK REQUIRED"
+)
+
+# =============================================================
 # LINKING SPECIALTIES TO HOSPITALS
 # =============================================================
 puts "Linking specialties..."
@@ -646,7 +4123,41 @@ HospitalSpecialty.create!([
 
   # Sendagaya — travel medicine
   { hospital: sendagaya,   specialty: infectious },
-  { hospital: sendagaya,   specialty: pediatrics }
+  { hospital: sendagaya,   specialty: pediatrics },
+
+  # --- PART 4 ward-by-ward specialties ---
+  # Ono Cardiology (Koto-ku)
+  { hospital: ono_cardiology,                    specialty: cardiology },
+
+  # Koujinkai Daiichi / Tobu Chiiki (Katsushika-ku) — emergency hospitals
+  { hospital: koujinkai_daiichi,                 specialty: emergency_med },
+  { hospital: tobu_chiiki,                       specialty: emergency_med },
+
+  # Tokyo Rinkai / Moriyama Memorial (Edogawa-ku) — full hospitals
+  { hospital: tokyo_rinkai,                      specialty: emergency_med },
+  { hospital: tokyo_rinkai,                      specialty: cardiology },
+  { hospital: moriyama_memorial,                 specialty: emergency_med },
+
+  # Kishi Clinica Femina / Asahi Ladies / Mammaria Tsukiji (gynecology/breast)
+  { hospital: kishi_clinica_femina,              specialty: gynecology },
+  { hospital: asahi_ladies_clinic,               specialty: gynecology },
+  { hospital: mammaria_tsukiji,                  specialty: gynecology },
+
+  # Ps I Clinic / Personal Health Clinic — mental health
+  { hospital: ps_i_clinic,                       specialty: psychiatry },
+  { hospital: personal_health_clinic,            specialty: psychiatry },
+
+  # Murai Clinic (Bunkyo-ku) — cardiovascular
+  { hospital: murai_clinic,                      specialty: cardiology },
+
+  # Juntendo University Hospital — major teaching hospital
+  { hospital: juntendo,                          specialty: cardiology },
+  { hospital: juntendo,                          specialty: oncology },
+  { hospital: juntendo,                          specialty: neurology },
+  { hospital: juntendo,                          specialty: emergency_med },
+
+  # Tokyo Station International / Koishikawa International — travel/infectious
+  { hospital: tokyo_station_international,       specialty: infectious }
 ])
 
 # =============================================================
@@ -744,7 +4255,121 @@ HospitalService.create!([
   { hospital: tmsc,        service: vaccination },
 
   { hospital: sendagaya,   service: outpatient },
-  { hospital: sendagaya,   service: vaccination }
+  { hospital: sendagaya,   service: vaccination },
+
+  # --- PART 4 ward-by-ward services ---
+
+  # Arakawa-ku
+  { hospital: kosaka_ophthalmology,              service: outpatient },
+
+  # Adachi-ku
+  { hospital: aqua_dental,                       service: outpatient },
+  { hospital: takahashi_clinic_adachi,           service: outpatient },
+  { hospital: kohoku_family_clinic,              service: outpatient },
+  { hospital: kohoku_family_clinic,              service: vaccination },
+
+  # Katsushika-ku
+  { hospital: koujinkai_daiichi,                 service: outpatient },
+  { hospital: koujinkai_daiichi,                 service: inpatient },
+  { hospital: koujinkai_daiichi,                 service: emergency_care },
+  { hospital: tobu_chiiki,                       service: outpatient },
+  { hospital: tobu_chiiki,                       service: inpatient },
+  { hospital: tobu_chiiki,                       service: emergency_care },
+
+  # Sumida-ku
+  { hospital: kinshicho_mint_dental,             service: outpatient },
+
+  # Koto-ku
+  { hospital: telecom_center_dental,             service: outpatient },
+  { hospital: wakaba_dental,                     service: outpatient },
+  { hospital: sekoukai_dental,                   service: outpatient },
+  { hospital: ono_cardiology,                    service: outpatient },
+  { hospital: kobayashi_clinic_koto,             service: outpatient },
+  { hospital: heiwa_memorial_clinic,             service: outpatient },
+  { hospital: toyosu_minna_clinic,               service: outpatient },
+  { hospital: toyosu_minna_clinic,               service: vaccination },
+  { hospital: kameido_eye_clinic,                service: outpatient },
+  { hospital: kameido_central_clinic,            service: outpatient },
+  { hospital: shinonome_medical,                 service: outpatient },
+
+  # Edogawa-ku
+  { hospital: moriyama_memorial,                 service: outpatient },
+  { hospital: moriyama_memorial,                 service: inpatient },
+  { hospital: moriyama_memorial,                 service: emergency_care },
+  { hospital: tokyo_rinkai,                      service: outpatient },
+  { hospital: tokyo_rinkai,                      service: inpatient },
+  { hospital: tokyo_rinkai,                      service: emergency_care },
+  { hospital: tokyo_rinkai,                      service: ct_scan },
+  { hospital: nishikasai_lifestyle_a,            service: outpatient },
+  { hospital: nishikasai_lifestyle_a,            service: vaccination },
+  { hospital: nishikasai_smile_dental,           service: outpatient },
+  { hospital: himawari_dental,                   service: outpatient },
+  { hospital: nishikasai_lifestyle_b,            service: outpatient },
+  { hospital: nishikasai_lifestyle_b,            service: vaccination },
+  { hospital: kobayashi_dental_edogawa,          service: outpatient },
+
+  # Chiyoda-ku
+  { hospital: tokyo_station_international,       service: outpatient },
+  { hospital: tokyo_station_international,       service: vaccination },
+  { hospital: isdorly_orthodontic,               service: outpatient },
+  { hospital: ochanomizu_vascular,               service: outpatient },
+  { hospital: shinomiya_clinic,                  service: outpatient },
+  { hospital: ambulatory_vascular,               service: outpatient },
+  { hospital: ambulatory_vascular,               service: surgery },
+  { hospital: dental_salon_kojimachi,            service: outpatient },
+  { hospital: your_clinic_akihabara,             service: outpatient },
+  { hospital: ichihashi_dental,                  service: outpatient },
+  { hospital: tokousha_kensin,                   service: outpatient },
+  { hospital: sanno_medical,                     service: outpatient },
+  { hospital: jtk_clinic,                        service: outpatient },
+  { hospital: kojimachi_dermatology,             service: outpatient },
+  { hospital: kandabashi_dental,                 service: outpatient },
+  { hospital: st_lukes_medilocus,                service: outpatient },
+  { hospital: imperial_clinic,                   service: outpatient },
+  { hospital: tokyo_seaside_clinic,              service: outpatient },
+  { hospital: tokyo_business_clinic_marunouchi, service: outpatient },
+  { hospital: tokyo_business_clinic_yaesu,       service: outpatient },
+  { hospital: tokyo_teishin,                     service: outpatient },
+  { hospital: tokyo_teishin,                     service: inpatient },
+  { hospital: hibiya_clinic,                     service: outpatient },
+  { hospital: hamille_dental_tokyo,              service: outpatient },
+  { hospital: hamille_ogawamachi,                service: outpatient },
+  { hospital: asahi_ladies_clinic,               service: outpatient },
+  { hospital: minsyu_dermatology,                service: outpatient },
+
+  # Chuo-ku
+  { hospital: kishi_clinica_femina,              service: outpatient },
+  { hospital: online_general_clinic,             service: outpatient },
+  { hospital: koike_clinic,                      service: outpatient },
+  { hospital: mamizuka_dental,                   service: outpatient },
+  { hospital: pulice_beauty,                     service: outpatient },
+  { hospital: yaesugai_medical,                  service: outpatient },
+  { hospital: fujimoto_international_dental,     service: outpatient },
+  { hospital: kameda_kyobashi,                   service: outpatient },
+  { hospital: nihonbashi_primary,                service: outpatient },
+  { hospital: ps_i_clinic,                       service: outpatient },
+  { hospital: harai_clinic,                      service: outpatient },
+  { hospital: igarashi_endocrine,                service: outpatient },
+  { hospital: takahashi_clinic_chuo,             service: outpatient },
+  { hospital: ningyocho_internal_medicine,       service: outpatient },
+  { hospital: total_skin_care_ginza,             service: outpatient },
+  { hospital: kuramochi_nihonbashi,              service: outpatient },
+  { hospital: mammaria_tsukiji,                  service: outpatient },
+
+  # Bunkyo-ku
+  { hospital: coco_medical,                      service: outpatient },
+  { hospital: personal_health_clinic,            service: outpatient },
+  { hospital: murai_clinic,                      service: outpatient },
+  { hospital: dentsuin_clinic,                   service: outpatient },
+  { hospital: hitomi_dental_bunkyo,              service: outpatient },
+  { hospital: takagi_dental,                     service: outpatient },
+  { hospital: sakuma_dental,                     service: outpatient },
+  { hospital: juntendo,                          service: outpatient },
+  { hospital: juntendo,                          service: inpatient },
+  { hospital: juntendo,                          service: emergency_care },
+  { hospital: juntendo,                          service: mri },
+  { hospital: juntendo,                          service: ct_scan },
+  { hospital: juntendo,                          service: surgery }
 ])
 # =============================================================
 # SUMMARY
