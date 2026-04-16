@@ -2,7 +2,7 @@
 // HOSPITALS INDEX & SHOW
 // =============================================
 
-// Filter pills
+// ── Filter pills ─────────────────────────────
 .filter-pill {
   font-size: 11px;
   font-weight: 500;
@@ -26,5 +26,135 @@
     color: #fff;
     border-color: var(--navy);
     box-shadow: 0 2px 8px rgba(12, 45, 107, 0.25);
+  }
+}
+
+// ── Ward jump navigation ──────────────────────
+.ward-jump-nav {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+  // hide scrollbar but keep scrollable
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.jump-pill {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(74, 127, 193, 0.2);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--mid-blue);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--navy);
+  }
+}
+
+// ── Ward section ──────────────────────────────
+.ward-section {
+  margin-bottom: 4px;
+}
+
+.ward-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 2px;
+}
+
+.ward-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.ward-count-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(74, 127, 193, 0.1);
+  color: var(--mid-blue);
+  flex-shrink: 0;
+}
+
+.ward-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(74,127,193,0.12) 0%, rgba(74,127,193,0.05) 100%);
+  margin: 14px 0 16px;
+  border: none;
+}
+
+// ── Hospital meta row (phone + lang tags) ─────
+.hosp-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.hosp-phone {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.lang-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+// ── Facility type badge ───────────────────────
+.type-badge {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+
+  &--hospital {
+    background: rgba(12, 45, 107, 0.08);
+    color: var(--navy);
+  }
+
+  &--clinic {
+    background: rgba(74, 127, 193, 0.1);
+    color: var(--mid-blue);
+  }
+
+  &--dental {
+    background: rgba(126, 184, 247, 0.18);
+    color: #2D6FA4;
+  }
+
+  &--center {
+    background: rgba(39, 80, 10, 0.08);
+    color: #27500A;
+  }
+
+  &--other {
+    background: rgba(74, 127, 193, 0.06);
+    color: var(--mid-blue);
   }
 }
