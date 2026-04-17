@@ -3,182 +3,273 @@
     /hospitals
     ======================================== %>
 
-<%# Search Bar %>
-<div style="position:relative; margin-bottom:12px;">
-  <svg style="position:absolute; left:14px; top:50%; transform:translateY(-50%); pointer-events:none;" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+<%# ── Search Bar ─────────────────────────── %>
+<div style="position:relative;margin-bottom:12px;">
+  <svg style="position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
     <circle cx="9" cy="9" r="6"/>
     <path d="M15 15l3 3"/>
   </svg>
   <input
     type="text"
     id="search-input"
-    placeholder="Search hospitals, wards..."
-    style="width:100%;padding:12px 16px 12px 40px;background:rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.2);border-radius:14px;font-size:13px;color:#0C2D6B;outline:none;font-family:var(--font-main);"
-  >
+    placeholder="Search hospitals, wards, cities…"
+    style="width:100%;padding:12px 16px 12px 40px;background:rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.2);border-radius:14px;font-size:13px;color:#0C2D6B;outline:none;font-family:var(--font-main);box-sizing:border-box;">
 </div>
 
-<%# Filter Pills — Insurance %>
+<%# ── Filter Pills — Insurance ───────────── %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Insurance</p>
 <div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px;">
-  <button onclick="filterBy('insurance','all')" id="ins-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
-  <button onclick="filterBy('insurance','shakai')" id="ins-shakai" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Shakai Hoken</button>
-  <button onclick="filterBy('insurance','kokumin')" id="ins-kokumin" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Kokumin Hoken</button>
-  <button onclick="filterBy('insurance','travel')" id="ins-travel" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Travel</button>
+  <button onclick="filterBy('insurance','all')"     id="ins-all"     class="filter-pill active">All</button>
+  <button onclick="filterBy('insurance','shakai')"  id="ins-shakai"  class="filter-pill">Shakai Hoken</button>
+  <button onclick="filterBy('insurance','kokumin')" id="ins-kokumin" class="filter-pill">Kokumin Hoken</button>
+  <button onclick="filterBy('insurance','travel')"  id="ins-travel"  class="filter-pill">Travel</button>
 </div>
 
-<%# Filter Pills — Type %>
+<%# ── Filter Pills — Type ────────────────── %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Type</p>
-<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;">
-  <button onclick="filterBy('type','all')" id="type-all" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;">All</button>
-  <button onclick="filterBy('type','government')" id="type-government" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Government</button>
-  <button onclick="filterBy('type','certified')" id="type-certified" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Certified</button>
-  <button onclick="filterBy('type','maternity')" id="type-maternity" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Maternity</button>
-  <button onclick="filterBy('type','emergency')" id="type-emergency" style="font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;">Emergency</button>
+<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;">
+  <button onclick="filterBy('type','all')"        id="type-all"        class="filter-pill active">All</button>
+  <button onclick="filterBy('type','government')" id="type-government" class="filter-pill">Government</button>
+  <button onclick="filterBy('type','certified')"  id="type-certified"  class="filter-pill">Certified</button>
+  <button onclick="filterBy('type','maternity')"  id="type-maternity"  class="filter-pill">Maternity</button>
+  <button onclick="filterBy('type','emergency')"  id="type-emergency"  class="filter-pill">Emergency</button>
 </div>
 
-<%# Result Count %>
-<p style="font-size:11px;color:#4A7FC1;margin-bottom:10px;" id="result-count"><%= @hospitals.count %> facilities found</p>
+<%# ── Ward / City Jump Navigation ─────────── %>
+<div class="ward-jump-nav" id="ward-jump-nav">
+  <% @hospitals_by_location.each do |ward, _| %>
+    <a href="#<%= ward_anchor(ward) %>" class="jump-pill"><%= ward_short_name(ward) %></a>
+  <% end %>
+</div>
 
-<%# Hospital Cards %>
+<%# ── Result Count ────────────────────────── %>
+<p style="font-size:11px;color:#4A7FC1;margin-bottom:12px;" id="result-count">
+  <%= @total_count %> facilities across <%= @hospitals_by_location.size %> wards &amp; cities
+</p>
+
+<%# ── Grouped Hospital Sections ───────────── %>
 <div id="hospitals-list">
-  <% @hospitals.each do |hospital| %>
-    <a href="<%= hospital_path(hospital) %>"
-      class="hospital-card"
-      data-name="<%= hospital.name_en.downcase %>"
-      data-ward="<%= hospital.ward.downcase %>"
-      data-government="<%= hospital.is_government? %>"
-      data-certified="<%= hospital.is_certified? %>"
-      data-shakai="<%= hospital.accepts_shakai_hoken? %>"
-      data-kokumin="<%= hospital.accepts_kokumin_hoken? %>"
-      data-travel="<%= hospital.accepts_travel_insurance? %>"
-      data-emergency="<%= hospital.specialties.any? { |s| s.name_en == 'Emergency Medicine' } %>"
-      data-maternity="<%= hospital.specialties.any? { |s| s.name_en.include?('Maternity') } %>">
+  <% @hospitals_by_location.each_with_index do |(ward, ward_hospitals), idx| %>
+    <section class="ward-section" id="<%= ward_anchor(ward) %>">
 
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-        <div style="flex:1;">
-          <p class="hosp-name"><%= locale_field(hospital, :name) %></p>
-          <p class="hosp-jp"><%= I18n.locale == :ja ? hospital.name_en : hospital.name_jp %></p>
-          <p class="hosp-meta"><%= hospital.ward %> · <%= hospital.phone %></p>
-        </div>
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.5" stroke-linecap="round" style="flex-shrink:0;margin-top:2px;">
-          <path d="M7 10h6M13 10l-3-3M13 10l-3 3"/>
-        </svg>
+      <%# Section header with count badge %>
+      <div class="ward-header">
+        <h2 class="ward-title"><%= ward %></h2>
+        <span class="ward-count-badge"><%= ward_hospitals.size %></span>
       </div>
 
-      <div class="tag-row">
-        <% if hospital.is_government? %>
-          <span class="tag tag-navy">Government</span>
-        <% end %>
-        <% if hospital.is_certified? %>
-          <span class="tag tag-sky">Certified</span>
-        <% end %>
-        <% if hospital.accepts_shakai_hoken? %>
-          <span class="tag tag-sky">Shakai Hoken</span>
-        <% end %>
-        <% if hospital.accepts_kokumin_hoken? %>
-          <span class="tag tag-sky">Kokumin Hoken</span>
-        <% end %>
-        <% if hospital.accepts_travel_insurance? %>
-          <span class="tag tag-amber">Travel Insurance</span>
-        <% end %>
-        <% if hospital.specialties.any? { |s| s.name_en == "Emergency Medicine" } %>
-          <span class="tag tag-red">24h Emergency</span>
-        <% end %>
-        <% if hospital.specialties.any? { |s| s.name_en.include?("Maternity") } %>
-          <span class="tag tag-pink">Maternity</span>
-        <% end %>
-      </div>
+      <%# Hospital cards for this ward %>
+      <% ward_hospitals.each do |hospital| %>
+        <%
+          langs     = parse_languages(hospital.insurance_notes_en)
+          type_lbl  = hospital_type_label(hospital)
+          type_css  = hospital_type_css(hospital)
+        %>
+        <a href="<%= hospital_path(hospital) %>"
+           class="hospital-card"
+           data-name="<%= hospital.name_en.to_s.downcase %>"
+           data-ward="<%= hospital.ward.to_s.downcase %>"
+           data-government="<%= hospital.is_government? %>"
+           data-certified="<%= hospital.is_certified? %>"
+           data-shakai="<%= hospital.accepts_shakai_hoken? %>"
+           data-kokumin="<%= hospital.accepts_kokumin_hoken? %>"
+           data-travel="<%= hospital.accepts_travel_insurance? %>"
+           data-emergency="<%= hospital.specialties.any? { |s| s.name_en == 'Emergency Medicine' } %>"
+           data-maternity="<%= hospital.specialties.any? { |s| s.name_en.include?('Maternity') } %>">
 
-    </a>
+          <%# Name row + type badge + chevron %>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+            <div style="flex:1;min-width:0;padding-right:8px;">
+              <p class="hosp-name"><%= hospital.name_en %></p>
+              <% if hospital.name_jp.present? %>
+                <p class="hosp-jp"><%= hospital.name_jp %></p>
+              <% end %>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;flex-shrink:0;margin-top:1px;">
+              <span class="type-badge type-badge--<%= type_css %>"><%= type_lbl %></span>
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#4A7FC1" stroke-width="1.5" stroke-linecap="round">
+                <path d="M7 10h6M13 10l-3-3M13 10l-3 3"/>
+              </svg>
+            </div>
+          </div>
+
+          <%# Phone + languages row %>
+          <div class="hosp-meta-row">
+            <% if hospital.phone.present? %>
+              <span class="hosp-phone">
+                <svg width="11" height="11" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="vertical-align:middle;margin-right:2px;">
+                  <path d="M3 3h4l2 5-2.5 1.5a11 11 0 005 5L13 12l5 2v4a2 2 0 01-2 2C6 20 0 14 0 5a2 2 0 012-2z"/>
+                </svg><%= hospital.phone %>
+              </span>
+            <% end %>
+            <% if langs.any? %>
+              <div class="lang-tags">
+                <% langs.first(3).each do |lang| %>
+                  <span class="tag tag-green"><%= lang %></span>
+                <% end %>
+                <% if langs.size > 3 %>
+                  <span class="tag tag-sky">+<%= langs.size - 3 %> more</span>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+
+          <%# Insurance / status tags (shown only when set) %>
+          <% has_tags = hospital.is_government? || hospital.is_certified? || hospital.accepts_shakai_hoken? || hospital.accepts_kokumin_hoken? || hospital.accepts_travel_insurance? || hospital.specialties.any? { |s| s.name_en == "Emergency Medicine" } || hospital.specialties.any? { |s| s.name_en.include?("Maternity") } %>
+          <% if has_tags %>
+            <div class="tag-row" style="margin-top:6px;">
+              <% if hospital.is_government? %>
+                <span class="tag tag-navy">Government</span>
+              <% end %>
+              <% if hospital.is_certified? %>
+                <span class="tag tag-sky">Certified</span>
+              <% end %>
+              <% if hospital.accepts_shakai_hoken? %>
+                <span class="tag tag-sky">Shakai Hoken</span>
+              <% end %>
+              <% if hospital.accepts_kokumin_hoken? %>
+                <span class="tag tag-sky">Kokumin Hoken</span>
+              <% end %>
+              <% if hospital.accepts_travel_insurance? %>
+                <span class="tag tag-amber">Travel Insurance</span>
+              <% end %>
+              <% if hospital.specialties.any? { |s| s.name_en == "Emergency Medicine" } %>
+                <span class="tag tag-red">24h Emergency</span>
+              <% end %>
+              <% if hospital.specialties.any? { |s| s.name_en.include?("Maternity") } %>
+                <span class="tag tag-pink">Maternity</span>
+              <% end %>
+            </div>
+          <% end %>
+
+        </a>
+      <% end %>
+    </section>
+
+    <%# Divider between sections (not after the last one) %>
+    <% unless idx == @hospitals_by_location.size - 1 %>
+      <div class="ward-divider"></div>
+    <% end %>
   <% end %>
 </div>
 
 <%# No results message %>
 <div id="no-results" style="display:none;text-align:center;padding:40px 20px;">
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto 12px;">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7EB8F7" stroke-width="1.5" stroke-linecap="round" style="margin:0 auto 12px;display:block;">
     <circle cx="11" cy="11" r="8"/>
     <path d="M21 21l-4.35-4.35"/>
   </svg>
   <p style="font-size:14px;font-weight:500;color:#0C2D6B;margin-bottom:4px;">No facilities found</p>
-  <p style="font-size:12px;color:#4A7FC1;">Try adjusting your filters</p>
+  <p style="font-size:12px;color:#4A7FC1;">Try adjusting your search or filters</p>
 </div>
 
 <script>
   let activeInsurance = 'all';
-  let activeType = 'all';
+  let activeType      = 'all';
 
-  const inactivePillStyle = 'font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid rgba(74,127,193,0.25);background:rgba(255,255,255,0.6);color:#4A7FC1;cursor:pointer;white-space:nowrap;font-family:inherit;';
-  const activePillStyle = 'font-size:11px;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid #0C2D6B;background:#0C2D6B;color:#fff;cursor:pointer;white-space:nowrap;font-family:inherit;';
+  // ── Filter state management ─────────────────────────────────
+  function filterBy(group, value) {
+    if (group === 'insurance') activeInsurance = value;
+    if (group === 'type')      activeType      = value;
 
-  function filterBy(filterGroup, value) {
-    if (filterGroup === 'insurance') activeInsurance = value;
-    if (filterGroup === 'type') activeType = value;
-
-    const prefixes = filterGroup === 'insurance'
-      ? ['ins-all','ins-shakai','ins-kokumin','ins-travel']
-      : ['type-all','type-government','type-certified','type-maternity','type-emergency'];
+    // Update pill active states using CSS classes (no inline style strings)
+    const insPrefixes  = ['ins-all','ins-shakai','ins-kokumin','ins-travel'];
+    const typePrefixes = ['type-all','type-government','type-certified','type-maternity','type-emergency'];
+    const prefixes     = group === 'insurance' ? insPrefixes : typePrefixes;
+    const activeId     = group === 'insurance' ? `ins-${value}` : `type-${value}`;
 
     prefixes.forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.style.cssText = inactivePillStyle;
+      if (el) el.classList.remove('active');
     });
-
-    const activeId = filterGroup === 'insurance' ? `ins-${value}` : `type-${value}`;
     const activeEl = document.getElementById(activeId);
-    if (activeEl) activeEl.style.cssText = activePillStyle;
+    if (activeEl) activeEl.classList.add('active');
 
     applyFilters();
   }
 
+  // ── Core filter logic ───────────────────────────────────────
   function applyFilters() {
-    const searchInput = document.getElementById('search-input');
-    const searchVal = searchInput ? searchInput.value.toLowerCase() : '';
-    const cards = document.querySelectorAll('#hospitals-list .hospital-card');
-    let visibleCount = 0;
+    const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase();
+    const cards     = document.querySelectorAll('#hospitals-list .hospital-card');
+    let   visible   = 0;
 
     cards.forEach(card => {
       const name = card.dataset.name || '';
       const ward = card.dataset.ward || '';
 
-      const matchesSearch = searchVal === '' || name.includes(searchVal) || ward.includes(searchVal);
+      const matchSearch = !searchVal || name.includes(searchVal) || ward.includes(searchVal);
 
-      let matchesInsurance = true;
-      if (activeInsurance === 'shakai')  matchesInsurance = card.dataset.shakai === 'true';
-      if (activeInsurance === 'kokumin') matchesInsurance = card.dataset.kokumin === 'true';
-      if (activeInsurance === 'travel')  matchesInsurance = card.dataset.travel === 'true';
+      let matchIns = true;
+      if (activeInsurance === 'shakai')  matchIns = card.dataset.shakai  === 'true';
+      if (activeInsurance === 'kokumin') matchIns = card.dataset.kokumin === 'true';
+      if (activeInsurance === 'travel')  matchIns = card.dataset.travel  === 'true';
 
-      let matchesType = true;
-      if (activeType === 'government') matchesType = card.dataset.government === 'true';
-      if (activeType === 'certified')  matchesType = card.dataset.certified === 'true';
-      if (activeType === 'maternity')  matchesType = card.dataset.maternity === 'true';
-      if (activeType === 'emergency')  matchesType = card.dataset.emergency === 'true';
+      let matchType = true;
+      if (activeType === 'government') matchType = card.dataset.government === 'true';
+      if (activeType === 'certified')  matchType = card.dataset.certified  === 'true';
+      if (activeType === 'maternity')  matchType = card.dataset.maternity  === 'true';
+      if (activeType === 'emergency')  matchType = card.dataset.emergency  === 'true';
 
-      const visible = matchesSearch && matchesInsurance && matchesType;
-      card.style.display = visible ? 'block' : 'none';
-      if (visible) visibleCount++;
+      const show = matchSearch && matchIns && matchType;
+      card.style.display = show ? 'block' : 'none';
+      if (show) visible++;
     });
 
+    // Hide ward sections where every card is filtered out
+    document.querySelectorAll('.ward-section').forEach(section => {
+      const sectionCards  = section.querySelectorAll('.hospital-card');
+      const anyVisible    = Array.from(sectionCards).some(c => c.style.display !== 'none');
+      section.style.display = anyVisible ? 'block' : 'none';
+
+      // Dim the matching jump-nav pill when its section is hidden
+      const sectionId = section.id;
+      const pill = document.querySelector(`.jump-pill[href="#${sectionId}"]`);
+      if (pill) pill.style.opacity = anyVisible ? '1' : '0.3';
+    });
+
+    // Also hide dividers that follow a hidden section
+    document.querySelectorAll('.ward-divider').forEach(divider => {
+      const prev = divider.previousElementSibling;
+      divider.style.display = (prev && prev.style.display === 'none') ? 'none' : 'block';
+    });
+
+    // Update count and no-results message
     const countEl = document.getElementById('result-count');
-    if (countEl) countEl.textContent = `${visibleCount} facilities found`;
+    if (countEl) countEl.textContent = `${visible} facilities found`;
 
     const noResults = document.getElementById('no-results');
-    if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
   }
 
-  document.getElementById('search-input').addEventListener('input', applyFilters);
+  // ── Event listeners ─────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('search-input');
+    if (input) input.addEventListener('input', applyFilters);
 
+    // Smooth scroll for jump-nav anchors
+    document.querySelectorAll('.jump-pill').forEach(pill => {
+      pill.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.getElementById(pill.getAttribute('href').slice(1));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  });
+
+  // ── Honour URL params (keep existing deep-link behaviour) ───
   document.addEventListener('turbo:load', () => {
-    const params = new URLSearchParams(window.location.search);
+    const p = new URLSearchParams(window.location.search);
 
-    const specialty = params.get('specialty');
+    const specialty = p.get('specialty');
     if (specialty === 'maternity') filterBy('type', 'maternity');
     else if (specialty === 'emergency') filterBy('type', 'emergency');
 
-    const type = params.get('type');
+    const type = p.get('type');
     if (type === 'certified') filterBy('type', 'certified');
     else if (type === 'government') filterBy('type', 'government');
 
-    const insurance = params.get('insurance');
+    const insurance = p.get('insurance');
     if (insurance === 'shakai') filterBy('insurance', 'shakai');
     else if (insurance === 'kokumin') filterBy('insurance', 'kokumin');
     else if (insurance === 'travel') filterBy('insurance', 'travel');

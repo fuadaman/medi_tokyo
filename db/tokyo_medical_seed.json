@@ -1,0 +1,2946 @@
+{
+  "wards": {
+    "Chiyoda Ward": [
+      {
+        "name": "Tokyo Station International Clinic",
+        "type": "clinic",
+        "address": "Tokyo Station International Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-6206-3070",
+        "languages": "English; Chinese; Korean",
+        "departments": "General medicine; Dermatology; Pediatrics; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Station+International+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Isdorly Orthodontic Office",
+        "type": "clinic",
+        "address": "Isdorly Orthodontic Office, Chiyoda Ward, Tokyo",
+        "contact": "03-6206-4806",
+        "languages": "English; Spanish",
+        "departments": "Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Isdorly+Orthodontic+Office+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ochanomizu Vascular & Vein Clinic",
+        "type": "clinic",
+        "address": "Ochanomizu Vascular & Vein Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-5281-4103",
+        "languages": "English",
+        "departments": "Department of surgery; Cardiovascular surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ochanomizu+Vascular+%26+Vein+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinomiya Clinic",
+        "type": "clinic",
+        "address": "Shinomiya Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-5687-1516",
+        "languages": "English",
+        "departments": "Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinomiya+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ambulatory Vascular Surgical Clinic Tokyo",
+        "type": "clinic",
+        "address": "Ambulatory Vascular Surgical Clinic Tokyo, Chiyoda Ward, Tokyo",
+        "contact": "03-5289-0072",
+        "languages": "English",
+        "departments": "Vascular surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ambulatory+Vascular+Surgical+Clinic+Tokyo+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dental Salon Kojimachi",
+        "type": "clinic",
+        "address": "Dental Salon Kojimachi, Chiyoda Ward, Tokyo",
+        "contact": "03-6268-9810",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dental+Salon+Kojimachi+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Your Clinic Akihabara",
+        "type": "clinic",
+        "address": "Your Clinic Akihabara, Chiyoda Ward, Tokyo",
+        "contact": "03-3256-1180",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Your+Clinic+Akihabara+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ichihashi Dental Clinic",
+        "type": "clinic",
+        "address": "Ichihashi Dental Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3211-2848",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ichihashi+Dental+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokousha Kensin Clinic",
+        "type": "clinic",
+        "address": "Tokousha Kensin Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3212-0105",
+        "languages": "English",
+        "departments": "Medical examination",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokousha+Kensin+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sanno Medical Clinic",
+        "type": "clinic",
+        "address": "Sanno Medical Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3580-5001",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiology; Dermatology; Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sanno+Medical+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "JTK Clinic",
+        "type": "clinic",
+        "address": "JTK Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-6261-6386",
+        "languages": "English; Chinese",
+        "departments": "General internal medicine; Department of rheumatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=JTK+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kojimachi Dermatology, Plastic Surgery Clinic",
+        "type": "clinic",
+        "address": "Kojimachi Dermatology, Plastic Surgery Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-6261-2458",
+        "languages": "English",
+        "departments": "Dermatology; Plastic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kojimachi+Dermatology%2C+Plastic+Surgery+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kandabashi Dental Office",
+        "type": "clinic",
+        "address": "Kandabashi Dental Office, Chiyoda Ward, Tokyo",
+        "contact": "03-5283-6533",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kandabashi+Dental+Office+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "St. Luke’s MediLocus",
+        "type": "clinic",
+        "address": "St. Luke’s MediLocus, Chiyoda Ward, Tokyo",
+        "contact": "03-3527-9520",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiovascular medicine; Digestive systemInternal medicine; Respiratory medicine; Psychosomatic medicine; Dermatology; Gynecology; Brest surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=St.+Luke’s+MediLocus+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Imperial Clinic",
+        "type": "clinic",
+        "address": "Imperial Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3503-8681",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Imperial+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Seaside Clinic",
+        "type": "clinic",
+        "address": "Tokyo Seaside Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-6272-6616",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Seaside+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Business Clinic GRANSTA MARUNOUCHI",
+        "type": "clinic",
+        "address": "Tokyo Business Clinic GRANSTA MARUNOUCHI, Chiyoda Ward, Tokyo",
+        "contact": "03-6259-1605",
+        "languages": "English; Chinese; Korean",
+        "departments": "General medicine; Dermatology; Pediatrics; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Business+Clinic+GRANSTA+MARUNOUCHI+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Business Clinic Yaesu-kitaguchi",
+        "type": "clinic",
+        "address": "Tokyo Business Clinic Yaesu-kitaguchi, Chiyoda Ward, Tokyo",
+        "contact": "03-6268-0079",
+        "languages": "English; Chinese; Korean",
+        "departments": "General medicine; Dermatology; Pediatrics; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Business+Clinic+Yaesu-kitaguchi+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Teishin Hospital",
+        "type": "hospital",
+        "address": "Tokyo Teishin Hospital, Chiyoda Ward, Tokyo",
+        "contact": "03-5214-7111",
+        "languages": "English",
+        "departments": "Internal medicine; Endocrine; Endocrinology and metabolism; Hematology; Neurology; Department of medicine and infectious diseases; Cardiovascular medicine; Nephrology; Gastroenterology; Respiratory medicine; Psychiatry; Department of surgery; Gastrointestinal surgery; Thoracic surgery; Neurosurgery; Orthopedic Surgery; Pediatrics; Ophthalmology; Dermatology; Plastic surgery; Urology; Otorhinolaryngology (ENT); Anesthesiology; Dentistry and oral surgery; Emergency department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Teishin+Hospital+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hibiya Clinic",
+        "type": "clinic",
+        "address": "Hibiya Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3215-1105",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hibiya+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "HAMILLE TOKYO DENTAL OFFICE",
+        "type": "clinic",
+        "address": "HAMILLE TOKYO DENTAL OFFICE, Chiyoda Ward, Tokyo",
+        "contact": "03-5280-6480",
+        "languages": "English; ChineseiMandarinj",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=HAMILLE+TOKYO+DENTAL+OFFICE+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "HAMILLE TOKYO OGAWAMACHI",
+        "type": "clinic",
+        "address": "HAMILLE TOKYO OGAWAMACHI, Chiyoda Ward, Tokyo",
+        "contact": "03-6275-0988",
+        "languages": "English; ChineseiMandarinj",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=HAMILLE+TOKYO+OGAWAMACHI+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Asahi Ladies Clinic",
+        "type": "clinic",
+        "address": "Asahi Ladies Clinic, Chiyoda Ward, Tokyo",
+        "contact": "03-3251-3588",
+        "languages": "English; Chinese",
+        "departments": "Gynecology; Assisted reproductive technology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Asahi+Ladies+Clinic+Chiyoda+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "MINSYU Dermatology Clinic KUDAN-KAIKAN TERRACE",
+        "type": "clinic",
+        "address": "MINSYU Dermatology Clinic KUDAN-KAIKAN TERRACE, Chiyoda Ward, Tokyo",
+        "contact": "03-6256-8981",
+        "languages": "English; Chinese",
+        "departments": "Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=MINSYU+Dermatology+Clinic+KUDAN-KAIKAN+TERRACE+Chiyoda+Ward+Tokyo+Japan"
+      }
+    ],
+    "Chuo Ward": [
+      {
+        "name": "KISHI CLINICA FEMINA",
+        "type": "clinic",
+        "address": "KISHI CLINICA FEMINA, Chuo Ward, Tokyo",
+        "contact": "03-5537-7171",
+        "languages": "English; Chinese",
+        "departments": "Gynecology; Women's internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=KISHI+CLINICA+FEMINA+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Online General Clinic",
+        "type": "clinic",
+        "address": "Online General Clinic, Chuo Ward, Tokyo",
+        "contact": "03-6691-9525",
+        "languages": "English",
+        "departments": "Internal medicine; Diabetology, endocrinology, and metabolism; Diabetology and metabolism; Orthopedic Surgery; Pediatrics; Gynecology; Ophthalmology; Otorhinolaryngology (ENT); Dermatology; Urology; Psychiatry; Psychosomatic medicine; Department of allergy; Department of rheumatology; Department of rehabilitation",
+        "link": "https://www.google.com/maps/search/?api=1&query=Online+General+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Koike Clinic",
+        "type": "clinic",
+        "address": "Koike Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3271-0813",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Dermatology; Urology; Gastroenterology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Koike+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mamizuka Dental Clinic",
+        "type": "clinic",
+        "address": "Mamizuka Dental Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3541-8110",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mamizuka+Dental+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Pulice Beauty & Health",
+        "type": "clinic",
+        "address": "Pulice Beauty & Health, Chuo Ward, Tokyo",
+        "contact": "03-3538-6767",
+        "languages": "Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Pulice+Beauty+%26+Health+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yaesugai Medical Clinic",
+        "type": "clinic",
+        "address": "Yaesugai Medical Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3271-1828",
+        "languages": "English",
+        "departments": "Internal medicine; Dermatology; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yaesugai+Medical+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Fujimoto International Dental Clinic",
+        "type": "clinic",
+        "address": "Fujimoto International Dental Clinic, Chuo Ward, Tokyo",
+        "contact": "03-5551-0051",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Fujimoto+International+Dental+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kameda Kyobashi Clinic",
+        "type": "clinic",
+        "address": "Kameda Kyobashi Clinic, Chuo Ward, Tokyo",
+        "contact": "03-5542-1182",
+        "languages": "English; Chinese",
+        "departments": "General internal medicine; Orthopedic Surgery; Gynecology; Urology; Brest care department; Sarcoma; Department of medicine and infectious diseases",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kameda+Kyobashi+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nihonbashi Primary Health Care Clinic",
+        "type": "clinic",
+        "address": "Nihonbashi Primary Health Care Clinic, Chuo Ward, Tokyo",
+        "contact": "03-6667-0855",
+        "languages": "English",
+        "departments": "Internal medicine; Dermatology; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nihonbashi+Primary+Health+Care+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "St. Luke’s International Hospital",
+        "type": "hospital",
+        "address": "St. Luke’s International Hospital, Chuo Ward, Tokyo",
+        "contact": "03-3541-5151",
+        "languages": "English; Chinese; Korean; RussianPOCKETALK",
+        "departments": "Internal medicine; Hematology; Psychosomatic medicine; Respiratory medicine; Thoracic surgery; Nephrology; Endocrine; Endocrinology and metabolism; Neurology; Department of medicine and infectious diseases; Cardiovascular medicine; Department of surgery; Cardiovascular surgery; Gastroenterology; Gastrointestinal surgery; Plastic surgery; Brest surgery; Neurosurgery; Pediatrics; Pediatric surgery; Obstetrics and gynecology; Orthopedic Surgery; Dermatology; Urology; Ophthalmology; Otorhinolaryngology (ENT); Dentistry; Dentistry and oral surgery; Psychiatry; Department of internal medicine (palliative care); Anesthesiology; Radiology; Department of pathology; Clinical laboratory; Emergency department; Medical oncology; Endocrine surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=St.+Luke’s+International+Hospital+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Psychosomatic and Internal Medicine Clinic (Ps I Clinic)",
+        "type": "clinic",
+        "address": "Psychosomatic and Internal Medicine Clinic (Ps I Clinic), Chuo Ward, Tokyo",
+        "contact": "03-6228-5581",
+        "languages": "English",
+        "departments": "Psychosomatic medicine Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Psychosomatic+and+Internal+Medicine+Clinic+%28Ps+I+Clinic%29+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Harai Clinic",
+        "type": "clinic",
+        "address": "Harai Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3538-6055",
+        "languages": "English",
+        "departments": "Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Harai+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Igarashi Endocrine Clinic",
+        "type": "clinic",
+        "address": "Igarashi Endocrine Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3820-8855",
+        "languages": "English",
+        "departments": "Department of surgery; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Igarashi+Endocrine+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takahashi Clinic",
+        "type": "clinic",
+        "address": "Takahashi Clinic, Chuo Ward, Tokyo",
+        "contact": "03-3551-5955",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takahashi+Clinic+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Internal Medicine General Clinic Ningyocho",
+        "type": "clinic",
+        "address": "Internal Medicine General Clinic Ningyocho, Chuo Ward, Tokyo",
+        "contact": "050-3146-4285",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Internal+Medicine+General+Clinic+Ningyocho+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Total Skin Care Clinic GINZA",
+        "type": "clinic",
+        "address": "Total Skin Care Clinic GINZA, Chuo Ward, Tokyo",
+        "contact": "03-6281-5208",
+        "languages": "EnglishOther multiple languages including Chinese and Korean are supported via tablet",
+        "departments": "Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Total+Skin+Care+Clinic+GINZA+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kuramochi Clinic Interpark Nihonbashi",
+        "type": "clinic",
+        "address": "Kuramochi Clinic Interpark Nihonbashi, Chuo Ward, Tokyo",
+        "contact": "03-5801-9893",
+        "languages": "English; Nepali; Hindi; Thai; Vietnamese",
+        "departments": "Respiratory medicine; Gastroenterology; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kuramochi+Clinic+Interpark+Nihonbashi+Chuo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "mammaria tsukiji",
+        "type": "clinic",
+        "address": "mammaria tsukiji, Chuo Ward, Tokyo",
+        "contact": "03-3545-0880",
+        "languages": "English; Korean; Chinese",
+        "departments": "Gynecology; Brest surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=mammaria+tsukiji+Chuo+Ward+Tokyo+Japan"
+      }
+    ],
+    "Bunkyo Ward": [
+      {
+        "name": "Coco Medical Clinic",
+        "type": "clinic",
+        "address": "Coco Medical Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-6882-3319",
+        "languages": "Chinese",
+        "departments": "Internal medicine; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Coco+Medical+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Personal Health Clinic",
+        "type": "clinic",
+        "address": "Personal Health Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-5817-4415",
+        "languages": "English; Swahili",
+        "departments": "Department of medicine and infectious diseases; Transgender health care",
+        "link": "https://www.google.com/maps/search/?api=1&query=Personal+Health+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Internal Medicine and Cardiovascular Murai Clinic",
+        "type": "clinic",
+        "address": "Internal Medicine and Cardiovascular Murai Clinic, Bunkyo Ward, Tokyo",
+        "contact": "070-8339-2683",
+        "languages": "English",
+        "departments": "Internal medicine Cardiovascular medicine Diabetology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Internal+Medicine+and+Cardiovascular+Murai+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dentsuin Clinic",
+        "type": "clinic",
+        "address": "Dentsuin Clinic, Bunkyo Ward, Tokyo",
+        "contact": "81-3-6912-1565",
+        "languages": "English; German",
+        "departments": "Internal medicine; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dentsuin+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hitomi Dental Office",
+        "type": "clinic",
+        "address": "Hitomi Dental Office, Bunkyo Ward, Tokyo",
+        "contact": "03-6280-8789",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hitomi+Dental+Office+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takagi Dental Clinic",
+        "type": "clinic",
+        "address": "Takagi Dental Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3815-6725",
+        "languages": "English",
+        "departments": "General dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takagi+Dental+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sakuma Dental Clinic",
+        "type": "clinic",
+        "address": "Sakuma Dental Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3941-0280",
+        "languages": "English; German",
+        "departments": "General dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sakuma+Dental+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Juntendo University Hospital",
+        "type": "hospital",
+        "address": "Juntendo University Hospital, Bunkyo Ward, Tokyo",
+        "contact": "03-5802-1985",
+        "languages": "English",
+        "departments": "Each clinical department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Juntendo+University+Hospital+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Koishikawa International Clinic",
+        "type": "clinic",
+        "address": "Koishikawa International Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-5615-8556",
+        "languages": "English; Chinese; Spanish",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Koishikawa+International+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Cancer and Infectious Diseases Center Komagome Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Cancer and Infectious Diseases Center Komagome Hospital, Bunkyo Ward, Tokyo",
+        "contact": "03-3823-2101",
+        "languages": "English; Chinese; Korean; Italian; Portuguese; Spanish; Vietnamese; Burmese; Russian; Thai; French; German; Nepali; Hindi; Mongolian; Khmer; Indonesian; Tagalog; Malayan(Using mediPhone)",
+        "departments": "Gastroenterology; Respiratory medicine; Cardiovascular medicine; Neurology; Hematology; Nephrology; Department of hepatology; Connective tissue diseases; Diabetes; Endocrine internal medicine; Department of general medicine; Medical oncology; Department of palliative care; Psycho-oncology; Pediatrics; Surgery(Esophageal, Hepatobiliary–Pancreatic, Gastric, Colorectal, Breast, and Thoracic Surgery); Orthopedic Surgery; Department of rehabilitation; Musculoskeletal oncology; Neurosurgery; Skin oncology; Plastic and reconstructive surgery; Urology; Gynecology; Ophthalmology; Otorhinolaryngology (ENT); Head and neck surgery; Department of infectious diseases; Infection control; Department of medical genetics and genomics; Anesthesiology; Dentistry and oral surgery; Radiology (Diagnostic Radiology/Radiation Oncology); Blood transfusion; Cell therapy; Endoscopy department; Clinical research; Clinical trial center; Clinical laboratory; Pathology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Cancer+and+Infectious+Diseases+Center+Komagome+Hospital+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nakamura Clinic",
+        "type": "clinic",
+        "address": "Nakamura Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3818-7677",
+        "languages": "English",
+        "departments": "Digestive system; Department of surgery; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nakamura+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Institute of Science Tokyo Hospital",
+        "type": "hospital",
+        "address": "Institute of Science Tokyo Hospital, Bunkyo Ward, Tokyo",
+        "contact": "03-5803-5650",
+        "languages": "English; Chinese",
+        "departments": "Emergency department; Internal medicine; Department of surgery; Pediatrics; Psychiatry; Dermatology; Neurosurgery; Urology; Orthopedic Surgery; Ophthalmology; Otorhinolaryngology (ENT); Obstetrics; Gynecology; Dentistry; Clinical department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Institute+of+Science+Tokyo+Hospital+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hakusan Nagamine Eye Clinic",
+        "type": "clinic",
+        "address": "Hakusan Nagamine Eye Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-5842-2232",
+        "languages": "English; Chinese; Korean",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hakusan+Nagamine+Eye+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hongo E.N.T. Clinic",
+        "type": "clinic",
+        "address": "Hongo E.N.T. Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-5689-4133",
+        "languages": "English",
+        "departments": "Otorhinolaryngology (ENT)",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hongo+E.N.T.+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Bunkyo Medical Clinic",
+        "type": "clinic",
+        "address": "Bunkyo Medical Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3827-7755",
+        "languages": "English; Other (Multiple languages including Chinese, Korean, French, etc. are supported via tablet)",
+        "departments": "Internal medicine; Gastroenterology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Bunkyo+Medical+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Fix Dental Clinic",
+        "type": "clinic",
+        "address": "Fix Dental Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-5615-8415",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Fix+Dental+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ohtsuka Clinic",
+        "type": "clinic",
+        "address": "Ohtsuka Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3831-2294",
+        "languages": "English",
+        "departments": "Pediatrics; Internal medicine; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ohtsuka+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Todaimae Kids Clinic",
+        "type": "clinic",
+        "address": "Todaimae Kids Clinic, Bunkyo Ward, Tokyo",
+        "contact": "03-3830-0161",
+        "languages": "English",
+        "departments": "Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Todaimae+Kids+Clinic+Bunkyo+Ward+Tokyo+Japan"
+      }
+    ],
+    "Taito Ward": [
+      {
+        "name": "Asian Beauty Clinic",
+        "type": "clinic",
+        "address": "Asian Beauty Clinic, Taito Ward, Tokyo",
+        "contact": "03-3831-5136",
+        "languages": "Korean; Chinese",
+        "departments": "Cosmetic dermatology; Cosmetic surgery; Plastic surgery; Dermatology; Others",
+        "link": "https://www.google.com/maps/search/?api=1&query=Asian+Beauty+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Stress Care Tokyo Ueno Ekimae Clinic",
+        "type": "clinic",
+        "address": "Stress Care Tokyo Ueno Ekimae Clinic, Taito Ward, Tokyo",
+        "contact": "03-3842-7730",
+        "languages": "English",
+        "departments": "Psychosomatic medicine; Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Stress+Care+Tokyo+Ueno+Ekimae+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kyowa Clinic",
+        "type": "clinic",
+        "address": "Kyowa Clinic, Taito Ward, Tokyo",
+        "contact": "03-3835-0186",
+        "languages": "English",
+        "departments": "Internal medicine; Digestive systemInternal medicine; Department of hepatology; Diabetology and endocrinology; Cardiovascular medicine; Department of allergies, and connective tissue disorders",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kyowa+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Minowa Dental Clinic",
+        "type": "clinic",
+        "address": "Minowa Dental Clinic, Taito Ward, Tokyo",
+        "contact": "090-3503-8871",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Minowa+Dental+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yamada Hideaki Shitamachi Clinic",
+        "type": "clinic",
+        "address": "Yamada Hideaki Shitamachi Clinic, Taito Ward, Tokyo",
+        "contact": "03-5806-3077",
+        "languages": "English; Korean",
+        "departments": "Internal medicine; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamada+Hideaki+Shitamachi+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ueno Medical Clinic",
+        "type": "clinic",
+        "address": "Ueno Medical Clinic, Taito Ward, Tokyo",
+        "contact": "03-3832-0076",
+        "languages": "English; Korean",
+        "departments": "Internal medicine; Dermatology; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ueno+Medical+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ueno Shinagawa Dental & Orthodontic Clinic",
+        "type": "clinic",
+        "address": "Ueno Shinagawa Dental & Orthodontic Clinic, Taito Ward, Tokyo",
+        "contact": "03-5826-8814",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ueno+Shinagawa+Dental+%26+Orthodontic+Clinic+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Business Clinic Ecute-ueno",
+        "type": "clinic",
+        "address": "Tokyo Business Clinic Ecute-ueno, Taito Ward, Tokyo",
+        "contact": "03-6802-8792",
+        "languages": "English; Chinese; Korean",
+        "departments": "General medicine; Dermatology; Pediatrics; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Business+Clinic+Ecute-ueno+Taito+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hjgashiueno Dental clinic",
+        "type": "clinic",
+        "address": "Hjgashiueno Dental clinic, Taito Ward, Tokyo",
+        "contact": "03-5818-4618",
+        "languages": "English",
+        "departments": "General dentistry; Dentistry and oral surgery; Pediatric dentistry; Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hjgashiueno+Dental+clinic+Taito+Ward+Tokyo+Japan"
+      }
+    ],
+    "Minato Ward": [
+      {
+        "name": "IUHW Mita Hospital",
+        "type": "hospital",
+        "address": "IUHW Mita Hospital, Minato Ward, Tokyo",
+        "contact": "03-3451-8121",
+        "languages": "English; Chinese",
+        "departments": "Otorhinolaryngology (ENT); Urology; Head and neck cancer center; Internal medicine; Respiratory center; Gastrointestinal center; Orthopedic Surgery; Neurosurgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=IUHW+Mita+Hospital+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Takanawa Hospital",
+        "type": "hospital",
+        "address": "Tokyo Takanawa Hospital, Minato Ward, Tokyo",
+        "contact": "03-3443-9193",
+        "languages": "English; ChineseiMandarin; Cantonesej; Russian; 74 languages supported by POCKETALK",
+        "departments": "Internal medicine; Department of surgery; Neurosurgery; Orthopedic Surgery; Plastic surgery; Dermatology; Urology; Ophthalmology; Department of rehabilitation; Radiology; Dentistry and oral surgery; Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Takanawa+Hospital+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Toranomon Hospital",
+        "type": "hospital",
+        "address": "Toranomon Hospital, Minato Ward, Tokyo",
+        "contact": "03-3588-1111",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Respiratory medicine; Gastroenterology; Cardiovascular medicine; Pediatrics; Psychiatry; Neurology; Department of surgery; Orthopedic Surgery; Plastic surgery; Neurosurgery; Thoracic surgery; Cardiovascular surgery; Dermatology; Obstetrics and gynecology; Ophthalmology; Otorhinolaryngology (ENT); Urology; Dentistry; Hematology; Emergency department; Department of hepatology; Endocrine; Endocrinology and metabolism; Nephrology; KidneyDepartment of surgery; Department of rheumatology; Department of medicine and infectious diseases; Gastrointestinal surgery; Brest care department; Endocrine surgery; Neurology; Vascular surgery; Medical oncology; Radiation oncology; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Toranomon+Hospital+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Toranomon Nakamura Clinic",
+        "type": "clinic",
+        "address": "Toranomon Nakamura Clinic, Minato Ward, Tokyo",
+        "contact": "03-6823-1409",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Digestive systemInternal medicine; Otolaryngology; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Toranomon+Nakamura+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nishiazabu International Clinic",
+        "type": "clinic",
+        "address": "Nishiazabu International Clinic, Minato Ward, Tokyo",
+        "contact": "03-6447-5966",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Department of surgery; Pediatrics; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nishiazabu+International+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kyono Art Clinic Takanawa",
+        "type": "clinic",
+        "address": "Kyono Art Clinic Takanawa, Minato Ward, Tokyo",
+        "contact": "03-6408-4124",
+        "languages": "English",
+        "departments": "Gynecology (infertility treatment); Urology (male infertility)",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kyono+Art+Clinic+Takanawa+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Roppongi HAT Clinic",
+        "type": "clinic",
+        "address": "Roppongi HAT Clinic, Minato Ward, Tokyo",
+        "contact": "03-3585-3232",
+        "languages": "English",
+        "departments": "General internal medicine; Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Roppongi+HAT+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "SHIBA INTERNATIONAL COLOPROCTOLOGICAL CLINIC",
+        "type": "clinic",
+        "address": "SHIBA INTERNATIONAL COLOPROCTOLOGICAL CLINIC, Minato Ward, Tokyo",
+        "contact": "03-6453-9307",
+        "languages": "English; Korean",
+        "departments": "Proctologic surgery; Gastroenterology; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=SHIBA+INTERNATIONAL+COLOPROCTOLOGICAL+CLINIC+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Omotesando Helene Clinic",
+        "type": "clinic",
+        "address": "Omotesando Helene Clinic, Minato Ward, Tokyo",
+        "contact": "03-3400-2277",
+        "languages": "English; Chinese; Vietnamese; Indonesian; Malayan; Mongolian",
+        "departments": "Dermatology; Anesthesiology; Internal medicine; Radiology; Plastic surgery; Dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Omotesando+Helene+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "International Health Care Clinic",
+        "type": "clinic",
+        "address": "International Health Care Clinic, Minato Ward, Tokyo",
+        "contact": "03-3501-1330",
+        "languages": "(Consultation via an interpreter available: Tue-Fri, 15:30-18:30)",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=International+Health+Care+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Azabu Orthopedic Clinic",
+        "type": "clinic",
+        "address": "Azabu Orthopedic Clinic, Minato Ward, Tokyo",
+        "contact": "03-5765-2020",
+        "languages": "English",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Azabu+Orthopedic+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Beauty Skin Clinic",
+        "type": "clinic",
+        "address": "Tokyo Beauty Skin Clinic, Minato Ward, Tokyo",
+        "contact": "03-3585-0272/03-3585-0282",
+        "languages": "English; French; German; Dutch",
+        "departments": "Dermatology; Plastic surgery; Department of allergy; Internal medicine; Gynecology; Ophthalmology; Psychosomatic medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Beauty+Skin+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kumada Clinic",
+        "type": "clinic",
+        "address": "Kumada Clinic, Minato Ward, Tokyo",
+        "contact": "03-5766-3357",
+        "languages": "English",
+        "departments": "Otorhinolaryngology (ENT)",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kumada+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "matsumi ladice clinic",
+        "type": "clinic",
+        "address": "matsumi ladice clinic, Minato Ward, Tokyo",
+        "contact": "03-6453-8355",
+        "languages": "English; Chinese",
+        "departments": "Cosmetic dermatology; Obstetrics and gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=matsumi+ladice+clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Omotesando Wiz Clinic",
+        "type": "clinic",
+        "address": "Omotesando Wiz Clinic, Minato Ward, Tokyo",
+        "contact": "03-5962-7018",
+        "languages": "English; Chinese",
+        "departments": "Cosmetic dermatology; Cosmetic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Omotesando+Wiz+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Akasaka Odayaka Clinic",
+        "type": "clinic",
+        "address": "Akasaka Odayaka Clinic, Minato Ward, Tokyo",
+        "contact": "03-6234-0511",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Akasaka+Odayaka+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ishigami Dental Office",
+        "type": "clinic",
+        "address": "Ishigami Dental Office, Minato Ward, Tokyo",
+        "contact": "03-3409-6889",
+        "languages": "English",
+        "departments": "Dentistry; Department of orthodontics; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ishigami+Dental+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yamanaka Dental Clinic",
+        "type": "clinic",
+        "address": "Yamanaka Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-6381-7778",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamanaka+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takanawa Orthodontic Clinic",
+        "type": "clinic",
+        "address": "Takanawa Orthodontic Clinic, Minato Ward, Tokyo",
+        "contact": "03-3280-1700",
+        "languages": "English",
+        "departments": "Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takanawa+Orthodontic+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Azabudai United Dental Office",
+        "type": "clinic",
+        "address": "Azabudai United Dental Office, Minato Ward, Tokyo",
+        "contact": "03-5570-4334",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Azabudai+United+Dental+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nakajima Dental Clinic",
+        "type": "clinic",
+        "address": "Nakajima Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-3479-2726",
+        "languages": "English",
+        "departments": "General dentistry; Endodontics; Periodontal; Beauty care",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nakajima+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ichikawa Dental Akasaka Office",
+        "type": "clinic",
+        "address": "Ichikawa Dental Akasaka Office, Minato Ward, Tokyo",
+        "contact": "03-3505-5733",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ichikawa+Dental+Akasaka+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo International Dental Clinic Roppongi",
+        "type": "clinic",
+        "address": "Tokyo International Dental Clinic Roppongi, Minato Ward, Tokyo",
+        "contact": "03-6447-5966",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+International+Dental+Clinic+Roppongi+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mirise Orthodontics Minami Aoyama",
+        "type": "clinic",
+        "address": "Mirise Orthodontics Minami Aoyama, Minato Ward, Tokyo",
+        "contact": "03-5468-5585",
+        "languages": "English; Chinese; Russian; Thai",
+        "departments": "Department of orthodontics; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mirise+Orthodontics+Minami+Aoyama+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Reiko Dental Clinic",
+        "type": "clinic",
+        "address": "Reiko Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-5114-6077",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Reiko+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Makiyama Kiyoshi Oral Clinic",
+        "type": "clinic",
+        "address": "Makiyama Kiyoshi Oral Clinic, Minato Ward, Tokyo",
+        "contact": "03-6447-4118",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Makiyama+Kiyoshi+Oral+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Azabu Tokyo Dental Clinic",
+        "type": "clinic",
+        "address": "Azabu Tokyo Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-5422-7518",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Azabu+Tokyo+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kimishima Dental Office",
+        "type": "clinic",
+        "address": "Kimishima Dental Office, Minato Ward, Tokyo",
+        "contact": "03-6277-4217",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kimishima+Dental+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shiroganedai Pearl Orthodontic Office",
+        "type": "clinic",
+        "address": "Shiroganedai Pearl Orthodontic Office, Minato Ward, Tokyo",
+        "contact": "03-3445-1182",
+        "languages": "English",
+        "departments": "Dentistry; Clinical department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shiroganedai+Pearl+Orthodontic+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Midtown Dental Clinic",
+        "type": "clinic",
+        "address": "Tokyo Midtown Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-5413-7911",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Midtown+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hitomi Dental Office Akasaka",
+        "type": "clinic",
+        "address": "Hitomi Dental Office Akasaka, Minato Ward, Tokyo",
+        "contact": "03-6277-7983",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hitomi+Dental+Office+Akasaka+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "NAKANO DENTAL",
+        "type": "clinic",
+        "address": "NAKANO DENTAL, Minato Ward, Tokyo",
+        "contact": "03-3446-1117",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=NAKANO+DENTAL+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Toyoda Dental Office",
+        "type": "clinic",
+        "address": "Toyoda Dental Office, Minato Ward, Tokyo",
+        "contact": "03-3582-4731",
+        "languages": "English",
+        "departments": "General dentistry; Department of orthodontics; Oral surgery; Pediatric dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Toyoda+Dental+Office+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Royal Dental Clinic",
+        "type": "clinic",
+        "address": "Royal Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-3404-0819",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Royal+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Keyakizakaue Medical and Dental Clinic",
+        "type": "clinic",
+        "address": "Keyakizakaue Medical and Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-6804-2211",
+        "languages": "English,Chinese",
+        "departments": "Dentistry; Cardiovascular medicine; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Keyakizakaue+Medical+and+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "RK Dental Office Roppongi",
+        "type": "clinic",
+        "address": "RK Dental Office Roppongi, Minato Ward, Tokyo",
+        "contact": "03-6459-2560",
+        "languages": "English",
+        "departments": "Dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=RK+Dental+Office+Roppongi+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Saiseikai Central Hospital",
+        "type": "hospital",
+        "address": "Tokyo Saiseikai Central Hospital, Minato Ward, Tokyo",
+        "contact": "050-5358-2873(",
+        "languages": "Emergency departmentFEnglish; Chinese; Korean; Spanish; Portuguese; FrenchRussian Internal medicine; Department of surgery; Pediatrics; Obstetrics and gynecology; Dermatology; Otorhinolaryngology (ENT); UrologyFEnglish; Chinese; Spanish; French; Russian",
+        "departments": "Emergency department; Internal medicine; Department of surgeryFPediatricsFObstetrics and gynecology; Dermatology; Otorhinolaryngology (ENT)",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Saiseikai+Central+Hospital+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shimbashi Hibiya Clinic",
+        "type": "clinic",
+        "address": "Shimbashi Hibiya Clinic, Minato Ward, Tokyo",
+        "contact": "03-5251-9300",
+        "languages": "English",
+        "departments": "Orthopedic Surgery; Dermatology; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shimbashi+Hibiya+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Azabu Koki Clinic",
+        "type": "clinic",
+        "address": "Azabu Koki Clinic, Minato Ward, Tokyo",
+        "contact": "03-6240-2912",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Azabu+Koki+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Midtown Clinic",
+        "type": "clinic",
+        "address": "Tokyo Midtown Clinic, Minato Ward, Tokyo",
+        "contact": "03-5413-7911",
+        "languages": "English",
+        "departments": "General internal medicine; Orthopedic Surgery; Gastroenterology; Respiratory medicine; Cardiovascular medicine; Diabetology; Neurology; Neurosurgery; Department of rheumatology; Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Midtown+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Akasaka Dental Clinic",
+        "type": "clinic",
+        "address": "Akasaka Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-3583-1818",
+        "languages": "English; Chinese",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Akasaka+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Aoyama Dental Clinic",
+        "type": "clinic",
+        "address": "Aoyama Dental Clinic, Minato Ward, Tokyo",
+        "contact": "03-6804-2378",
+        "languages": "English; Chinese",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Aoyama+Dental+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Plaza Precision Surgery",
+        "type": "clinic",
+        "address": "Plaza Precision Surgery, Minato Ward, Tokyo",
+        "contact": "03-3437-3880",
+        "languages": "English; Chinese",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Plaza+Precision+Surgery+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Indiva Clinic",
+        "type": "clinic",
+        "address": "Indiva Clinic, Minato Ward, Tokyo",
+        "contact": "03-6436-7991",
+        "languages": "English; Chinese",
+        "departments": "Medical departmentDentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Indiva+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Roppongi Clinic, Mental Health Clinic",
+        "type": "clinic",
+        "address": "Roppongi Clinic, Mental Health Clinic, Minato Ward, Tokyo",
+        "contact": "03-6262-3459",
+        "languages": "English; Korean; Portuguese",
+        "departments": "Psychosomatic medicine; Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Roppongi+Clinic%2C+Mental+Health+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Tower View Clinic Azabujuban",
+        "type": "clinic",
+        "address": "Tokyo Tower View Clinic Azabujuban, Minato Ward, Tokyo",
+        "contact": "03-6809-3207",
+        "languages": "English; French(Appointment required: internal medicine only)",
+        "departments": "Internal medicine; Psychosomatic medicine; Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Tower+View+Clinic+Azabujuban+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Minamiazabu Musubi Dermatology and Plastic Surgery",
+        "type": "clinic",
+        "address": "Minamiazabu Musubi Dermatology and Plastic Surgery, Minato Ward, Tokyo",
+        "contact": "03-6277-2113",
+        "languages": "English; Chinese*Depends on interpreter's working days",
+        "departments": "Dermatology; Plastic surgery; Fever outpatient clinic; Cosmetic dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Minamiazabu+Musubi+Dermatology+and+Plastic+Surgery+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "DENTAL OFFICE TORANOMON",
+        "type": "clinic",
+        "address": "DENTAL OFFICE TORANOMON, Minato Ward, Tokyo",
+        "contact": "03-5545-1418",
+        "languages": "English; ChineseiMandarinj*Appointment required",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=DENTAL+OFFICE+TORANOMON+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "TOTAL TOOTH TREATMENT",
+        "type": "clinic",
+        "address": "TOTAL TOOTH TREATMENT, Minato Ward, Tokyo",
+        "contact": "03-3585-0648",
+        "languages": "English; Chinese",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=TOTAL+TOOTH+TREATMENT+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "HEIWA@HOSPITAL",
+        "type": "hospital",
+        "address": "HEIWA@HOSPITAL, Minato Ward, Tokyo",
+        "contact": "03-5797-8367",
+        "languages": "English; Chinese; Taiwanese; French; Korean",
+        "departments": "General internal medicine; Diabetes; Medical oncology; Regenerative medicine; Plastic surgery; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=HEIWA@HOSPITAL+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinagawa East Medical Clinic",
+        "type": "clinic",
+        "address": "Shinagawa East Medical Clinic, Minato Ward, Tokyo",
+        "contact": "03-5783-5521",
+        "languages": "English; Chinese",
+        "departments": "General internal medicine; Gastroenterology; Cardiovascular medicine; Travel clinic; Medical examination; Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinagawa+East+Medical+Clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Evergreen medical clinic",
+        "type": "clinic",
+        "address": "Evergreen medical clinic, Minato Ward, Tokyo",
+        "contact": "03-6459-2757",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Department of surgery; Dermatology; Urology; Gynecology; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Evergreen+medical+clinic+Minato+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sakura International Clinic Tokyo",
+        "type": "clinic",
+        "address": "Sakura International Clinic Tokyo, Minato Ward, Tokyo",
+        "contact": "03-6824-6819",
+        "languages": "English; Chinese; Korean; Nepali; Portuguese; Spanish; Vietnamese; Burmese; French; Russian; Thai; Hindi; Mongolian; Tagalog; Indonesian; Persian; Cantonese; Arabic; Urdu; Lao; Bengali; Taiwanese; Italian; Khmer; Dari; German; Pashto; Sinhalese; Turkish; Tamil; Malayan; Ukrainian",
+        "departments": "Internal medicine; Obstetrics and gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sakura+International+Clinic+Tokyo+Minato+Ward+Tokyo+Japan"
+      }
+    ],
+    "Shinagawa Ward": [
+      {
+        "name": "NTT Medical Center Tokyo",
+        "type": "hospital",
+        "address": "NTT Medical Center Tokyo, Shinagawa Ward, Tokyo",
+        "contact": "03-6721-6239",
+        "languages": "English; Chinese; Korean; Thai; Russian; Vietnamese; Portuguese; Spanish (Appointment required:Filipino; French; Mongolian; Hindi; Indonesian; Persian; Nepali; Burmese)",
+        "departments": "Emergency department; Department of general medicine; International medicine; Cardiovascular medicine; Cardiovascular surgery; Respiratory medicine; Thoracic surgery; Neurosurgery; Neurology; Hypertension; Nephrology; Gastroenterology; Hepatopancreatobiliary medicine; Diabetes; Endocrine internal medicine; Hematology; Department of rheumatology and connective tissue disorders; Medical oncology; Department of medicine and infectious diseases; Department of surgery; Orthopedic Surgery; Sports orthopedics; Brest surgery; Plastic surgery; Dentistry and oral surgery; Dermatology; Urology; Obstetrics and gynecology; Pediatrics; Ophthalmology; Otorhinolaryngology (ENT); Head and Neck Surgery; Neuropsychiatry; Psychosomatic medicine; Radiology; Pain clinic; Department of rehabilitation; Department of palliative care",
+        "link": "https://www.google.com/maps/search/?api=1&query=NTT+Medical+Center+Tokyo+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mochizuki Clinic",
+        "type": "clinic",
+        "address": "Mochizuki Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-6426-2711",
+        "languages": "English; French",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mochizuki+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ooi Clinic",
+        "type": "clinic",
+        "address": "Ooi Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-6433-1463",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Pediatrics; Gastrointestinal medicine; Department of Chinese medicine; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ooi+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinagawa Gotenyama Dermatology Clinic",
+        "type": "clinic",
+        "address": "Shinagawa Gotenyama Dermatology Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-5420-1212",
+        "languages": "English",
+        "departments": "Dermatology; Pediatric dermatology; Department of allergy; Cosmetic dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinagawa+Gotenyama+Dermatology+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Meguro Dermatology Clinic",
+        "type": "clinic",
+        "address": "Meguro Dermatology Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-6409-6079",
+        "languages": "English",
+        "departments": "Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Meguro+Dermatology+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Murasaki Breast Clinic",
+        "type": "clinic",
+        "address": "Murasaki Breast Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-3495-0881",
+        "languages": "English",
+        "departments": "Brest surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Murasaki+Breast+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Keishin Gotanda Eye Clinic",
+        "type": "clinic",
+        "address": "Keishin Gotanda Eye Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-3473-0400",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Keishin+Gotanda+Eye+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shimizuzaka Dental Clinic",
+        "type": "clinic",
+        "address": "Shimizuzaka Dental Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-3783-2200",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shimizuzaka+Dental+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ohara Dental Clinic",
+        "type": "clinic",
+        "address": "Ohara Dental Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-3471-1181",
+        "languages": "English",
+        "departments": "General dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ohara+Dental+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Gotenyama Orthopedic & Rehab Clinic",
+        "type": "clinic",
+        "address": "Gotenyama Orthopedic & Rehab Clinic, Shinagawa Ward, Tokyo",
+        "contact": "03-3446-5108",
+        "languages": "Japanese; English; Chinese",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Gotenyama+Orthopedic+%26+Rehab+Clinic+Shinagawa+Ward+Tokyo+Japan"
+      }
+    ],
+    "Ota Ward": [
+      {
+        "name": "Egawa Dental Clinic",
+        "type": "clinic",
+        "address": "Egawa Dental Clinic, Ota Ward, Tokyo",
+        "contact": "03-5711-0418",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Egawa+Dental+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Rosai Hospital",
+        "type": "hospital",
+        "address": "Tokyo Rosai Hospital, Ota Ward, Tokyo",
+        "contact": "03-3742-7301",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Digestive systemInternal medicine; Kidney; Endocrinology and metabolism; Respiratory medicine; Diabetes; Endocrine internal medicine; Department of general medicine; Neurology; Cardiology; Mental health department; Pediatrics; Department of surgery; Gastrointestinal surgery; Thoracic surgery; Brest surgery; Orthopedic Surgery; Plastic surgery; Neurosurgery; Dermatology; Urology; Obstetrics and gynecology; Ophthalmology; Otorhinolaryngology (ENT); Department of rehabilitation; Neurotransplantation department; Diagnostic radiology; Radiation oncology; Anesthesiology; Emergency department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Rosai+Hospital+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Toho University Omori Medical Center",
+        "type": "hospital",
+        "address": "Toho University Omori Medical Center, Ota Ward, Tokyo",
+        "contact": "03-3762-4151",
+        "languages": "English; Chinese(Tablet-based medical interpretation service supports 31 languages)",
+        "departments": "Internal medicine; Department of surgery; Gastroenterology; Gastrointestinal surgery; Cardiovascular medicine; Cardiovascular surgery; Respiratory medicine; Thoracic surgery; Diabetology, endocrinology and metabolism; Nephrology; Neurology; Neurosurgery; Connective tissue diseases; Pediatrics; Hematology and oncology; Breast and endocrine surgery; Psychosomatic medicine; Neuropsychiatry; Plastic surgery; Orthopedic Surgery; Obstetrics and gynecology; Dermatology; Urology; Ophthalmology; Otorhinolaryngology (ENT); Radiology; Anesthesiology; Oriental medicine; Oral surgery; Neonatology; Department of rehabilitation",
+        "link": "https://www.google.com/maps/search/?api=1&query=Toho+University+Omori+Medical+Center+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Ebara Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Ebara Hospital, Ota Ward, Tokyo",
+        "contact": "03-5734-8000",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Pediatrics; Psychiatry; Dermatology; Neurosurgery; Urology; Orthopedic Surgery; Ophthalmology; Otorhinolaryngology (ENT); Obstetrics; Gynecology; Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Ebara+Hospital+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Taiseikai Onishi Clinic",
+        "type": "clinic",
+        "address": "Taiseikai Onishi Clinic, Ota Ward, Tokyo",
+        "contact": "03-3765-0024",
+        "languages": "English",
+        "departments": "Internal medicine; Dermatology; Proctologic internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Taiseikai+Onishi+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kugahara Women’s Clinic",
+        "type": "clinic",
+        "address": "Kugahara Women’s Clinic, Ota Ward, Tokyo",
+        "contact": "03-3751-1111",
+        "languages": "English",
+        "departments": "Obstetrics and gynecology; Women's internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kugahara+Women’s+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mori Dental Clinic",
+        "type": "clinic",
+        "address": "Mori Dental Clinic, Ota Ward, Tokyo",
+        "contact": "03-3765-0418",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mori+Dental+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kawanabe Dental Clinic",
+        "type": "clinic",
+        "address": "Kawanabe Dental Clinic, Ota Ward, Tokyo",
+        "contact": "03-3744-4182",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kawanabe+Dental+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dental Tourism Japan TokyoTellus Dental & Implant Office",
+        "type": "clinic",
+        "address": "Dental Tourism Japan TokyoTellus Dental & Implant Office, Ota Ward, Tokyo",
+        "contact": "03-5726-9163",
+        "languages": "English",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dental+Tourism+Japan+TokyoTellus+Dental+%26+Implant+Office+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Fujimi Clinic",
+        "type": "clinic",
+        "address": "Fujimi Clinic, Ota Ward, Tokyo",
+        "contact": "03-5493-5253",
+        "languages": "English",
+        "departments": "Pediatrics; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Fujimi+Clinic+Ota+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Minamiota Eye Clinic",
+        "type": "clinic",
+        "address": "Minamiota Eye Clinic, Ota Ward, Tokyo",
+        "contact": "03-3738-0681",
+        "languages": "English; (Languages other than English are supported using an electronic tool)",
+        "departments": "Ophthalmology; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Minamiota+Eye+Clinic+Ota+Ward+Tokyo+Japan"
+      }
+    ],
+    "Shinjuku Ward": [
+      {
+        "name": "Shinjuku Dental Clinic",
+        "type": "clinic",
+        "address": "Shinjuku Dental Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-3366-0018",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Dental+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku East Primary Care Clinic",
+        "type": "clinic",
+        "address": "Shinjuku East Primary Care Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-3226-7777",
+        "languages": "English",
+        "departments": "General medicine; Respiratory medicine; Department of medicine and infectious diseases; Cardiovascular medicine; Department of sexually transmitted diseases",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+East+Primary+Care+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "National Center for Global Health and Medicine",
+        "type": "clinic",
+        "address": "National Center for Global Health and Medicine, Shinjuku Ward, Tokyo",
+        "contact": "03-6228-0749",
+        "languages": "English; Chinese; Korean; Vietnamese; Nepali; Burmese; Thai; Filipino; Indonesian; Russian; Spanish; Portuguese; French; Persian; Mongolian; Hindi; Cantonese; Ukrainian; Dari; Pashto; German; Italian; Bengali; Arabic; Urdu; Lao; Taiwanese; Khmer; Sinhalese; Tamil; Turkish; Malayan70 languages (automatic translator)/as needed",
+        "departments": "All clinical departments",
+        "link": "https://www.google.com/maps/search/?api=1&query=National+Center+for+Global+Health+and+Medicine+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Okubo Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Okubo Hospital, Shinjuku Ward, Tokyo",
+        "contact": "03-5285-8811",
+        "languages": "English; Chinese; Korean; Polish; Spanish; Vietnamese",
+        "departments": "Internal medicine; Neurosurgery; Urology; Orthopedic Surgery; Ophthalmology; Otorhinolaryngology (ENT); Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Okubo+Hospital+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Medical University Hospital",
+        "type": "hospital",
+        "address": "Tokyo Medical University Hospital, Shinjuku Ward, Tokyo",
+        "contact": "03-3342-6111",
+        "languages": "English",
+        "departments": "Emergency department; Internal medicine; Department of surgery; Pediatrics; Psychiatry; Dermatology; Neurosurgery; Urology; Orthopedic Surgery; Ophthalmology; Otorhinolaryngology (ENT); Obstetrics; Gynecology; Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Medical+University+Hospital+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "SEIBO international Catholic Hospital",
+        "type": "hospital",
+        "address": "SEIBO international Catholic Hospital, Shinjuku Ward, Tokyo",
+        "contact": "03-3951-1111 (",
+        "languages": "English; French; Spanish; Burmese",
+        "departments": "Obstetrics and gynecology; Internal medicine; Department of surgery; Pediatrics; Department of general medicine; Department of palliative care; Brest surgery; Dermatology; Orthopedic Surgery; Otorhinolaryngology (ENT); Ophthalmology; Psychiatry; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=SEIBO+international+Catholic+Hospital+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Haruyama Memorial Hospital",
+        "type": "hospital",
+        "address": "Haruyama Memorial Hospital, Shinjuku Ward, Tokyo",
+        "contact": "03-3363-1661",
+        "languages": "English; Chinese; Portuguese; Spanish",
+        "departments": "Internal medicine; Orthopedic Surgery; Neurosurgery; Plastic surgery; Gastroenterology; Gastrointestinal surgery; Department of surgery; Anesthesiology; Department of rehabilitation; Urology; Emergency department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Haruyama+Memorial+Hospital+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Doctor Ando’s Orthopedic Clinic",
+        "type": "clinic",
+        "address": "Doctor Ando’s Orthopedic Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-3350-6956",
+        "languages": "English; French; Chinese",
+        "departments": "Orthopedic Surgery; Department of rehabilitation",
+        "link": "https://www.google.com/maps/search/?api=1&query=Doctor+Ando’s+Orthopedic+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mejiro Sola Clinic",
+        "type": "clinic",
+        "address": "Mejiro Sola Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5906-5092",
+        "languages": "English/German: All days, French: Tue, Thu, Sat",
+        "departments": "Psychiatry; Psychosomatic medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mejiro+Sola+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ishii Clinic",
+        "type": "clinic",
+        "address": "Ishii Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5937-3361",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Urinary system; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ishii+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Miyoshi Clinic",
+        "type": "clinic",
+        "address": "Miyoshi Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5337-9871",
+        "languages": "Chinese",
+        "departments": "General medicine; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Miyoshi+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Cardiovascular Imaging Clinic",
+        "type": "clinic",
+        "address": "Cardiovascular Imaging Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5206-5956",
+        "languages": "English; Chinese",
+        "departments": "Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Cardiovascular+Imaging+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kagurazaka Clinic Internal Medicine & Neurology",
+        "type": "clinic",
+        "address": "Kagurazaka Clinic Internal Medicine & Neurology, Shinjuku Ward, Tokyo",
+        "contact": "03-6280-7582",
+        "languages": "English",
+        "departments": "Internal medicine; Neurology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kagurazaka+Clinic+Internal+Medicine+%26+Neurology+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yanagisawa Clinic",
+        "type": "clinic",
+        "address": "Yanagisawa Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5368-1303",
+        "languages": "English",
+        "departments": "Internal medicine; Department of infectious diseases",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yanagisawa+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku-Higashiguchi Eye Clinic",
+        "type": "clinic",
+        "address": "Shinjuku-Higashiguchi Eye Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5363-0507",
+        "languages": "English; Chinese",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku-Higashiguchi+Eye+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku Hiro Clinic",
+        "type": "clinic",
+        "address": "Shinjuku Hiro Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5272-5610",
+        "languages": "English; Chinese; Nepali",
+        "departments": "Internal medicine; Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Hiro+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sakura Clinic",
+        "type": "clinic",
+        "address": "Sakura Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5937-3717",
+        "languages": "Burmese; Nepali; Burmese; Vietnamese; Thai; Cambodian",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sakura+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yotsuya Yui Clinic",
+        "type": "clinic",
+        "address": "Yotsuya Yui Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5225-1291",
+        "languages": "English; Korean; Spanish; Portuguese",
+        "departments": "Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yotsuya+Yui+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "eHealth clinic",
+        "type": "clinic",
+        "address": "eHealth clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5315-0514",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Nephrology; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=eHealth+clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Aoi Dental Clinic",
+        "type": "clinic",
+        "address": "Aoi Dental Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5351-4618",
+        "languages": "Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Aoi+Dental+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kojima Dental Clinic",
+        "type": "clinic",
+        "address": "Kojima Dental Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-3350-4658",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kojima+Dental+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sato Orthodontic Clinic",
+        "type": "clinic",
+        "address": "Sato Orthodontic Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5386-1180",
+        "languages": "English",
+        "departments": "Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sato+Orthodontic+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yotsuya Saneicho Dental Clinic",
+        "type": "clinic",
+        "address": "Yotsuya Saneicho Dental Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-3350-0817",
+        "languages": "English",
+        "departments": "Dentistry; Oral surgery; Orthodontic treatment; Pediatric dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yotsuya+Saneicho+Dental+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku Island Medical Clinic",
+        "type": "clinic",
+        "address": "Shinjuku Island Medical Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5323-0252",
+        "languages": "English",
+        "departments": "Internal medicine; Respiratory medicine; Department of allergy; Diabetology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Island+Medical+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku Breast Center Kusama Clinic",
+        "type": "clinic",
+        "address": "Shinjuku Breast Center Kusama Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5925-3855",
+        "languages": "English",
+        "departments": "Brest care department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Breast+Center+Kusama+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dental Clinic Takadanobaba Eorthodontics",
+        "type": "clinic",
+        "address": "Dental Clinic Takadanobaba Eorthodontics, Shinjuku Ward, Tokyo",
+        "contact": "03-6233-7288",
+        "languages": "English; ChineseiMandarinj",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dental+Clinic+Takadanobaba+Eorthodontics+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dental Clinic Hamille Takadanobaba",
+        "type": "clinic",
+        "address": "Dental Clinic Hamille Takadanobaba, Shinjuku Ward, Tokyo",
+        "contact": "03-6709-6866",
+        "languages": "English; ChineseiCantonese; Mandarin; Taiwanesej",
+        "departments": "Dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dental+Clinic+Hamille+Takadanobaba+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjyuku Sta.Blart Dental Clinic",
+        "type": "clinic",
+        "address": "Shinjyuku Sta.Blart Dental Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5990-2835",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjyuku+Sta.Blart+Dental+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinjuku NSBuilding Skyclinic",
+        "type": "clinic",
+        "address": "Shinjuku NSBuilding Skyclinic, Shinjuku Ward, Tokyo",
+        "contact": "03-6258-5755",
+        "languages": "English; Chinese; French",
+        "departments": "Internal medicine; Gastroenterology; Department of surgery; Gastroenterology; Gynecology; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinjuku+NSBuilding+Skyclinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "PRIVATE CARE CLINIC TOKYO",
+        "type": "clinic",
+        "address": "PRIVATE CARE CLINIC TOKYO, Shinjuku Ward, Tokyo",
+        "contact": "03-5337-6611",
+        "languages": "English; Chinese",
+        "departments": "Department of sexually transmitted diseases",
+        "link": "https://www.google.com/maps/search/?api=1&query=PRIVATE+CARE+CLINIC+TOKYO+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Higashi-Shinjyuku Clinic",
+        "type": "clinic",
+        "address": "Higashi-Shinjyuku Clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-6233-8581",
+        "languages": "English; Chinese; Korean(Internal medicine, Nephrology: French added)",
+        "departments": "Internal medicine; Nephrology; Neurology; Pain clinic internal medicine; Gastroenterology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Higashi-Shinjyuku+Clinic+Shinjuku+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "shinjuku central park dental clinic",
+        "type": "clinic",
+        "address": "shinjuku central park dental clinic, Shinjuku Ward, Tokyo",
+        "contact": "03-5302-5050",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=shinjuku+central+park+dental+clinic+Shinjuku+Ward+Tokyo+Japan"
+      }
+    ],
+    "Nakano Ward": [
+      {
+        "name": "KUMA Dental Clinic",
+        "type": "clinic",
+        "address": "KUMA Dental Clinic, Nakano Ward, Tokyo",
+        "contact": "03-3228-8241",
+        "languages": "English",
+        "departments": "Dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=KUMA+Dental+Clinic+Nakano+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Brain and Physical Clinic Kanenaka Neurosurgery",
+        "type": "clinic",
+        "address": "Brain and Physical Clinic Kanenaka Neurosurgery, Nakano Ward, Tokyo",
+        "contact": "03-6382-4880",
+        "languages": "English; Chinese",
+        "departments": "Brain surgery; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Brain+and+Physical+Clinic+Kanenaka+Neurosurgery+Nakano+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tanaka Dental Clinic",
+        "type": "clinic",
+        "address": "Tanaka Dental Clinic, Nakano Ward, Tokyo",
+        "contact": "03-3387-6850",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tanaka+Dental+Clinic+Nakano+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hayama Dental Clinic",
+        "type": "clinic",
+        "address": "Hayama Dental Clinic, Nakano Ward, Tokyo",
+        "contact": "03-5380-3678",
+        "languages": "English; Chinese",
+        "departments": "Dentistry; Oral surgery; Pediatric dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hayama+Dental+Clinic+Nakano+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Apollo Dental Clinic Nakano",
+        "type": "clinic",
+        "address": "Apollo Dental Clinic Nakano, Nakano Ward, Tokyo",
+        "contact": "03-3380-8234",
+        "languages": "English; Other languages supported via translation app.",
+        "departments": "Dentistry; Pediatric dentistry; Oral surgery; DentistryOrthodontic treatment",
+        "link": "https://www.google.com/maps/search/?api=1&query=Apollo+Dental+Clinic+Nakano+Nakano+Ward+Tokyo+Japan"
+      }
+    ],
+    "Suginami Ward": [
+      {
+        "name": "Kyorin University Suginami Hospital",
+        "type": "hospital",
+        "address": "Kyorin University Suginami Hospital, Suginami Ward, Tokyo",
+        "contact": "03-3383-1281",
+        "languages": "English; Chinese; Korean; Spanish; Portuguese; Russian; Thai; Vietnamese; Tagalog; French; Nepali; Indonesian; Persian; Hindi; Burmese",
+        "departments": "Internal medicine; Department of rheumatology; Respiratory medicine; Digestive systemInternal medicine; Cardiovascular medicine; Diabetes; Endocrinology and metabolism; Nephrology; Neurology; Medical oncology; Pediatrics; Pediatric surgery; Dermatology; Psychiatry; Gastrointestinal surgery; Thoracic surgery; Brest surgery; Neurosurgery; Orthopedic Surgery; Cardiovascular surgery; Plastic surgery; Urology; Ophthalmology; Otorhinolaryngology (ENT); Obstetrics; Gynecology; Radiology; Anesthesiology; Department of rehabilitation; Department of pathology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kyorin+University+Suginami+Hospital+Suginami+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kansaku Dental Office",
+        "type": "clinic",
+        "address": "Kansaku Dental Office, Suginami Ward, Tokyo",
+        "contact": "03-3338-0755",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kansaku+Dental+Office+Suginami+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Koenji Jun Clinic",
+        "type": "clinic",
+        "address": "Koenji Jun Clinic, Suginami Ward, Tokyo",
+        "contact": "03-5356-9645",
+        "languages": "English; Chinese",
+        "departments": "Digestive systemInternal medicine; Digestive system; General surgery; Proctology department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Koenji+Jun+Clinic+Suginami+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "miyakesikaiinn",
+        "type": "clinic",
+        "address": "miyakesikaiinn, Suginami Ward, Tokyo",
+        "contact": "03-3223-8215",
+        "languages": "English; Chinese; Korean(Advance notice required)Nepali(Support via translation app)",
+        "departments": "General dentistry; Department of orthodontics; Pediatric dentistry; Oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=miyakesikaiinn+Suginami+Ward+Tokyo+Japan"
+      }
+    ],
+    "Meguro Ward": [
+      {
+        "name": "Yamashita Medical Clinic Jiyugaoka",
+        "type": "clinic",
+        "address": "Yamashita Medical Clinic Jiyugaoka, Meguro Ward, Tokyo",
+        "contact": "03-3724-3811",
+        "languages": "English",
+        "departments": "Internal medicine; Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamashita+Medical+Clinic+Jiyugaoka+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Loco Clinic Nakameguro",
+        "type": "clinic",
+        "address": "Loco Clinic Nakameguro, Meguro Ward, Tokyo",
+        "contact": "03-5722-6565",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Pediatrics; Psychosomatic medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Loco+Clinic+Nakameguro+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yamamoto Familiar Dermatology Clinic",
+        "type": "clinic",
+        "address": "Yamamoto Familiar Dermatology Clinic, Meguro Ward, Tokyo",
+        "contact": "03-3795-1112",
+        "languages": "English",
+        "departments": "Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamamoto+Familiar+Dermatology+Clinic+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Meguro no Ootorijinjya-mae Clinic",
+        "type": "clinic",
+        "address": "Meguro no Ootorijinjya-mae Clinic, Meguro Ward, Tokyo",
+        "contact": "03-3779-7736",
+        "languages": "English",
+        "departments": "Internal medicine; Digestive systemInternal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Meguro+no+Ootorijinjya-mae+Clinic+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mikawa Orthodontics",
+        "type": "clinic",
+        "address": "Mikawa Orthodontics, Meguro Ward, Tokyo",
+        "contact": "03-6421-8998",
+        "languages": "English",
+        "departments": "Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mikawa+Orthodontics+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Matsuo Dental Clinic",
+        "type": "clinic",
+        "address": "Matsuo Dental Clinic, Meguro Ward, Tokyo",
+        "contact": "03-3419-4018",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Matsuo+Dental+Clinic+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "La Ebs Clinique Dental",
+        "type": "clinic",
+        "address": "La Ebs Clinique Dental, Meguro Ward, Tokyo",
+        "contact": "03-6451-2314",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=La+Ebs+Clinique+Dental+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yamate Dental Clinic",
+        "type": "clinic",
+        "address": "Yamate Dental Clinic, Meguro Ward, Tokyo",
+        "contact": "03-3719-6874",
+        "languages": "English",
+        "departments": "General dentistry ; Orthodontic treatmentPediatric dentistry ; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamate+Dental+Clinic+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Jiyugaoka Oral Care",
+        "type": "clinic",
+        "address": "Jiyugaoka Oral Care, Meguro Ward, Tokyo",
+        "contact": "03-5726-9185",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Jiyugaoka+Oral+Care+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Genwado Dental Clinic",
+        "type": "clinic",
+        "address": "Genwado Dental Clinic, Meguro Ward, Tokyo",
+        "contact": "03-6452-3882",
+        "languages": "English",
+        "departments": "General dentistry; Oral surgery; Pediatric dentistry; Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Genwado+Dental+Clinic+Meguro+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokuchi clinic",
+        "type": "clinic",
+        "address": "Tokuchi clinic, Meguro Ward, Tokyo",
+        "contact": "03-3712-0872",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokuchi+clinic+Meguro+Ward+Tokyo+Japan"
+      }
+    ],
+    "Setagaya Ward": [
+      {
+        "name": "Nissan Tamagawa Hospital",
+        "type": "hospital",
+        "address": "Nissan Tamagawa Hospital, Setagaya Ward, Tokyo",
+        "contact": "03-3700-1151",
+        "languages": "English",
+        "departments": "Department of general medicine ; Respiratory medicine ; Emergency orthopedic surgery ; Connective tissue disease; Department of rheumatology ; Thoracic surgery ; Neurosurgery ; Department of surgery ; Dermatology ; Urology ; Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nissan+Tamagawa+Hospital+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kanto Central Hospital of the Mutual Aid Association of Public School Teachers",
+        "type": "hospital",
+        "address": "Kanto Central Hospital of the Mutual Aid Association of Public School Teachers, Setagaya Ward, Tokyo",
+        "contact": "03-3429-1171",
+        "languages": "English",
+        "departments": "Respiratory medicine; Cardiovascular medicine; Gastroenterology; Diabetes; Endocrine internal medicine; Neurology; Nephrology; Psychiatry; Mental health department; Pediatrics; Gastrointestinal surgery; General surgery; Thoracic surgery; Thyroid surgery; Brest surgery; Cardiovascular surgery; Orthopedic Surgery; Department of rehabilitation; Plastic surgery; Neurosurgery; Obstetrics and gynecology; Ophthalmology; Dermatology; Urology; Otorhinolaryngology (ENT); Radiology; Anesthesiology; Department of health management",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kanto+Central+Hospital+of+the+Mutual+Aid+Association+of+Public+School+Teachers+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kodama Kyodo Hospital",
+        "type": "hospital",
+        "address": "Kodama Kyodo Hospital, Setagaya Ward, Tokyo",
+        "contact": "03-3420-1028",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kodama+Kyodo+Hospital+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Musashi Eye Clinic",
+        "type": "clinic",
+        "address": "Musashi Eye Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-5760-6695",
+        "languages": "English; Arabic",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Musashi+Eye+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Karasawa Clinic",
+        "type": "clinic",
+        "address": "Karasawa Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-3701-7552",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Karasawa+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Naomiya Clinic",
+        "type": "clinic",
+        "address": "Naomiya Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-3468-2867",
+        "languages": "English",
+        "departments": "Internal medicine ; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Naomiya+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Setagaya Okada Orthopaedic Surgery Clinic",
+        "type": "clinic",
+        "address": "Setagaya Okada Orthopaedic Surgery Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-3422-8877",
+        "languages": "English",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Setagaya+Okada+Orthopaedic+Surgery+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "California Orthodontics Sangenjaya",
+        "type": "clinic",
+        "address": "California Orthodontics Sangenjaya, Setagaya Ward, Tokyo",
+        "contact": "03-5787-8107",
+        "languages": "English",
+        "departments": "Department of orthodontics; Pediatric dentistry; Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=California+Orthodontics+Sangenjaya+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Dental Watanabe",
+        "type": "clinic",
+        "address": "Dental Watanabe, Setagaya Ward, Tokyo",
+        "contact": "03-3309-1188",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Dental+Watanabe+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takao Dental Clinic",
+        "type": "clinic",
+        "address": "Takao Dental Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-3309-7771",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takao+Dental+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kan Dental Clinic",
+        "type": "clinic",
+        "address": "Kan Dental Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-5752-6480",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kan+Dental+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Matsuzawa Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Matsuzawa Hospital, Setagaya Ward, Tokyo",
+        "contact": "03-3303-7211",
+        "languages": "English",
+        "departments": "Internal medicine ; Department of surgery ; Psychiatry ; Dermatology ; Neurosurgery ; Urology ; Orthopedic Surgery ; Ophthalmology ; Otorhinolaryngology (ENT) ; Gynecology ; Dentistry; Others",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Matsuzawa+Hospital+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "sanchaclinicEye&ENT",
+        "type": "clinic",
+        "address": "sanchaclinicEye&ENT, Setagaya Ward, Tokyo",
+        "contact": "03-3795",
+        "languages": "English",
+        "departments": "OtolaryngologyOphthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=sanchaclinicEye%26ENT+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nishikawa Dental Clinic",
+        "type": "clinic",
+        "address": "Nishikawa Dental Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-3429-0418",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nishikawa+Dental+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Futakotamagawa Celeste Clinic",
+        "type": "clinic",
+        "address": "Futakotamagawa Celeste Clinic, Setagaya Ward, Tokyo",
+        "contact": "03-6447-9511",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Respiratory medicine; Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Futakotamagawa+Celeste+Clinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "RoseLadiesClinic",
+        "type": "clinic",
+        "address": "RoseLadiesClinic, Setagaya Ward, Tokyo",
+        "contact": "03-3703-0114",
+        "languages": "English; Chinese",
+        "departments": "Gynecology; infertility treatment",
+        "link": "https://www.google.com/maps/search/?api=1&query=RoseLadiesClinic+Setagaya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "National Center for Child Health and Development",
+        "type": "clinic",
+        "address": "National Center for Child Health and Development, Setagaya Ward, Tokyo",
+        "contact": "03-5494-5486",
+        "languages": "English",
+        "departments": "Pediatrics; Obstetrics; Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=National+Center+for+Child+Health+and+Development+Setagaya+Ward+Tokyo+Japan"
+      }
+    ],
+    "Shibuya Ward": [
+      {
+        "name": "Tokyo Metropolitan Hiroo Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Hiroo Hospital, Shibuya Ward, Tokyo",
+        "contact": "03-3444-1181",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Hematology; Diabetology and endocrinology; Gastroenterology; Cardiovascular medicine; Respiratory medicine; Nephrology; Psychiatry; Neurology; Pediatrics; Department of surgery; Gastrointestinal surgery; Cardiovascular surgery; Neurosurgery; Orthopedic Surgery; Department of rehabilitation; Plastic surgery; Ophthalmology; Otorhinolaryngology (ENT); Dermatology; Urology; Obstetrics and gynecology; Radiology; Dentistry; Dentistry and oral surgery; Anesthesiology; Emergency department; Critical care center; Department of pathology; Trauma center",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Hiroo+Hospital+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Plaza Plastic Surgery",
+        "type": "clinic",
+        "address": "Plaza Plastic Surgery, Shibuya Ward, Tokyo",
+        "contact": "03-5475-2345",
+        "languages": "English",
+        "departments": "Plastic surgery; Cosmetic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Plaza+Plastic+Surgery+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ogihara Orthopedics",
+        "type": "clinic",
+        "address": "Ogihara Orthopedics, Shibuya Ward, Tokyo",
+        "contact": "03-5371-3001",
+        "languages": "English",
+        "departments": "Orthopedic Surgery; Internal medicine; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ogihara+Orthopedics+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takako Clinic",
+        "type": "clinic",
+        "address": "Takako Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-5459-7943",
+        "languages": "English",
+        "departments": "Plastic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takako+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Fertility Clinic Tokyo",
+        "type": "clinic",
+        "address": "Fertility Clinic Tokyo, Shibuya Ward, Tokyo",
+        "contact": "03-3406-6868",
+        "languages": "English",
+        "departments": "Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Fertility+Clinic+Tokyo+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sendagaya International Clinic",
+        "type": "clinic",
+        "address": "Sendagaya International Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-3478-4747",
+        "languages": "English; Chinese; Korean; Spanish; French; Portuguese; Thai; Vietnamese",
+        "departments": "Internal medicine; Pediatrics; Outpatient surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sendagaya+International+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Suwa Child Family Clinic",
+        "type": "clinic",
+        "address": "Suwa Child Family Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-3444-7070",
+        "languages": "English",
+        "departments": "Pediatrics; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Suwa+Child+Family+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mih Clinic Yoyogi",
+        "type": "clinic",
+        "address": "Mih Clinic Yoyogi, Shibuya Ward, Tokyo",
+        "contact": "03-6276-5385",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics; Dermatology; Department of allergy; Department of rheumatology and connective tissue disorders; Neurology; DiabetesEndocrineDepartment of metabolism; Psychosomatic medicine; Psychiatry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mih+Clinic+Yoyogi+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Harajuku First Dental Office",
+        "type": "clinic",
+        "address": "Harajuku First Dental Office, Shibuya Ward, Tokyo",
+        "contact": "03-5413-6480",
+        "languages": "English; French",
+        "departments": "Dentistry; Pediatric dentistry; Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Harajuku+First+Dental+Office+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Mihara Dental Clinic",
+        "type": "clinic",
+        "address": "Mihara Dental Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-6407-1646",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mihara+Dental+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Daikanyama Dental Salon",
+        "type": "clinic",
+        "address": "Daikanyama Dental Salon, Shibuya Ward, Tokyo",
+        "contact": "03-6416-5747",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Daikanyama+Dental+Salon+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Daikanyama Dental Clinic",
+        "type": "clinic",
+        "address": "Daikanyama Dental Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-3462-0787",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Daikanyama+Dental+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Japan Orthodontic Center",
+        "type": "clinic",
+        "address": "Japan Orthodontic Center, Shibuya Ward, Tokyo",
+        "contact": "03-3499-2222",
+        "languages": "English",
+        "departments": "Department of orthodontics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Japan+Orthodontic+Center+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Doi Dental Harajuku Clinic",
+        "type": "clinic",
+        "address": "Doi Dental Harajuku Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-5414-5727",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Doi+Dental+Harajuku+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Hirahata Clinic",
+        "type": "clinic",
+        "address": "Hirahata Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-3400-3288",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Digestive systemInternal medicine; Department of diabetes; Medical checkup/complete medical checkup; Gastroscopy; Colonoscopy; Ultrasonography; Fever outpatient clinic; Travel vaccinations; Chinese medicine specialty outpatient",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hirahata+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "pinkribbon breastcare clinic omotesando",
+        "type": "clinic",
+        "address": "pinkribbon breastcare clinic omotesando, Shibuya Ward, Tokyo",
+        "contact": "050-3171-3258",
+        "languages": "English; Chinese; Korean; Vietnamese; Russian; Spanish; Portuguese; Thai; French; Hindi; Tagalog; Mongolian; Indonesian; Persian; Dari; Nepali; Burmese; Arabic; Bengali; German; Italian; Khmer; Lao; Malayan; Pashto; Sinhalese; Tamil; Turkish; Ukrainian; Urdu",
+        "departments": "Brest care department; Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=pinkribbon+breastcare+clinic+omotesando+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Japan China Friendship Clinic",
+        "type": "clinic",
+        "address": "Japan China Friendship Clinic, Shibuya Ward, Tokyo",
+        "contact": "03-6276-9788",
+        "languages": "Chinese; English; Korean; German",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Japan+China+Friendship+Clinic+Shibuya+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shibuya ER",
+        "type": "clinic",
+        "address": "Shibuya ER, Shibuya Ward, Tokyo",
+        "contact": "080-3312-9910",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Pediatrics; Obstetrics and gynecology; Psychosomatic medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shibuya+ER+Shibuya+Ward+Tokyo+Japan"
+      }
+    ],
+    "Toshima Ward": [
+      {
+        "name": "Kobayashi Dental Office",
+        "type": "clinic",
+        "address": "Kobayashi Dental Office, Toshima Ward, Tokyo",
+        "contact": "03-5944-8449",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kobayashi+Dental+Office+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "SEALDs Dental Clinic",
+        "type": "clinic",
+        "address": "SEALDs Dental Clinic, Toshima Ward, Tokyo",
+        "contact": "03-6903-1180",
+        "languages": "Spanish",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=SEALDs+Dental+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Ohtsuka Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Ohtsuka Hospital, Toshima Ward, Tokyo",
+        "contact": "03-3941-3211",
+        "languages": "English; Chinese; Korean; Nepali; Portuguese; Spanish; Vietnamese; Burmese; Russian; French; Thai; Hindi; Tagalog; Indonesian; Persian; Chinese-Arabic; Urdu; Bengali; Italian; Cambodian; German; Pashto; Sinhalese; Turkish; Malayan; Tamil; Lao; Taiwanese; Dari",
+        "departments": "Internal medicine; Digestive systemInternal medicine; Nephrology; Diabetology; Department of allergy; Hematology; Neurology; Respiratory medicine; Cardiovascular medicine; Geriatric medicine; Psychiatry; Pediatrics; Department of surgery; Thoracic surgery; Gastrointestinal surgery; Pediatric surgery; Brest surgery; Orthopedic Surgery; Neurosurgery; Plastic surgery; Dermatology; Urology; Obstetrics and gynecology; Ophthalmology; Otorhinolaryngology (ENT); Department of rheumatology; Department of rehabilitation; Radiology; Anesthesiology; Emergency department; Dentistry; Dentistry and oral surgery; Department of internal medicine (palliative care); Child psychiatry; Department of pathology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Ohtsuka+Hospital+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Guang Ming Clinic",
+        "type": "clinic",
+        "address": "Guang Ming Clinic, Toshima Ward, Tokyo",
+        "contact": "03-6915-2612",
+        "languages": "Chinese",
+        "departments": "Ophthalmology; Cosmetic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Guang+Ming+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ikebukuro Dental Clinic",
+        "type": "clinic",
+        "address": "Ikebukuro Dental Clinic, Toshima Ward, Tokyo",
+        "contact": "03-5985-1180",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ikebukuro+Dental+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sugamo Sengoku Dermatology",
+        "type": "clinic",
+        "address": "Sugamo Sengoku Dermatology, Toshima Ward, Tokyo",
+        "contact": "03-3941-1241",
+        "languages": "English; Chinese; Corsican; Thai; Tagalog; Burmese; Bengali; Vietnamese; French; Portuguese; Russian; Italian; Spanish",
+        "departments": "Dermatology; Department of allergy; Cosmetic dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sugamo+Sengoku+Dermatology+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shirota Clinic",
+        "type": "clinic",
+        "address": "Shirota Clinic, Toshima Ward, Tokyo",
+        "contact": "03-3950-0776",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Dialysis",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shirota+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ikebukuro Sunshine Street Eye Clinic",
+        "type": "clinic",
+        "address": "Ikebukuro Sunshine Street Eye Clinic, Toshima Ward, Tokyo",
+        "contact": "03-3981-6363",
+        "languages": "English; Chinese",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ikebukuro+Sunshine+Street+Eye+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Nephrology Clinic",
+        "type": "clinic",
+        "address": "Tokyo Nephrology Clinic, Toshima Ward, Tokyo",
+        "contact": "03-3949-5801",
+        "languages": "English",
+        "departments": "Nephrology; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Nephrology+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Heiwa International Clinic",
+        "type": "clinic",
+        "address": "Heiwa International Clinic, Toshima Ward, Tokyo",
+        "contact": "03-5904-8608",
+        "languages": "Chinese",
+        "departments": "Internal medicine; Cardiovascular medicine; Nephrology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Heiwa+International+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ikebukuro Nagomi Clinic",
+        "type": "clinic",
+        "address": "Ikebukuro Nagomi Clinic, Toshima Ward, Tokyo",
+        "contact": "03-6709-1392",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics; Pediatric surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ikebukuro+Nagomi+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sugamo Nagomi Clinic",
+        "type": "clinic",
+        "address": "Sugamo Nagomi Clinic, Toshima Ward, Tokyo",
+        "contact": "03-5981-8521",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics; Pediatric surgery; Department of surgery; Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sugamo+Nagomi+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Yamashita Medical & Dental Clinic Otsuka",
+        "type": "clinic",
+        "address": "Yamashita Medical & Dental Clinic Otsuka, Toshima Ward, Tokyo",
+        "contact": "03-3910-6711",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics; Otorhinolaryngology (ENT); Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Yamashita+Medical+%26+Dental+Clinic+Otsuka+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Noda Sakura Heart Clinic",
+        "type": "clinic",
+        "address": "Noda Sakura Heart Clinic, Toshima Ward, Tokyo",
+        "contact": "03-3915-5500",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Noda+Sakura+Heart+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ozaki Orthodontic Clinic",
+        "type": "clinic",
+        "address": "Ozaki Orthodontic Clinic, Toshima Ward, Tokyo",
+        "contact": "03-3981-9679",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ozaki+Orthodontic+Clinic+Toshima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sanyu EyeClinic,Ikebukuro",
+        "type": "clinic",
+        "address": "Sanyu EyeClinic,Ikebukuro, Toshima Ward, Tokyo",
+        "contact": "03-5810-3039",
+        "languages": "Chinese; English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sanyu+EyeClinic%2CIkebukuro+Toshima+Ward+Tokyo+Japan"
+      }
+    ],
+    "Kita Ward": [
+      {
+        "name": "Akiyama Eye Clinic",
+        "type": "clinic",
+        "address": "Akiyama Eye Clinic, Kita Ward, Tokyo",
+        "contact": "03-3915-5210",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Akiyama+Eye+Clinic+Kita+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ito Oji-kamiya Naika-geka Clinic",
+        "type": "clinic",
+        "address": "Ito Oji-kamiya Naika-geka Clinic, Kita Ward, Tokyo",
+        "contact": "03-5959-7705",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Brest surgery; Dermatology; Digestive systemInternal medicine; Urology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ito+Oji-kamiya+Naika-geka+Clinic+Kita+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Medical Corporation Koseikai Akabane Wellness Clinic",
+        "type": "clinic",
+        "address": "Medical Corporation Koseikai Akabane Wellness Clinic, Kita Ward, Tokyo",
+        "contact": "050-1780-1754",
+        "languages": "English",
+        "departments": "Vascular surgery; Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Medical+Corporation+Koseikai+Akabane+Wellness+Clinic+Kita+Ward+Tokyo+Japan"
+      }
+    ],
+    "Itabashi Ward": [
+      {
+        "name": "Itabashi Chuo Medical Center",
+        "type": "hospital",
+        "address": "Itabashi Chuo Medical Center, Itabashi Ward, Tokyo",
+        "contact": "03-3967-1181",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Orthopedic Surgery; Obstetrics; Gynecology; Others",
+        "link": "https://www.google.com/maps/search/?api=1&query=Itabashi+Chuo+Medical+Center+Itabashi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Toshima Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Toshima Hospital, Itabashi Ward, Tokyo",
+        "contact": "03-5375-1234",
+        "languages": "English",
+        "departments": "Internal medicine ; Neurology;  Endocrine; Endocrinology and metabolism ; Respiratory medicine; Digestive systemInternal medicine; Cardiovascular medicine; Nephrology; Hematology; Psychiatry; Pediatrics; Department of surgery; Gastrointestinal surgery; Brest surgery ; Orthopedic Surgery; Plastic surgery; Neurosurgery; Dermatology ; @Urology; Obstetrics and gynecology; Ophthalmology; Otorhinolaryngology (ENT); Department of rehabilitation; Radiology; Dentistry and oral surgery; Anesthesiology; Department of medicine and infectious diseases; Department of internal medicine (palliative care); Department of pathology; Emergency department",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Toshima+Hospital+Itabashi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Akatsuka Eye Clinic",
+        "type": "clinic",
+        "address": "Akatsuka Eye Clinic, Itabashi Ward, Tokyo",
+        "contact": "03-3938-8900",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Akatsuka+Eye+Clinic+Itabashi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Okinaga Eye Clinic",
+        "type": "clinic",
+        "address": "Okinaga Eye Clinic, Itabashi Ward, Tokyo",
+        "contact": "03-3962-0929",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Okinaga+Eye+Clinic+Itabashi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kyoujokai Clinic",
+        "type": "clinic",
+        "address": "Kyoujokai Clinic, Itabashi Ward, Tokyo",
+        "contact": "03-3966-2577",
+        "languages": "English; French",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kyoujokai+Clinic+Itabashi+Ward+Tokyo+Japan"
+      }
+    ],
+    "Nerima Ward": [
+      {
+        "name": "Nakasugidori Orthopedics",
+        "type": "clinic",
+        "address": "Nakasugidori Orthopedics, Nerima Ward, Tokyo",
+        "contact": "03-3999-7916",
+        "languages": "Chinese",
+        "departments": "Orthopedic Surgery; Internal medicine; Department of rehabilitation; Department of rheumatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nakasugidori+Orthopedics+Nerima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "You Orthopaedics Clinic",
+        "type": "clinic",
+        "address": "You Orthopaedics Clinic, Nerima Ward, Tokyo",
+        "contact": "03-5971-7811",
+        "languages": "English; Korean; Chinese",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=You+Orthopaedics+Clinic+Nerima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Uehara Dental Office",
+        "type": "clinic",
+        "address": "Uehara Dental Office, Nerima Ward, Tokyo",
+        "contact": "03-3557-1180",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Uehara+Dental+Office+Nerima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shibuya Medical Clinic",
+        "type": "clinic",
+        "address": "Shibuya Medical Clinic, Nerima Ward, Tokyo",
+        "contact": "03-3922-0022",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shibuya+Medical+Clinic+Nerima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Noguchi Clinic",
+        "type": "clinic",
+        "address": "Noguchi Clinic, Nerima Ward, Tokyo",
+        "contact": "03-3994-5018",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Noguchi+Clinic+Nerima+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Asamura Children’s Clinic",
+        "type": "clinic",
+        "address": "Asamura Children’s Clinic, Nerima Ward, Tokyo",
+        "contact": "03-5372-6686",
+        "languages": "English",
+        "departments": "Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Asamura+Children’s+Clinic+Nerima+Ward+Tokyo+Japan"
+      }
+    ],
+    "Arakawa Ward": [
+      {
+        "name": "Kosaka Ophthalmology",
+        "type": "clinic",
+        "address": "Kosaka Ophthalmology, Arakawa Ward, Tokyo",
+        "contact": "03-5615-0321",
+        "languages": "English; Korean",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kosaka+Ophthalmology+Arakawa+Ward+Tokyo+Japan"
+      }
+    ],
+    "Adachi Ward": [
+      {
+        "name": "aQua Dental Clinic",
+        "type": "clinic",
+        "address": "aQua Dental Clinic, Adachi Ward, Tokyo",
+        "contact": "03-3882-6677",
+        "languages": "English; Chinese; Korean; Spanish",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=aQua+Dental+Clinic+Adachi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Takahashi Clinic Adachi-ku",
+        "type": "clinic",
+        "address": "Takahashi Clinic Adachi-ku, Adachi Ward, Tokyo",
+        "contact": "03-3854-3031",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takahashi+Clinic+Adachi-ku+Adachi+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "kohoku family clinic",
+        "type": "clinic",
+        "address": "kohoku family clinic, Adachi Ward, Tokyo",
+        "contact": "03-3897-3030",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics; Department of allergy; Respiratory medicine; Dermatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=kohoku+family+clinic+Adachi+Ward+Tokyo+Japan"
+      }
+    ],
+    "Katsushika Ward": [
+      {
+        "name": "Koujinkai Daiichi Hospital",
+        "type": "hospital",
+        "address": "Koujinkai Daiichi Hospital, Katsushika Ward, Tokyo",
+        "contact": "03-3607-0007",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Orthopedic Surgery; Department of rehabilitation; Neurosurgery; Dermatology; Cardiovascular surgery; Neurology; Urology; Brest surgery; Diabetology; Cardiovascular medicine; Department of hepatology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Koujinkai+Daiichi+Hospital+Katsushika+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Tobu Chiiki Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Tobu Chiiki Hospital, Katsushika Ward, Tokyo",
+        "contact": "03-5682-5111",
+        "languages": "English",
+        "departments": "Internal medicine; Respiratory medicine; Digestive systemInternal medicine ; Diabetology; Nephrology; Cardiovascular medicine; Pediatrics; Department of surgery ; Gastrointestinal surgery; Orthopedic Surgery; Neurosurgery ; Cardiovascular surgery ; Urology; Gynecology; Ophthalmology; Otorhinolaryngology (ENT); Radiology; Anesthesiology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Tobu+Chiiki+Hospital+Katsushika+Ward+Tokyo+Japan"
+      }
+    ],
+    "Sumida Ward": [
+      {
+        "name": "Tokyo Metropolitan Bokutoh Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Bokutoh Hospital, Sumida Ward, Tokyo",
+        "contact": "03-3633-6151",
+        "languages": "All departments offer support in English via medical interpreters (remote).",
+        "departments": "Endocrinology and metabolism; Neurology; Hematology; Gastroenterology; Respiratory medicine; Nephrology; Department of general medicine; Cardiovascular medicine; Psychiatry; Pediatrics; Department of surgery; Cardiovascular surgery; Thoracic surgery; Orthopedic Surgery; Neurosurgery; Plastic surgery; Dermatology; Urology; Ophthalmology; Obstetrics and gynecology; Neonatology; Otorhinolaryngology (ENT); Department of rehabilitation; Department of rheumatology and connective tissue disorders; Dentistry and oral surgery; Department of medicine and infectious diseases; Emergency care department; Critical care center; Intensive care department; Anesthesiology; Medical radiology; Blood transfusion department; Endoscopy department; Laboratory department; Department of medical genetics and genomics; Outpatient care center; Artificial joint center",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Bokutoh+Hospital+Sumida+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kinshicho Mint Dental Clinic",
+        "type": "clinic",
+        "address": "Kinshicho Mint Dental Clinic, Sumida Ward, Tokyo",
+        "contact": "03-5637-7610",
+        "languages": "English; Chinese",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kinshicho+Mint+Dental+Clinic+Sumida+Ward+Tokyo+Japan"
+      }
+    ],
+    "Koto Ward": [
+      {
+        "name": "Telecom Center Dental Office",
+        "type": "clinic",
+        "address": "Telecom Center Dental Office, Koto Ward, Tokyo",
+        "contact": "03-5500-0418",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Telecom+Center+Dental+Office+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Wakaba Dental Clinic",
+        "type": "clinic",
+        "address": "Wakaba Dental Clinic, Koto Ward, Tokyo",
+        "contact": "03-3684-3655",
+        "languages": "Thai",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Wakaba+Dental+Clinic+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Sekoukai Dental Office Tokyo Bay",
+        "type": "clinic",
+        "address": "Sekoukai Dental Office Tokyo Bay, Koto Ward, Tokyo",
+        "contact": "03-5530-3755",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sekoukai+Dental+Office+Tokyo+Bay+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Ono Cardiology and GP Medical Office",
+        "type": "clinic",
+        "address": "Ono Cardiology and GP Medical Office, Koto Ward, Tokyo",
+        "contact": "03-3636-5505",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiovascular medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ono+Cardiology+and+GP+Medical+Office+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kobayashi Clinic",
+        "type": "clinic",
+        "address": "Kobayashi Clinic, Koto Ward, Tokyo",
+        "contact": "03-3684-0481",
+        "languages": "English",
+        "departments": "General medicine; Respiratory medicine; Department of allergy; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kobayashi+Clinic+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "HEIWA MEMORIAL CLINIC",
+        "type": "clinic",
+        "address": "HEIWA MEMORIAL CLINIC, Koto Ward, Tokyo",
+        "contact": "03-3820-8880",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine(Pediatric examinations available); Dermatology; Chinese medicine outpatient",
+        "link": "https://www.google.com/maps/search/?api=1&query=HEIWA+MEMORIAL+CLINIC+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Toyosu Minna Clinic Toyosu",
+        "type": "clinic",
+        "address": "Toyosu Minna Clinic Toyosu, Koto Ward, Tokyo",
+        "contact": "03-6204-2733",
+        "languages": "English",
+        "departments": "Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Toyosu+Minna+Clinic+Toyosu+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Kameido Eye Clinic",
+        "type": "clinic",
+        "address": "Kameido Eye Clinic, Koto Ward, Tokyo",
+        "contact": "03-3682-9973",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kameido+Eye+Clinic+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "KAMEIDO CENTRAL CLINIC",
+        "type": "clinic",
+        "address": "KAMEIDO CENTRAL CLINIC, Koto Ward, Tokyo",
+        "contact": "03-5628-6531",
+        "languages": "Chinese; English",
+        "departments": "Internal medicine; Gastroenterology; Dermatology; Orthopedic Surgery; Psychosomatic medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=KAMEIDO+CENTRAL+CLINIC+Koto+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Shinonome medical clinic",
+        "type": "clinic",
+        "address": "Shinonome medical clinic, Koto Ward, Tokyo",
+        "contact": "03-6910-1623",
+        "languages": "English",
+        "departments": "Internal medicine; Gastroenterology; Proctologic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shinonome+medical+clinic+Koto+Ward+Tokyo+Japan"
+      }
+    ],
+    "Edogawa Ward": [
+      {
+        "name": "Moriyama Memorial hospital",
+        "type": "hospital",
+        "address": "Moriyama Memorial hospital, Edogawa Ward, Tokyo",
+        "contact": "03-5679-1211",
+        "languages": "English",
+        "departments": "Neurosurgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Moriyama+Memorial+hospital+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Rinkai Hospital",
+        "type": "hospital",
+        "address": "Tokyo Rinkai Hospital, Edogawa Ward, Tokyo",
+        "contact": "03-5605-8811",
+        "languages": "English",
+        "departments": "Internal medicine; Cardiovascular medicine; Digestive systemInternal medicine; Respiratory medicine; Neurology; Diabetology; Nephrology; Department of internal medicine (palliative care); Psychiatry; Pediatrics; Department of surgery; Emergency department; Orthopedic Surgery; Plastic surgery; Neurosurgery; Cardiovascular surgery; Thoracic surgery; Dermatology; Urology; Obstetrics and gynecology; Ophthalmology; Otorhinolaryngology (ENT); Radiology; Anesthesiology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Rinkai+Hospital+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nishikasai Life Style Clinic",
+        "type": "clinic",
+        "address": "Nishikasai Life Style Clinic, Edogawa Ward, Tokyo",
+        "contact": "080-4340-9083",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nishikasai+Life+Style+Clinic+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Nishikasai Smile Dental Clinic",
+        "type": "clinic",
+        "address": "Nishikasai Smile Dental Clinic, Edogawa Ward, Tokyo",
+        "contact": "03-3675-4182",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nishikasai+Smile+Dental+Clinic+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "Himawari Dental Clinic",
+        "type": "clinic",
+        "address": "Himawari Dental Clinic, Edogawa Ward, Tokyo",
+        "contact": "03-5622-2350",
+        "languages": "English; Chinese; German",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Himawari+Dental+Clinic+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "NISHIKASAI LIFESTYLE CLINIC",
+        "type": "clinic",
+        "address": "NISHIKASAI LIFESTYLE CLINIC, Edogawa Ward, Tokyo",
+        "contact": "080-3640-9636",
+        "languages": "Languages supported by translation machineEnglish; Chinese; Hindi; Korean; Other",
+        "departments": "Internal medicine; Pain clinic internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=NISHIKASAI+LIFESTYLE+CLINIC+Edogawa+Ward+Tokyo+Japan"
+      },
+      {
+        "name": "KOBAYASHI DENTAL CLINIC",
+        "type": "clinic",
+        "address": "KOBAYASHI DENTAL CLINIC, Edogawa Ward, Tokyo",
+        "contact": "03-3653-7567",
+        "languages": "English; Russian; Korean(For home visit: English and Russian only)",
+        "departments": "General, pediatric, orthodontic, preventive, implant, periodontal disease treatment, home visit",
+        "link": "https://www.google.com/maps/search/?api=1&query=KOBAYASHI+DENTAL+CLINIC+Edogawa+Ward+Tokyo+Japan"
+      }
+    ]
+  },
+  "outside_23_wards": {
+    "Kokubunji City": [
+      {
+        "name": "Nomura Clinic Square",
+        "type": "clinic",
+        "address": "Nomura Clinic Square, Kokubunji City, Tokyo",
+        "contact": "042-325-0087",
+        "languages": "English",
+        "departments": "Internal medicine; Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nomura+Clinic+Square+Kokubunji+City+Tokyo+Japan"
+      }
+    ],
+    "Kunitachi City": [
+      {
+        "name": "Seirin Clinic",
+        "type": "clinic",
+        "address": "Seirin Clinic, Kunitachi City, Tokyo",
+        "contact": "042-580-6102",
+        "languages": "English",
+        "departments": "Internal medicine; Department of surgery; Proctology department; Gastroenterology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Seirin+Clinic+Kunitachi+City+Tokyo+Japan"
+      }
+    ],
+    "Mitaka City": [
+      {
+        "name": "Tokyo International Ohori Hospital",
+        "type": "hospital",
+        "address": "Tokyo International Ohori Hospital, Mitaka City, Tokyo",
+        "contact": "0422-47-1000",
+        "languages": "English; Chinese",
+        "departments": "Urology; Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+International+Ohori+Hospital+Mitaka+City+Tokyo+Japan"
+      },
+      {
+        "name": "TAKAYAMA CLINIC",
+        "type": "clinic",
+        "address": "TAKAYAMA CLINIC, Mitaka City, Tokyo",
+        "contact": "0422-43-0700",
+        "languages": "Vietnamese; Taiwanese; Chinese; English; *All languages supported by translation machine",
+        "departments": "Internal medicine; Department of surgery; Urology; Dermatology; Proctologic surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=TAKAYAMA+CLINIC+Mitaka+City+Tokyo+Japan"
+      }
+    ],
+    "Kodaira City": [
+      {
+        "name": "National Center for Neurology and Psychiatry",
+        "type": "clinic",
+        "address": "National Center for Neurology and Psychiatry, Kodaira City, Tokyo",
+        "contact": "042-341-2711",
+        "languages": "English",
+        "departments": "Psychiatry; Neurology; Pediatric psychiatry; Neurosurgery; Internal medicine; Department of surgery; Orthopedic Surgery; Department of rehabilitation",
+        "link": "https://www.google.com/maps/search/?api=1&query=National+Center+for+Neurology+and+Psychiatry+Kodaira+City+Tokyo+Japan"
+      },
+      {
+        "name": "Shiraya Eye Clinic",
+        "type": "clinic",
+        "address": "Shiraya Eye Clinic, Kodaira City, Tokyo",
+        "contact": "042-341-0219",
+        "languages": "English",
+        "departments": "Ophthalmology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Shiraya+Eye+Clinic+Kodaira+City+Tokyo+Japan"
+      }
+    ],
+    "Akishima City": [
+      {
+        "name": "Tokyo Nishi Tokushukai Hospital",
+        "type": "hospital",
+        "address": "Tokyo Nishi Tokushukai Hospital, Akishima City, Tokyo",
+        "contact": "042-500-4433",
+        "languages": "English; Chinese",
+        "departments": "Emergency department; Internal medicine; Department of surgery; Pediatrics; Dermatology; Neurosurgery; Urology; Orthopedic Surgery; Gynecology; Dentistry and oral surgery; Cardiovascular medicine; Plastic surgery; Brest oncology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Nishi+Tokushukai+Hospital+Akishima+City+Tokyo+Japan"
+      }
+    ],
+    "Nishitokyo City": [
+      {
+        "name": "Musashino Tokushukai Hospital",
+        "type": "hospital",
+        "address": "Musashino Tokushukai Hospital, Nishitokyo City, Tokyo",
+        "contact": "042-465-0700",
+        "languages": "English; Chinese",
+        "departments": "Internal medicine; Cardiovascular medicine; Digestive systemInternal medicine; Nephrology; Respiratory medicine; Diabetology; Department of surgery; Gastrointestinal surgery; Thoracic surgery; Brest surgery; Orthopedic Surgery; Neurosurgery; Plastic surgery; Vascular surgery; Urology; Pediatrics; Gynecology; Dermatology; Otorhinolaryngology (ENT); Emergency department; Department of rehabilitation; Radiology; Anesthesiology; Department of pathology; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Musashino+Tokushukai+Hospital+Nishitokyo+City+Tokyo+Japan"
+      },
+      {
+        "name": "Aozora Tanashi Clinic",
+        "type": "clinic",
+        "address": "Aozora Tanashi Clinic, Nishitokyo City, Tokyo",
+        "contact": "042-452-3700",
+        "languages": "English;  German",
+        "departments": "Dermatology; Department of allergy",
+        "link": "https://www.google.com/maps/search/?api=1&query=Aozora+Tanashi+Clinic+Nishitokyo+City+Tokyo+Japan"
+      }
+    ],
+    "Tama City": [
+      {
+        "name": "Tokyo Metropolitan Tama-Nambu Chiiki Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Tama-Nambu Chiiki Hospital, Tama City, Tokyo",
+        "contact": "042-338-5111",
+        "languages": "English; Chinese; Korean; Thai; Tagalog; Burmese; Vietnamese; Bengali; French; Portuguese; German; Russian; Italian; Spanish",
+        "departments": "Internal medicine; Cardiology; Pediatrics; Department of surgery; Orthopedic Surgery; Neurosurgery; Urology; Dermatology; Gynecology; Ophthalmology; Otorhinolaryngology (ENT); Radiology; Dentistry and oral surgery; Department of palliative care",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Tama-Nambu+Chiiki+Hospital+Tama+City+Tokyo+Japan"
+      }
+    ],
+    "Machida City": [
+      {
+        "name": "Mimuro Women’s Clinic",
+        "type": "clinic",
+        "address": "Mimuro Women’s Clinic, Machida City, Tokyo",
+        "contact": "042-710-3609",
+        "languages": "English",
+        "departments": "Gynecology",
+        "link": "https://www.google.com/maps/search/?api=1&query=Mimuro+Women’s+Clinic+Machida+City+Tokyo+Japan"
+      },
+      {
+        "name": "Kuroiwa Dental Clinic",
+        "type": "clinic",
+        "address": "Kuroiwa Dental Clinic, Machida City, Tokyo",
+        "contact": "042-725-0310",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kuroiwa+Dental+Clinic+Machida+City+Tokyo+Japan"
+      },
+      {
+        "name": "Neuro Machida Clinic",
+        "type": "clinic",
+        "address": "Neuro Machida Clinic, Machida City, Tokyo",
+        "contact": "042-732-6077",
+        "languages": "English",
+        "departments": "Neurosurgery; Neurology; Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Neuro+Machida+Clinic+Machida+City+Tokyo+Japan"
+      },
+      {
+        "name": "Taisei Clinic",
+        "type": "clinic",
+        "address": "Taisei Clinic, Machida City, Tokyo",
+        "contact": "042-797-7423",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Taisei+Clinic+Machida+City+Tokyo+Japan"
+      }
+    ],
+    "Chofu City": [
+      {
+        "name": "Sengawa Orthopedics",
+        "type": "clinic",
+        "address": "Sengawa Orthopedics, Chofu City, Tokyo",
+        "contact": "03-3305-0088",
+        "languages": "English",
+        "departments": "Orthopedic Surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sengawa+Orthopedics+Chofu+City+Tokyo+Japan"
+      },
+      {
+        "name": "Sengawa E.N.T Clinic",
+        "type": "clinic",
+        "address": "Sengawa E.N.T Clinic, Chofu City, Tokyo",
+        "contact": "03-5313-3281",
+        "languages": "English",
+        "departments": "Otorhinolaryngology (ENT)",
+        "link": "https://www.google.com/maps/search/?api=1&query=Sengawa+E.N.T+Clinic+Chofu+City+Tokyo+Japan"
+      }
+    ],
+    "Higashimurayama City": [
+      {
+        "name": "Tokyo Metropolitan Tama-Hokubu Medical Center",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Tama-Hokubu Medical Center, Higashimurayama City, Tokyo",
+        "contact": "042-396-3811",
+        "languages": "English; Cantonese; Mandarin; Korean; Thai; Tagalog; Burmese; Vietnamese; Bengali; French; Portuguese; German; Russian; Italian; Spanish",
+        "departments": "Cardiovascular medicine; Respiratory department; Medical oncology; Nephrology; Endocrinology and metabolism; Department of rheumatology and connective tissue disorders; Neurology; Department of cerebrovascular treatment; Neurology; Hematology; Department of medicine and infectious diseases; Department of internal medicine (palliative care); Neuropsychiatry; Digestive system; General surgery; Brest surgery; Vascular surgery; Thoracic surgery(Thoracic surgery); Cardiovascular surgery; Orthopedic Surgery; Department of rheumatism surgery; Neurosurgery; Obstetrics and gynecology; Urology; Ophthalmology; Otorhinolaryngology (ENT); Head and neck surgery; Plastic surgery; Dermatology; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Tama-Hokubu+Medical+Center+Higashimurayama+City+Tokyo+Japan"
+      }
+    ],
+    "Hachioji City": [
+      {
+        "name": "Kitahara International Hospital",
+        "type": "hospital",
+        "address": "Kitahara International Hospital, Hachioji City, Tokyo",
+        "contact": "042-645-1110",
+        "languages": "English",
+        "departments": "Neurosurgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kitahara+International+Hospital+Hachioji+City+Tokyo+Japan"
+      },
+      {
+        "name": "Ito Clinic",
+        "type": "clinic",
+        "address": "Ito Clinic, Hachioji City, Tokyo",
+        "contact": "042-644-2770",
+        "languages": "English",
+        "departments": "Internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Ito+Clinic+Hachioji+City+Tokyo+Japan"
+      },
+      {
+        "name": "Saitoh Dental Clinic",
+        "type": "clinic",
+        "address": "Saitoh Dental Clinic, Hachioji City, Tokyo",
+        "contact": "042-626-6066",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Saitoh+Dental+Clinic+Hachioji+City+Tokyo+Japan"
+      }
+    ],
+    "Fuchu City": [
+      {
+        "name": "Tokyo Metropolitan Tama Medical Center",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Tama Medical Center, Fuchu City, Tokyo",
+        "contact": "042-323-5111",
+        "languages": "English",
+        "departments": "Cardiovascular medicine; Respiratory department; Medical oncology; Nephrology; Endocrinology and metabolism; Department of rheumatology and connective tissue disorders; Neurology; Department of cerebrovascular treatment; Neurology; Hematology; Department of medicine and infectious diseases; Department of internal medicine (palliative care); Neuropsychiatry; Digestive system; General surgery; Brest surgery; Vascular surgery; Thoracic surgery(Thoracic surgery); Cardiovascular surgery; Orthopedic Surgery; Department of rheumatism surgery; Neurosurgery; Obstetrics and gynecology; Urology; Ophthalmology; Otorhinolaryngology (ENT); Head and neck surgery; Plastic surgery; Dermatology; Dentistry and oral surgery",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Tama+Medical+Center+Fuchu+City+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Children’s Medical Center",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Children’s Medical Center, Fuchu City, Tokyo",
+        "contact": "042-300-5111",
+        "languages": "English; Chinese; Korean; Vietnamese; Russian; Portuguese; Thai; Spanish; Tagalog; French; Mongolian; Hindi; Indonesian; Persian; Nepali; Burmese",
+        "departments": "Department of general medicine; Psychosomatic medicine; Cardiology; Endocrine; Department of metabolism; Blood; Oncology; Kidney; Department of rheumatology and connective tissue disorders; Neurology; Respiratory department; Tuberculosis department; Department of infectious diseases; Immunology; Gastroenterology; Department of allergy; Clinical genetics; Department of surgery; Cardiovascular surgery; Urology; Orthopedic Surgery; Plastic surgery; Neurosurgery; Ophthalmology; Otorhinolaryngology (ENT); Dermatology; Pediatric dentistry; Department of orthodontics; Organ transplant department; Laboratory department; Medical radiology; Anesthesiology; Children; Adolescent psychiatry; Critical care department; Intensive care department; Neonatology; Department of rehabilitation; Psychology; Welfare department; Training department; Department of home medical care; Clinical trials department; Department of genetic research",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Children’s+Medical+Center+Fuchu+City+Tokyo+Japan"
+      },
+      {
+        "name": "Clinique Dentaire Jardin Du Sacre-Coeur",
+        "type": "clinic",
+        "address": "Clinique Dentaire Jardin Du Sacre-Coeur, Fuchu City, Tokyo",
+        "contact": "042-403-9511",
+        "languages": "English",
+        "departments": "General dentistry; Pediatric dentistry; Department of orthodontics; Oral surgery; Implants; Whitening; Aesthetic dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Clinique+Dentaire+Jardin+Du+Sacre-Coeur+Fuchu+City+Tokyo+Japan"
+      },
+      {
+        "name": "Tama Fuchu Umehara Dental Clinic",
+        "type": "clinic",
+        "address": "Tama Fuchu Umehara Dental Clinic, Fuchu City, Tokyo",
+        "contact": "042-306-9877",
+        "languages": "English",
+        "departments": "General dentistry; Aesthetic dentistry; Department of orthodontics; Oral surgery; Pediatric dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tama+Fuchu+Umehara+Dental+Clinic+Fuchu+City+Tokyo+Japan"
+      },
+      {
+        "name": "Tokyo Metropolitan Neurological Hospital",
+        "type": "hospital",
+        "address": "Tokyo Metropolitan Neurological Hospital, Fuchu City, Tokyo",
+        "contact": "042-323-5110",
+        "languages": "English",
+        "departments": "Neurosurgery; Otorhinolaryngology (ENT); Dentistry; Others",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Neurological+Hospital+Fuchu+City+Tokyo+Japan"
+      }
+    ],
+    "Musashino City": [
+      {
+        "name": "Kawasaki Dental Clinic",
+        "type": "clinic",
+        "address": "Kawasaki Dental Clinic, Musashino City, Tokyo",
+        "contact": "0422-51-3200",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kawasaki+Dental+Clinic+Musashino+City+Tokyo+Japan"
+      },
+      {
+        "name": "Nakajima Clinic",
+        "type": "clinic",
+        "address": "Nakajima Clinic, Musashino City, Tokyo",
+        "contact": "0422-21-6251",
+        "languages": "English",
+        "departments": "Internal medicine; Respiratory medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Nakajima+Clinic+Musashino+City+Tokyo+Japan"
+      },
+      {
+        "name": "Numata Medical Clinic",
+        "type": "clinic",
+        "address": "Numata Medical Clinic, Musashino City, Tokyo",
+        "contact": "0422-56-3255",
+        "languages": "English; Chinese",
+        "departments": "Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Numata+Medical+Clinic+Musashino+City+Tokyo+Japan"
+      },
+      {
+        "name": "Kichijoji General Dental Clinic",
+        "type": "clinic",
+        "address": "Kichijoji General Dental Clinic, Musashino City, Tokyo",
+        "contact": "0422-26-2900",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Kichijoji+General+Dental+Clinic+Musashino+City+Tokyo+Japan"
+      }
+    ],
+    "Fussa City": [
+      {
+        "name": "Takahashi Dental Clinic",
+        "type": "clinic",
+        "address": "Takahashi Dental Clinic, Fussa City, Tokyo",
+        "contact": "042-552-1182",
+        "languages": "English",
+        "departments": "General dentistry; Pediatric dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Takahashi+Dental+Clinic+Fussa+City+Tokyo+Japan"
+      },
+      {
+        "name": "Hikari Clinic",
+        "type": "clinic",
+        "address": "Hikari Clinic, Fussa City, Tokyo",
+        "contact": "042-530-0221",
+        "languages": "English",
+        "departments": "Internal medicine; Pediatrics",
+        "link": "https://www.google.com/maps/search/?api=1&query=Hikari+Clinic+Fussa+City+Tokyo+Japan"
+      }
+    ],
+    "Tachikawa City": [
+      {
+        "name": "Tachikawa Iki-Iki Dental Clinic",
+        "type": "clinic",
+        "address": "Tachikawa Iki-Iki Dental Clinic, Tachikawa City, Tokyo",
+        "contact": "042-526-2784",
+        "languages": "English",
+        "departments": "Dentistry",
+        "link": "https://www.google.com/maps/search/?api=1&query=Tachikawa+Iki-Iki+Dental+Clinic+Tachikawa+City+Tokyo+Japan"
+      }
+    ],
+    "Koganei City": [
+      {
+        "name": "Musashi-Koganei Midori Clinic",
+        "type": "clinic",
+        "address": "Musashi-Koganei Midori Clinic, Koganei City, Tokyo",
+        "contact": "042-316-1101",
+        "languages": "English",
+        "departments": "Internal medicine; Diabetology; Endocrine internal medicine",
+        "link": "https://www.google.com/maps/search/?api=1&query=Musashi-Koganei+Midori+Clinic+Koganei+City+Tokyo+Japan"
+      }
+    ]
+  }
+}
