@@ -16,16 +16,8 @@
     style="width:100%;padding:12px 16px 12px 40px;background:rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.2);border-radius:14px;font-size:13px;color:#0C2D6B;outline:none;font-family:var(--font-main);box-sizing:border-box;">
 </div>
 
-<%# ── Filter Pills — Insurance ───────────── %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Insurance</p>
-<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:10px;">
-  <button onclick="filterBy('insurance','all')"     id="ins-all"     class="filter-pill active">All</button>
-  <button onclick="filterBy('insurance','shakai')"  id="ins-shakai"  class="filter-pill">Shakai Hoken</button>
-  <button onclick="filterBy('insurance','kokumin')" id="ins-kokumin" class="filter-pill">Kokumin Hoken</button>
-  <button onclick="filterBy('insurance','travel')"  id="ins-travel"  class="filter-pill">Travel</button>
-</div>
-
 <%# ── Ward / City Jump Navigation ─────────── %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;"><%= t('hospitals.wards_cities') %></p>
 <div class="ward-jump-nav" id="ward-jump-nav">
   <button onclick="filterByWard('')" id="pill-all" class="jump-pill active">All</button>
   <% @hospitals_by_location.each do |ward, _| %>
@@ -62,9 +54,6 @@
            data-ward="<%= hospital.ward.to_s.downcase %>"
            data-government="<%= hospital.is_government? %>"
            data-certified="<%= hospital.is_certified? %>"
-           data-shakai="<%= hospital.accepts_shakai_hoken? %>"
-           data-kokumin="<%= hospital.accepts_kokumin_hoken? %>"
-           data-travel="<%= hospital.accepts_travel_insurance? %>"
            data-emergency="<%= hospital.specialties.any? { |s| s.name_en == 'Emergency Medicine' } %>"
            data-maternity="<%= hospital.specialties.any? { |s| s.name_en.include?('Maternity') } %>">
 
@@ -155,24 +144,7 @@
 </div>
 
 <script>
-  let activeInsurance = 'all';
-  let activeWard      = '';
-
-  // ── Insurance filter ────────────────────────────────────────
-  function filterBy(group, value) {
-    if (group !== 'insurance') return;
-    activeInsurance = value;
-
-    const insPrefixes = ['ins-all','ins-shakai','ins-kokumin','ins-travel'];
-    insPrefixes.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.classList.remove('active');
-    });
-    const activeEl = document.getElementById(`ins-${value}`);
-    if (activeEl) activeEl.classList.add('active');
-
-    applyFilters();
-  }
+  let activeWard = '';
 
   // ── Ward / city filter ──────────────────────────────────────
   function filterByWard(wardId) {
@@ -199,12 +171,7 @@
       const matchWard   = !activeWard || (section && section.id === activeWard);
       const matchSearch = !searchVal  || name.includes(searchVal) || ward.includes(searchVal);
 
-      let matchIns = true;
-      if (activeInsurance === 'shakai')  matchIns = card.dataset.shakai  === 'true';
-      if (activeInsurance === 'kokumin') matchIns = card.dataset.kokumin === 'true';
-      if (activeInsurance === 'travel')  matchIns = card.dataset.travel  === 'true';
-
-      const show = matchWard && matchSearch && matchIns;
+      const show = matchWard && matchSearch;
       card.style.display = show ? 'block' : 'none';
       if (show) visible++;
     });
@@ -248,9 +215,5 @@
       if (input) { input.value = q; applyFilters(); }
     }
 
-    const insurance = p.get('insurance');
-    if (insurance === 'shakai') filterBy('insurance', 'shakai');
-    else if (insurance === 'kokumin') filterBy('insurance', 'kokumin');
-    else if (insurance === 'travel') filterBy('insurance', 'travel');
   });
 </script>

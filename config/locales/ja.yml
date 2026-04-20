@@ -26,7 +26,7 @@ ja:
   hospitals:
     title: "病院"
     search_placeholder: "病院、区を検索..."
-    insurance_label: "保険"
+    wards_cities: "区・市"
     type_label: "種別"
     all: "すべて"
     shakai: "社会保険"

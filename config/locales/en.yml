@@ -26,7 +26,7 @@ en:
   hospitals:
     title: "Hospitals"
     search_placeholder: "Search hospitals, wards..."
-    insurance_label: "Insurance"
+    wards_cities: "Wards & Cities"
     type_label: "Type"
     all: "All"
     shakai: "Shakai Hoken"
