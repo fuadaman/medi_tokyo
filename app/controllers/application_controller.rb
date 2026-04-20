@@ -2,7 +2,12 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_locale
-    I18n.locale = session[:locale] || :en
+    requested = session[:locale]&.to_sym
+    I18n.locale = if I18n.available_locales.include?(requested)
+                    requested
+                  else
+                    I18n.default_locale
+                  end
   end
 
   def set_language
