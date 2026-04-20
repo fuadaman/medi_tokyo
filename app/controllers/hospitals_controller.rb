@@ -24,8 +24,9 @@ class HospitalsController < ApplicationController
     end
 
     # Everything else (outside-23-ward cities) sorted alphabetically.
+    # Exclude nil/blank ward values — those are data gaps, not real locations.
     outside_groups = grouped
-      .reject { |ward, _| WARD_ORDER.include?(ward) }
+      .reject { |ward, _| WARD_ORDER.include?(ward) || ward.blank? }
       .sort_by { |ward, _| ward.to_s }
       .map { |ward, hospitals| [ward, hospitals.sort_by(&:name_en)] }
 
