@@ -45,6 +45,8 @@ ja:
     ward: "区"
     address: "住所"
     visiting_hours: "面会時間"
+    visiting_hours_note: "受診前に公式サイトをご確認ください。"
+    accepted_departments: "診療科"
     insurance_accepted: "対応保険"
     specialties: "診療科"
     services: "サービス"

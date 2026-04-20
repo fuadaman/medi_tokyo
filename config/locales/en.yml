@@ -45,6 +45,8 @@ en:
     ward: "Ward"
     address: "Address"
     visiting_hours: "Visiting hours"
+    visiting_hours_note: "Please check their website before visiting."
+    accepted_departments: "Accepted Departments"
     insurance_accepted: "Insurance Accepted"
     specialties: "Specialties"
     services: "Services"

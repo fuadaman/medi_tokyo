@@ -133,8 +133,7 @@ InsuranceGuide.create!([
 #   JSON "contact"     -> phone
 #   JSON "link"        -> website_url
 #   JSON "languages"   -> insurance_notes_en  (no dedicated languages column)
-#   JSON "departments" -> not stored          (no departments column; use
-#                                              specialties relation if needed)
+#   JSON "departments" -> departments         (semicolon-separated string)
 #   JSON "type"        -> not stored          (no type column)
 #
 # Ward logic:
@@ -170,6 +169,7 @@ json_data["wards"].each do |ward_name, entries|
       h.accepts_travel_insurance = false
       # Store supported languages as a plain string (no array column exists).
       h.insurance_notes_en   = entry["languages"].presence
+      h.departments          = entry["departments"].presence
       h.visiting_hours       = nil
     end
     count += 1
@@ -192,6 +192,7 @@ json_data["outside_23_wards"].each do |city_name, entries|
       h.is_certified         = false
       h.accepts_travel_insurance = false
       h.insurance_notes_en   = entry["languages"].presence
+      h.departments          = entry["departments"].presence
       h.visiting_hours       = nil
     end
     count += 1

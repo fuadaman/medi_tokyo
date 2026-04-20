@@ -95,10 +95,27 @@
         <%= locale_field(@hospital, :address) %>
       </span>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:center;">
-      <span style="font-size:12px;color:#4A7FC1;"><%= t('hospitals.visiting_hours') %></span>
-      <span style="font-size:12px;font-weight:500;color:#0C2D6B;"><%= @hospital.visiting_hours %></span>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:8px;border-bottom:1px solid rgba(74,127,193,0.08);">
+      <span style="font-size:12px;color:#4A7FC1;white-space:nowrap;margin-right:12px;"><%= t('hospitals.visiting_hours') %></span>
+      <span style="font-size:12px;font-weight:500;color:#0C2D6B;text-align:right;">
+        <%= @hospital.visiting_hours.presence || t('hospitals.visiting_hours_note') %>
+      </span>
     </div>
+    <% if @hospital.departments.present? %>
+      <% dept_list = @hospital.departments.split(/;\s*/).map(&:strip).reject(&:blank?) %>
+      <% if dept_list.any? %>
+        <div style="padding-top:4px;">
+          <span style="font-size:12px;color:#4A7FC1;display:block;margin-bottom:6px;"><%= t('hospitals.accepted_departments') %></span>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;">
+            <% dept_list.each do |dept| %>
+              <span style="font-size:11px;font-weight:500;padding:4px 10px;border-radius:20px;background:rgba(74,127,193,0.08);color:#0C2D6B;border:1px solid rgba(74,127,193,0.15);">
+                <%= dept %>
+              </span>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
