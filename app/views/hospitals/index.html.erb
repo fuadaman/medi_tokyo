@@ -25,20 +25,11 @@
   <button onclick="filterBy('insurance','travel')"  id="ins-travel"  class="filter-pill">Travel</button>
 </div>
 
-<%# ── Filter Pills — Type ────────────────── %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:6px;">Type</p>
-<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px;">
-  <button onclick="filterBy('type','all')"        id="type-all"        class="filter-pill active">All</button>
-  <button onclick="filterBy('type','government')" id="type-government" class="filter-pill">Government</button>
-  <button onclick="filterBy('type','certified')"  id="type-certified"  class="filter-pill">Certified</button>
-  <button onclick="filterBy('type','maternity')"  id="type-maternity"  class="filter-pill">Maternity</button>
-  <button onclick="filterBy('type','emergency')"  id="type-emergency"  class="filter-pill">Emergency</button>
-</div>
-
 <%# ── Ward / City Jump Navigation ─────────── %>
 <div class="ward-jump-nav" id="ward-jump-nav">
+  <button onclick="filterByWard('')" id="pill-all" class="jump-pill active">All</button>
   <% @hospitals_by_location.each do |ward, _| %>
-    <a href="#<%= ward_anchor(ward) %>" class="jump-pill"><%= ward_short_name(ward) %></a>
+    <button onclick="filterByWard('<%= ward_anchor(ward) %>')" id="pill-<%= ward_anchor(ward) %>" class="jump-pill"><%= ward_short_name(ward) %></button>
   <% end %>
 </div>
 
@@ -165,25 +156,31 @@
 
 <script>
   let activeInsurance = 'all';
-  let activeType      = 'all';
+  let activeWard      = '';
 
-  // ── Filter state management ─────────────────────────────────
+  // ── Insurance filter ────────────────────────────────────────
   function filterBy(group, value) {
-    if (group === 'insurance') activeInsurance = value;
-    if (group === 'type')      activeType      = value;
+    if (group !== 'insurance') return;
+    activeInsurance = value;
 
-    // Update pill active states using CSS classes (no inline style strings)
-    const insPrefixes  = ['ins-all','ins-shakai','ins-kokumin','ins-travel'];
-    const typePrefixes = ['type-all','type-government','type-certified','type-maternity','type-emergency'];
-    const prefixes     = group === 'insurance' ? insPrefixes : typePrefixes;
-    const activeId     = group === 'insurance' ? `ins-${value}` : `type-${value}`;
-
-    prefixes.forEach(id => {
+    const insPrefixes = ['ins-all','ins-shakai','ins-kokumin','ins-travel'];
+    insPrefixes.forEach(id => {
       const el = document.getElementById(id);
       if (el) el.classList.remove('active');
     });
-    const activeEl = document.getElementById(activeId);
+    const activeEl = document.getElementById(`ins-${value}`);
     if (activeEl) activeEl.classList.add('active');
+
+    applyFilters();
+  }
+
+  // ── Ward / city filter ──────────────────────────────────────
+  function filterByWard(wardId) {
+    activeWard = wardId;
+
+    document.querySelectorAll('.jump-pill').forEach(p => p.classList.remove('active'));
+    const activePill = document.getElementById(wardId ? 'pill-' + wardId : 'pill-all');
+    if (activePill) activePill.classList.add('active');
 
     applyFilters();
   }
@@ -195,46 +192,39 @@
     let   visible   = 0;
 
     cards.forEach(card => {
-      const name = card.dataset.name || '';
-      const ward = card.dataset.ward || '';
+      const name    = card.dataset.name || '';
+      const ward    = card.dataset.ward || '';
+      const section = card.closest('.ward-section');
 
-      const matchSearch = !searchVal || name.includes(searchVal) || ward.includes(searchVal);
+      const matchWard   = !activeWard || (section && section.id === activeWard);
+      const matchSearch = !searchVal  || name.includes(searchVal) || ward.includes(searchVal);
 
       let matchIns = true;
       if (activeInsurance === 'shakai')  matchIns = card.dataset.shakai  === 'true';
       if (activeInsurance === 'kokumin') matchIns = card.dataset.kokumin === 'true';
       if (activeInsurance === 'travel')  matchIns = card.dataset.travel  === 'true';
 
-      let matchType = true;
-      if (activeType === 'government') matchType = card.dataset.government === 'true';
-      if (activeType === 'certified')  matchType = card.dataset.certified  === 'true';
-      if (activeType === 'maternity')  matchType = card.dataset.maternity  === 'true';
-      if (activeType === 'emergency')  matchType = card.dataset.emergency  === 'true';
-
-      const show = matchSearch && matchIns && matchType;
+      const show = matchWard && matchSearch && matchIns;
       card.style.display = show ? 'block' : 'none';
       if (show) visible++;
     });
 
     // Hide ward sections where every card is filtered out
     document.querySelectorAll('.ward-section').forEach(section => {
-      const sectionCards  = section.querySelectorAll('.hospital-card');
-      const anyVisible    = Array.from(sectionCards).some(c => c.style.display !== 'none');
+      const sectionCards = section.querySelectorAll('.hospital-card');
+      const anyVisible   = Array.from(sectionCards).some(c => c.style.display !== 'none');
       section.style.display = anyVisible ? 'block' : 'none';
 
-      // Dim the matching jump-nav pill when its section is hidden
-      const sectionId = section.id;
-      const pill = document.querySelector(`.jump-pill[href="#${sectionId}"]`);
+      const pill = document.getElementById('pill-' + section.id);
       if (pill) pill.style.opacity = anyVisible ? '1' : '0.3';
     });
 
-    // Also hide dividers that follow a hidden section
+    // Hide dividers that follow a hidden section
     document.querySelectorAll('.ward-divider').forEach(divider => {
       const prev = divider.previousElementSibling;
       divider.style.display = (prev && prev.style.display === 'none') ? 'none' : 'block';
     });
 
-    // Update count and no-results message
     const countEl = document.getElementById('result-count');
     if (countEl) countEl.textContent = `${visible} facilities found`;
 
@@ -246,18 +236,9 @@
   document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('search-input');
     if (input) input.addEventListener('input', applyFilters);
-
-    // Smooth scroll for jump-nav anchors
-    document.querySelectorAll('.jump-pill').forEach(pill => {
-      pill.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.getElementById(pill.getAttribute('href').slice(1));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
   });
 
-  // ── Honour URL params (keep existing deep-link behaviour) ───
+  // ── Honour URL params ───────────────────────────────────────
   document.addEventListener('turbo:load', () => {
     const p = new URLSearchParams(window.location.search);
 
@@ -266,14 +247,6 @@
       const input = document.getElementById('search-input');
       if (input) { input.value = q; applyFilters(); }
     }
-
-    const specialty = p.get('specialty');
-    if (specialty === 'maternity') filterBy('type', 'maternity');
-    else if (specialty === 'emergency') filterBy('type', 'emergency');
-
-    const type = p.get('type');
-    if (type === 'certified') filterBy('type', 'certified');
-    else if (type === 'government') filterBy('type', 'government');
 
     const insurance = p.get('insurance');
     if (insurance === 'shakai') filterBy('insurance', 'shakai');
