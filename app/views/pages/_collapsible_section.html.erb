@@ -1,12 +1,11 @@
-<%# Generic collapsible section wrapper.
-    Usage:
-      <%= render layout: 'pages/collapsible_section',
-            locals: {
-              label: 'SECTION TITLE',
-              teaser: 'One-line summary shown when collapsed'
-            } do %>
-        [content]
-      <% end %>
+<%#
+  Generic collapsible section wrapper.
+  Usage:
+    render layout: 'pages/collapsible_section',
+          locals: {
+            label: 'SECTION TITLE',
+            teaser: 'One-line summary shown when collapsed'
+          } do ... end
 %>
 
 <div data-controller="disclosure"
@@ -35,7 +34,7 @@
   <%# Panel — collapses to 0, expands to full content height %>
   <div data-disclosure-target="panel"
        style="max-height:0;overflow:hidden;transition:max-height 200ms ease-in-out;">
-    <%= content %>
+    <%= yield %>
   </div>
 
 </div>
