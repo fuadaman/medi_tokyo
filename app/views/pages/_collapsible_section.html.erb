@@ -1,0 +1,41 @@
+<%# Generic collapsible section wrapper.
+    Usage:
+      <%= render layout: 'pages/collapsible_section',
+            locals: {
+              label: 'SECTION TITLE',
+              teaser: 'One-line summary shown when collapsed'
+            } do %>
+        [content]
+      <% end %>
+%>
+
+<div data-controller="disclosure"
+     data-open="false"
+     style="margin-bottom:12px;">
+
+  <%# Toggle row — replaces the plain <p> section label %>
+  <button data-action="click->disclosure#toggle"
+          style="width:100%;background:none;border:none;padding:0;margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;">
+    <span style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;">
+      <%= label %>
+    </span>
+    <div style="display:flex;align-items:center;gap:6px;flex:1;justify-content:flex-end;min-width:0;">
+      <span style="font-size:10px;color:rgba(74,127,193,0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;">
+        <%= teaser %>
+      </span>
+      <svg data-disclosure-target="chevron"
+           style="flex-shrink:0;transition:transform 200ms ease-in-out;"
+           width="14" height="14" viewBox="0 0 20 20" fill="none"
+           stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+        <path d="M5 8l5 5 5-5"/>
+      </svg>
+    </div>
+  </button>
+
+  <%# Panel — collapses to 0, expands to full content height %>
+  <div data-disclosure-target="panel"
+       style="max-height:0;overflow:hidden;transition:max-height 200ms ease-in-out;">
+    <%= content %>
+  </div>
+
+</div>
