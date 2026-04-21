@@ -4,14 +4,20 @@ export default class extends Controller {
   static targets = ["panel", "chevron"]
   static values = { exclusive: Boolean }
 
-  toggle() {
-    const isOpen = this.element.dataset.open === "true"
+  connect() {
+    this.setOpen(this.isOpen)
+  }
 
-    if (this.exclusiveValue && !isOpen) {
+  get isOpen() {
+    return this.element.dataset.open === "true"
+  }
+
+  toggle() {
+    if (this.exclusiveValue && !this.isOpen) {
       this.dispatch("close", { bubbles: true })
     }
 
-    this.setOpen(!isOpen)
+    this.setOpen(!this.isOpen)
   }
 
   close() {
