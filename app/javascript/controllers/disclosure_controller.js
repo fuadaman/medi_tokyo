@@ -14,7 +14,7 @@ export default class extends Controller {
 
   toggle() {
     if (this.exclusiveValue && !this.isOpen) {
-      this.dispatch("close", { bubbles: true })
+      this.dispatch("exclusive-close", { target: window })
     }
 
     this.setOpen(!this.isOpen)
