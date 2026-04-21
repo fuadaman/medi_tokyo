@@ -1,0 +1,36 @@
+import { Controller } from "@hotwired/stimulus"
+
+export default class extends Controller {
+  static targets = ["panel", "chevron"]
+  static values = { exclusive: Boolean }
+
+  connect() {
+    this.setOpen(this.isOpen)
+  }
+
+  get isOpen() {
+    return this.element.dataset.open === "true"
+  }
+
+  toggle() {
+    if (this.exclusiveValue && !this.isOpen) {
+      this.dispatch("exclusive-close", { target: window })
+    }
+
+    this.setOpen(!this.isOpen)
+  }
+
+  close() {
+    this.setOpen(false)
+  }
+
+  setOpen(open) {
+    this.element.dataset.open = open
+    this.panelTarget.style.maxHeight = open
+      ? this.panelTarget.scrollHeight + "px"
+      : "0"
+    if (this.hasChevronTarget) {
+      this.chevronTarget.style.transform = open ? "rotate(180deg)" : "rotate(0deg)"
+    }
+  }
+}

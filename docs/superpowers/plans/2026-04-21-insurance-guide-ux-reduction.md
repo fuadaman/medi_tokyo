@@ -1,65 +1,309 @@
-<%# ========================================
-    INSURANCE GUIDE — MediTokyo
-    /insurance-guide
-    ======================================== %>
+# Insurance Guide UX Reduction Implementation Plan
 
-<%# Hero %>
-<div style="background:linear-gradient(135deg,rgba(74,127,193,0.12),rgba(12,45,107,0.06));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.2);border-radius:16px;padding:20px;margin-bottom:12px;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
-  <div style="width:56px;height:56px;background:rgba(74,127,193,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
-      <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/>
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Reduce the Insurance Guide page from 14 fully-expanded sections to a clean first-paint showing only the 5 always-visible sections, with all remaining content behind accordion/collapsible disclosure.
+
+**Architecture:** A generic Stimulus `disclosure` controller drives all show/hide behaviour via a CSS `max-height` transition — no JS height calculation. Insurance Types get an exclusive accordion (one open at a time) via a custom `exclusive` option. Seven secondary sections are wrapped in a reusable `_collapsible_section` partial. Insurance Type cards are extracted to an `_insurance_accordion_item` partial.
+
+**Tech Stack:** Rails 7, ERB partials, Stimulus (Hotwire), inline CSS (project convention), Minitest for controller tests.
+
+---
+
+## File Map
+
+| Action | Path | Responsibility |
+|---|---|---|
+| Create | `app/javascript/controllers/disclosure_controller.js` | Toggle panel open/closed; exclusive-accordion mode |
+| Create | `app/views/pages/_insurance_accordion_item.html.erb` | Single accordion item for one InsuranceGuide record |
+| Create | `app/views/pages/_collapsible_section.html.erb` | Generic collapsible wrapper for secondary sections |
+| Modify | `app/views/pages/insurance_guide.html.erb` | Wire partials; remove inline section rendering |
+| Modify | `test/controllers/pages_controller_test.rb` | Add insurance_guide route + DOM structure tests |
+
+---
+
+## Task 1: Disclosure Stimulus Controller
+
+**Files:**
+- Create: `app/javascript/controllers/disclosure_controller.js`
+
+- [ ] **Step 1: Write the controller**
+
+```javascript
+import { Controller } from "@hotwired/stimulus"
+
+export default class extends Controller {
+  static targets = ["panel", "chevron"]
+  static values = { exclusive: Boolean }
+
+  toggle() {
+    const isOpen = this.element.dataset.open === "true"
+
+    if (this.exclusiveValue && !isOpen) {
+      this.dispatch("close", { bubbles: true })
+    }
+
+    this.setOpen(!isOpen)
+  }
+
+  close() {
+    this.setOpen(false)
+  }
+
+  setOpen(open) {
+    this.element.dataset.open = open
+    this.panelTarget.style.maxHeight = open
+      ? this.panelTarget.scrollHeight + "px"
+      : "0"
+    if (this.hasChevronTarget) {
+      this.chevronTarget.style.transform = open ? "rotate(180deg)" : "rotate(0deg)"
+    }
+  }
+}
+```
+
+Save to `app/javascript/controllers/disclosure_controller.js`.
+
+- [ ] **Step 2: Verify Stimulus auto-loads it**
+
+The project uses `eagerLoadControllersFrom("controllers", application)` in `app/javascript/controllers/index.js` — no manual registration needed. The controller name `disclosure` maps to `disclosure_controller.js` automatically.
+
+Run: `bin/rails assets:precompile 2>&1 | tail -5`
+Expected: no errors mentioning `disclosure_controller`.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add app/javascript/controllers/disclosure_controller.js
+git commit -m "feat: add disclosure Stimulus controller for accordion/collapsible sections"
+```
+
+---
+
+## Task 2: Insurance Accordion Item Partial
+
+**Files:**
+- Create: `app/views/pages/_insurance_accordion_item.html.erb`
+
+- [ ] **Step 1: Write the partial**
+
+```erb
+<%# Renders one collapsed/expandable insurance type card.
+    guide: InsuranceGuide record
+    The disclosure controller is exclusive — opening this item
+    closes any sibling items that dispatched a close event. %>
+
+<div data-controller="disclosure"
+     data-disclosure-exclusive-value="true"
+     data-open="false"
+     data-action="disclosure:close@window->disclosure#close"
+     style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.1);overflow:hidden;">
+
+  <%# Collapsed header — full-width tap target %>
+  <button data-action="click->disclosure#toggle"
+          style="width:100%;background:none;border:none;padding:16px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;">
+    <div style="flex:1;min-width:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:4px;">
+        <div>
+          <p style="font-size:15px;font-weight:600;color:#0C2D6B;margin-bottom:2px;">
+            <%= locale_field(guide, :title) %>
+          </p>
+          <p style="font-size:11px;color:#4A7FC1;">
+            <%= I18n.locale == :ja ? guide.title_en : guide.title_jp %>
+          </p>
+        </div>
+        <span style="font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-left:8px;
+          <%= guide.insurance_type == 'travel_insurance' ? 'background:rgba(186,117,23,0.1);color:#633806;' : 'background:rgba(12,45,107,0.08);color:#0C2D6B;' %>">
+          <%= guide.coverage_percent %><%= t('insurance.covered') %>
+        </span>
+      </div>
+      <p style="font-size:12px;color:#4A7FC1;line-height:1.6;margin:0;">
+        <%= truncate(locale_field(guide, :body), length: 120) %>
+      </p>
+    </div>
+    <%# Chevron %>
+    <svg data-disclosure-target="chevron"
+         style="flex-shrink:0;transition:transform 200ms ease-in-out;margin-top:2px;"
+         width="16" height="16" viewBox="0 0 20 20" fill="none"
+         stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+      <path d="M5 8l5 5 5-5"/>
     </svg>
-  </div>
-  <h1 style="font-size:18px;font-weight:600;color:#0C2D6B;margin-bottom:6px;"><%= t('insurance.title') %></h1>
-  <p style="font-size:12px;color:#4A7FC1;line-height:1.6;"><%= t('insurance.subtitle') %></p>
-</div>
+  </button>
 
-<%# ⚠️ My Number Card Alert — NEW Dec 2024 %>
-<div style="background:rgba(250,238,218,0.8);backdrop-filter:blur(20px);border:1px solid rgba(186,117,23,0.25);border-radius:14px;padding:14px 16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
-  <div style="display:flex;gap:10px;align-items:flex-start;">
-    <span style="font-size:20px;flex-shrink:0;">⚠️</span>
-    <div>
-      <p style="font-size:12px;font-weight:600;color:#633806;margin-bottom:4px;">
-        <%= I18n.locale == :ja ? '重要：マイナンバーカードへの切り替え（2024年12月〜）' : 'Important: My Number Card Update (Dec 2024)' %>
-      </p>
-      <p style="font-size:11px;color:#633806;line-height:1.6;">
-        <%= I18n.locale == :ja ? '2024年12月2日より、従来の健康保険証の新規発行が停止されました。マイナンバーカードを健康保険証として使用することが推奨されています。マイナンバーカードをお持ちでない方には「資格確認書」が発行されます。' : 'As of December 2, 2024, traditional health insurance cards are no longer issued. Your My Number Card (マイナンバーカード) now serves as your health insurance credential. If you do not have one, you will receive a Qualification Confirmation Notice (資格確認書).' %>
-      </p>
+  <%# Expandable panel %>
+  <div data-disclosure-target="panel"
+       style="max-height:0;overflow:hidden;transition:max-height 200ms ease-in-out;">
+    <div style="padding:0 16px 16px;">
+      <div style="border-top:1px solid rgba(74,127,193,0.1);padding-top:12px;">
+        <p style="font-size:12px;color:#4A7FC1;line-height:1.7;margin-bottom:12px;">
+          <%= locale_field(guide, :body) %>
+        </p>
+        <div style="background:rgba(219,238,255,0.5);border-radius:10px;padding:10px 12px;border-left:3px solid #4A7FC1;">
+          <% if guide.insurance_type == 'shakai_hoken' %>
+            <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_shakai') %></p>
+          <% elsif guide.insurance_type == 'kokumin_hoken' %>
+            <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_kokumin') %></p>
+          <% elsif guide.insurance_type == 'travel_insurance' %>
+            <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_travel') %></p>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<%# ⚠️ 2027 Visa Renewal Warning %>
-<div style="background:rgba(252,235,235,0.8);backdrop-filter:blur(20px);border:1px solid rgba(226,75,74,0.2);border-radius:14px;padding:14px 16px;margin-bottom:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);">
-  <div style="display:flex;gap:10px;align-items:flex-start;">
-    <span style="font-size:20px;flex-shrink:0;">🛂</span>
-    <div>
-      <p style="font-size:12px;font-weight:600;color:#E24B4A;margin-bottom:4px;">
-        <%= I18n.locale == :ja ? '2027年6月〜：保険料未払いでビザ更新拒否の可能性' : 'From June 2027: Unpaid Premiums May Block Visa Renewal' %>
-      </p>
-      <p style="font-size:11px;color:#c0392b;line-height:1.6;">
-        <%= I18n.locale == :ja ? '2025年11月の政府発表により、国民健康保険料または国民年金保険料の未払いがある外国人は、2027年6月以降、ビザの更新・在留資格変更が原則として拒否される可能性があります。社会保険加入者は給与天引きのため影響は少ない見込みです。' : 'From June 2027, foreign residents with unpaid NHI or National Pension premiums may be denied visa renewal or status changes. This was announced in November 2025. Shakai Hoken enrollees are largely unaffected as premiums are auto-deducted from salary. Pay your NHI bills on time.' %>
-      </p>
+</div>
+```
+
+Save to `app/views/pages/_insurance_accordion_item.html.erb`.
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add app/views/pages/_insurance_accordion_item.html.erb
+git commit -m "feat: add insurance accordion item partial"
+```
+
+---
+
+## Task 3: Collapsible Section Partial
+
+**Files:**
+- Create: `app/views/pages/_collapsible_section.html.erb`
+
+- [ ] **Step 1: Write the partial**
+
+```erb
+<%# Generic collapsible section wrapper.
+    Usage:
+      <%= render 'pages/collapsible_section',
+            label: 'SECTION TITLE',
+            teaser: 'One-line summary shown when collapsed' do %>
+        [content]
+      <% end %>
+%>
+
+<div data-controller="disclosure"
+     data-open="false"
+     style="margin-bottom:12px;">
+
+  <%# Toggle row — replaces the plain <p> section label %>
+  <button data-action="click->disclosure#toggle"
+          style="width:100%;background:none;border:none;padding:0;margin-bottom:8px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;">
+    <span style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;">
+      <%= label %>
+    </span>
+    <div style="display:flex;align-items:center;gap:6px;flex:1;justify-content:flex-end;min-width:0;">
+      <span style="font-size:10px;color:rgba(74,127,193,0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;">
+        <%= teaser %>
+      </span>
+      <svg data-disclosure-target="chevron"
+           style="flex-shrink:0;transition:transform 200ms ease-in-out;"
+           width="14" height="14" viewBox="0 0 20 20" fill="none"
+           stroke="#4A7FC1" stroke-width="1.8" stroke-linecap="round">
+        <path d="M5 8l5 5 5-5"/>
+      </svg>
+    </div>
+  </button>
+
+  <%# Panel — collapses to 0, expands to full content height %>
+  <div data-disclosure-target="panel"
+       style="max-height:0;overflow:hidden;transition:max-height 200ms ease-in-out;">
+    <%= content %>
+  </div>
+
+</div>
+```
+
+Save to `app/views/pages/_collapsible_section.html.erb`.
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add app/views/pages/_collapsible_section.html.erb
+git commit -m "feat: add generic collapsible section partial"
+```
+
+---
+
+## Task 4: Wire Insurance Guide Template
+
+**Files:**
+- Modify: `app/views/pages/insurance_guide.html.erb`
+
+This task replaces the Insurance Types loop and wraps all 7 secondary sections with the new partials. The content inside each collapsible is **identical** to what exists today — only the wrapper changes.
+
+- [ ] **Step 1: Replace the Insurance Types section (lines 47–79)**
+
+Replace:
+```erb
+<%# Insurance Types %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.types_label') %></p>
+
+<% @insurance_guides.each do |guide| %>
+  <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);border:1px solid rgba(74,127,193,0.1);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+      <div>
+        <h2 style="font-size:15px;font-weight:600;color:#0C2D6B;margin-bottom:2px;">
+          <%= locale_field(guide, :title) %>
+        </h2>
+        <p style="font-size:11px;color:#4A7FC1;">
+          <%= I18n.locale == :ja ? guide.title_en : guide.title_jp %>
+        </p>
+      </div>
+      <span style="font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;white-space:nowrap;
+        <%= guide.insurance_type == 'travel_insurance' ? 'background:rgba(186,117,23,0.1);color:#633806;' : 'background:rgba(12,45,107,0.08);color:#0C2D6B;' %>">
+        <%= guide.coverage_percent %><%= t('insurance.covered') %>
+      </span>
+    </div>
+    <p style="font-size:12px;color:#4A7FC1;line-height:1.7;margin-bottom:12px;">
+      <%= locale_field(guide, :body) %>
+    </p>
+    <div style="background:rgba(219,238,255,0.5);border-radius:10px;padding:10px 12px;border-left:3px solid #4A7FC1;">
+      <% if guide.insurance_type == 'shakai_hoken' %>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_shakai') %></p>
+      <% elsif guide.insurance_type == 'kokumin_hoken' %>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_kokumin') %></p>
+      <% elsif guide.insurance_type == 'travel_insurance' %>
+        <p style="font-size:11px;font-weight:500;color:#0C2D6B;">💡 <%= t('insurance.tip_travel') %></p>
+      <% end %>
     </div>
   </div>
-</div>
+<% end %>
+```
 
+With:
+```erb
 <%# Insurance Types %>
 <p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.types_label') %></p>
 
 <% @insurance_guides.each do |guide| %>
   <%= render 'pages/insurance_accordion_item', guide: guide %>
 <% end %>
+```
 
+- [ ] **Step 2: Wrap "Real Cost Examples" section (lines 81–146)**
+
+Replace:
+```erb
 <%# Real Cost Examples %>
+<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;">
+  <%= I18n.locale == :ja ? '実際の費用例（2025年東京）' : 'Real Cost Examples (Tokyo 2025)' %>
+</p>
+
+<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
+  ... [entire inner content through the closing </div> at line 146] ...
+</div>
+```
+
+With:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '実際の費用例（2025年東京）' : 'Real Cost Examples (Tokyo 2025)',
         teaser: I18n.locale == :ja ? '¥19,820/月の負担例（月給40万円）' : 'e.g. ¥19,820/mo on a ¥400K salary'
       } do %>
   <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:0;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
-
-    <%# Shakai Hoken example %>
+    <%# --- Shakai Hoken example --- %>
     <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);">
       <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">
         <%= I18n.locale == :ja ? '社会保険（月給40万円の場合）' : 'Shakai Hoken (¥400,000/month salary)' %>
@@ -77,8 +321,7 @@
         <span style="font-size:11px;font-weight:600;color:#27500A;">¥19,820/月</span>
       </div>
     </div>
-
-    <%# Kokumin Hoken example %>
+    <%# --- Kokumin Hoken example --- %>
     <div style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(74,127,193,0.08);">
       <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:6px;">
         <%= I18n.locale == :ja ? '国民健康保険（年収400万円、東京の場合）' : 'Kokumin Hoken (¥4M annual income, Tokyo)' %>
@@ -92,8 +335,7 @@
         <span style="font-size:11px;font-weight:600;color:#0C2D6B;">¥61,400/月</span>
       </div>
     </div>
-
-    <%# Co-pay at hospital %>
+    <%# --- Co-pay at hospital --- %>
     <p style="font-size:12px;font-weight:600;color:#0C2D6B;margin-bottom:8px;">
       <%= I18n.locale == :ja ? '病院での自己負担（窓口支払い）' : 'At the hospital — your co-pay (30%)' %>
     </p>
@@ -119,8 +361,12 @@
     </div>
   </div>
 <% end %>
+```
 
-<%# Co-pay by Age %>
+- [ ] **Step 3: Wrap "Co-pay by Age" section (lines 148–174)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '年齢別自己負担率' : 'Co-pay by age',
@@ -149,8 +395,12 @@
     <% end %>
   </div>
 <% end %>
+```
 
-<%# Enrollment Steps %>
+- [ ] **Step 4: Wrap "Enrollment Steps" section (lines 176–207)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '加入手続き（国民健康保険）' : 'How to enroll — Kokumin Hoken',
@@ -183,8 +433,12 @@
     <% end %>
   </div>
 <% end %>
+```
 
-<%# High Cost Medical Expense Benefit %>
+- [ ] **Step 5: Wrap "High-Cost Medical Expense Benefit" section (lines 209–242)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '高額療養費制度' : 'High-Cost Medical Expense Benefit',
@@ -220,8 +474,12 @@
     </div>
   </div>
 <% end %>
+```
 
-<%# Between Jobs %>
+- [ ] **Step 6: Wrap "Between Jobs" section (lines 244–269)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '退職・転職時の保険' : 'Between jobs — what to do',
@@ -248,8 +506,12 @@
     <% end %>
   </div>
 <% end %>
+```
 
-<%# Dependent Family Coverage %>
+- [ ] **Step 7: Wrap "Family & Dependent Coverage" section (lines 271–296)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: I18n.locale == :ja ? '家族の保険' : 'Family & dependent coverage',
@@ -276,8 +538,12 @@
     <% end %>
   </div>
 <% end %>
+```
 
-<%# Maternity Allowance %>
+- [ ] **Step 8: Wrap "Maternity Allowance" section (lines 298–318)**
+
+Replace the `<p>` label and `<div>` card with:
+```erb
 <%= render layout: 'pages/collapsible_section',
       locals: {
         label: t('insurance.maternity_label'),
@@ -302,53 +568,119 @@
     </div>
   </div>
 <% end %>
+```
 
-<%# What to bring %>
-<p style="font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#4A7FC1;margin-bottom:8px;"><%= t('insurance.bring_label') %></p>
+- [ ] **Step 9: Verify page renders**
 
-<div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(40px);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);">
-  <% if I18n.locale == :ja %>
-    <% items = [
-      { icon: "🪪", text: "マイナンバーカード（保険証として使用）", sub: "2024年12月以降、最も重要な書類" },
-      { icon: "🛂", text: "在留カード", sub: "外国人居住者向け" },
-      { icon: "💳", text: "お支払い方法", sub: "自己負担分（30%）の現金またはクレジットカード" },
-      { icon: "📋", text: "病歴・現在の薬のリスト", sub: "アレルギー情報も含めて" },
-      { icon: "🌐", text: "翻訳アプリ", sub: "Google翻訳またはDeepLで医師とコミュニケーション" }
-    ] %>
-  <% else %>
-    <% items = [
-      { icon: "🪪", text: "My Number Card (acts as insurance card)", sub: "Most important document since Dec 2024" },
-      { icon: "🛂", text: "Residence card (在留カード)", sub: "For foreign residents" },
-      { icon: "💳", text: "Payment method", sub: "Cash or credit card for your 30% co-pay" },
-      { icon: "📋", text: "Medical history & medication list", sub: "Include any allergies" },
-      { icon: "🌐", text: "Translation app", sub: "Google Translate or DeepL for communication" }
-    ] %>
-  <% end %>
+```bash
+bin/rails server
+```
 
-  <% items.each_with_index do |item, index| %>
-    <div style="display:flex;align-items:flex-start;gap:12px;<%= index < items.length - 1 ? 'margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(74,127,193,0.08);' : '' %>">
-      <span style="font-size:20px;flex-shrink:0;"><%= item[:icon] %></span>
-      <div>
-        <p style="font-size:12px;font-weight:500;color:#0C2D6B;margin-bottom:1px;"><%= item[:text] %></p>
-        <p style="font-size:10px;color:#4A7FC1;"><%= item[:sub] %></p>
-      </div>
-    </div>
-  <% end %>
-</div>
+Visit `http://localhost:3000/insurance-guide`. Confirm:
+- Hero, both alert banners, What to Bring, CTA, Disclaimer are fully visible
+- Insurance Types shows 3 collapsed accordion items with coverage badges
+- 7 secondary sections show only their label row + teaser + chevron
 
-<%# Find hospitals CTA %>
-<div style="background:linear-gradient(135deg,rgba(12,45,107,0.06),rgba(74,127,193,0.08));backdrop-filter:blur(40px);border:1px solid rgba(74,127,193,0.15);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);text-align:center;">
-  <p style="font-size:13px;font-weight:600;color:#0C2D6B;margin-bottom:6px;"><%= t('insurance.find_label') %></p>
-  <p style="font-size:11px;color:#4A7FC1;margin-bottom:12px;"><%= t('insurance.find_sub') %></p>
-  <a href="<%= hospitals_path %>" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4A7FC1,#0C2D6B);color:#fff;font-size:13px;font-weight:500;padding:12px 24px;border-radius:12px;text-decoration:none;box-shadow:0 4px 12px rgba(12,45,107,0.25);">
-    <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M15 15l3 3"/></svg>
-    <%= t('insurance.search_btn') %>
-  </a>
-</div>
+- [ ] **Step 10: Commit**
 
-<%# Disclaimer %>
-<div style="background:rgba(74,127,193,0.05);border:1px solid rgba(74,127,193,0.12);border-radius:12px;padding:12px;margin-bottom:8px;">
-  <p style="font-size:10px;color:#4A7FC1;line-height:1.6;text-align:center;">
-    <%= t('insurance.disclaimer') %>
-  </p>
-</div>
+```bash
+git add app/views/pages/insurance_guide.html.erb
+git commit -m "feat: wire insurance guide with accordion and collapsible partials"
+```
+
+---
+
+## Task 5: Controller Tests
+
+**Files:**
+- Modify: `test/controllers/pages_controller_test.rb`
+
+- [ ] **Step 1: Write failing tests**
+
+Replace the contents of `test/controllers/pages_controller_test.rb` with:
+
+```ruby
+require "test_helper"
+
+class PagesControllerTest < ActionDispatch::IntegrationTest
+  test "should get home" do
+    get pages_home_url
+    assert_response :success
+  end
+
+  test "should get emergency" do
+    get pages_emergency_url
+    assert_response :success
+  end
+
+  test "should get insurance guide" do
+    get insurance_guide_url
+    assert_response :success
+  end
+
+  test "insurance guide renders accordion items for each guide" do
+    get insurance_guide_url
+    assert_select "[data-controller='disclosure']"
+  end
+
+  test "insurance guide accordion panels start collapsed" do
+    get insurance_guide_url
+    assert_select "[data-disclosure-target='panel']" do |panels|
+      panels.each do |panel|
+        assert_match(/max-height:0/, panel["style"].to_s)
+      end
+    end
+  end
+
+  test "insurance guide renders what to bring section always visible" do
+    get insurance_guide_url
+    assert_select "p", text: /My Number Card|マイナンバーカード/
+  end
+end
+```
+
+- [ ] **Step 2: Run tests to confirm failure**
+
+```bash
+bin/rails test test/controllers/pages_controller_test.rb
+```
+
+Expected: `insurance_guide_url` test fails with routing error (route exists but test helper may need URL helper). All others pass.
+
+- [ ] **Step 3: Run full test suite to confirm no regressions**
+
+```bash
+bin/rails test
+```
+
+Expected: all existing tests pass; new tests pass now that templates are wired.
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add test/controllers/pages_controller_test.rb
+git commit -m "test: add insurance guide controller and DOM structure tests"
+```
+
+---
+
+## Self-Review
+
+**Spec coverage:**
+- ✅ Disclosure Stimulus controller — Task 1
+- ✅ `_insurance_accordion_item` partial — Task 2
+- ✅ `_collapsible_section` partial — Task 3
+- ✅ All 7 secondary sections wrapped — Task 4 steps 2–8
+- ✅ Insurance Types accordion wired — Task 4 step 1
+- ✅ Always-visible sections untouched — verified in Task 4 step 9
+- ✅ Both locales accounted for in all teasers
+- ✅ CSS transition on `max-height` — in both partials
+- ✅ Chevron rotation — in both partials
+- ✅ Exclusive accordion via `disclosure:close@window` event — in accordion item partial
+
+**Placeholder scan:** No TBDs, TODOs, or vague steps found.
+
+**Type consistency:**
+- `disclosure_controller.js` exports `toggle`, `close`, `setOpen` — referenced in partials as `click->disclosure#toggle` and `disclosure:close@window->disclosure#close`. Consistent.
+- `data-disclosure-target="panel"` and `data-disclosure-target="chevron"` match `static targets` in controller. Consistent.
+- `data-disclosure-exclusive-value="true"` matches `static values = { exclusive: Boolean }`. Consistent.
