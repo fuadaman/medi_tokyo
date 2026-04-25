@@ -70,12 +70,14 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(45px);
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .bg-glow-1 { width: 350px; height: 350px; top: -120px; left: -120px; background: rgba(126,184,247,0.13); animation: cell-drift-1 16s ease-in-out infinite; }
-.bg-glow-2 { width: 220px; height: 220px; top: 30%; left: 70%; background: rgba(74,127,193,0.09); animation: cell-drift-2 12s ease-in-out infinite; animation-delay: -4s; }
+.bg-glow-2 { width: 220px; height: 220px; top: 30%; left: 55%; background: rgba(74,127,193,0.09); animation: cell-drift-2 12s ease-in-out infinite; animation-delay: -4s; }
 .bg-glow-3 { width: 280px; height: 280px; top: 70%; left: -60px; background: rgba(127,119,221,0.09); animation: cell-drift-3 18s ease-in-out infinite; animation-delay: -8s; }
-.bg-glow-4 { width: 200px; height: 200px; top: 55%; left: 78%; background: rgba(126,184,247,0.11); animation: cell-drift-4 11s ease-in-out infinite; animation-delay: -2s; }
+.bg-glow-4 { width: 200px; height: 200px; top: 55%; left: 62%; background: rgba(126,184,247,0.11); animation: cell-drift-4 11s ease-in-out infinite; animation-delay: -2s; }
 .bg-glow-5 { width: 240px; height: 240px; top: 18%; left: 42%; background: rgba(74,127,193,0.07); animation: cell-drift-5 14s ease-in-out infinite; animation-delay: -6s; }
 
 // Bio-pulse rings — ripple outward like a heartbeat / cell membrane pulse
