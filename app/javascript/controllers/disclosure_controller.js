@@ -28,9 +28,11 @@ export default class extends Controller {
     this.element.dataset.open = open
     this.panelTarget.style.maxHeight = open
       ? this.panelTarget.scrollHeight + "px"
-      : "0"
+      : "0px"
     if (this.hasChevronTarget) {
       this.chevronTarget.style.transform = open ? "rotate(180deg)" : "rotate(0deg)"
     }
+    const preview = this.element.querySelector(".accordion-preview")
+    if (preview) preview.style.display = open ? "none" : ""
   }
 }
